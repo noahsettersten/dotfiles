@@ -112,19 +112,6 @@ brewdeps () {
   brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
 }
 
-
-# $1 = type; 0 - both, 1 - tab, 2 - title
-# rest = text
-setTerminalText () {
-    # echo works in bash & zsh
-    local mode=$1 ; shift
-    echo -ne "\033]$mode;$@\007"
-}
-nt         () { setTerminalText 0 $@; }
-stt_tab    () { setTerminalText 1 $@; }
-stt_title  () { setTerminalText 2 $@; }
-
-
 # Edit/source this file
 alias ea='vim ~/.dotfiles/zsh/shortcuts.zsh'
 alias ea_source='source $HOME/.dotfiles/zsh/shortcuts.zsh'
