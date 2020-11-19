@@ -1,0 +1,45 @@
+# Account settings
+# Sets from, realname, imap_user, imap_pass, and smtp_pass
+source ~/.mutt/passwords
+
+set folder = 'imaps://imap.gmail.com:993'
+set spoolfile = '+INBOX'
+unset postponed
+set trash = '+[Google Mail]/Trash'
+
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+unset record
+
+set smtp_url = 'smtp://smtp.gmail.com:587/'
+
+set move = no
+set imap_keepalive = 150
+
+# Sidebar config
+set sidebar_visible=no
+set sidebar_width=30
+# set sidebar_folderindent=yes
+# set sidebar_sort=yes
+# set sidebar_shortpath=yes
+# set sidebar_delim=" | "
+color sidebar_new brightred default
+# b toggles sidebar visibility
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+# Remap bounce-message function to Ã¢â‚¬Å“BÃ¢â‚¬Â�
+bind index B bounce-message
+
+# SSL hardening
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set ssl_use_sslv2=no
+set ssl_use_sslv3=no
+set ssl_use_tlsv1=no
+set ssl_use_tlsv1_1=no
+set ssl_use_tlsv1_2=yes
+set ssl_verify_dates=yes
+set ssl_verify_host=yes
+
+source ~/.mutt/solarized_dark_256.muttrc

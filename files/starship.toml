@@ -1,0 +1,25 @@
+[git_status]
+stashed_count.enabled = true
+
+[aws]
+disabled=true
+
+# [directory]
+# fish_style_pwd_dir_length = 1
+
+[cmd_duration]
+min_time = 500
+# show_milliseconds = true
+
+[status]
+disabled = false
+
+[custom.zsh]
+command = "echo 🚀"
+when = """ "$STARSHIP_SHELL" == "zsh" """
+format = "[$symbol$output]($style)"
+
+[custom.fish]
+command = "echo 🐟"
+when = """ "$STARSHIP_SHELL" == "fish" """
+format = "[$symbol$output]($style)"

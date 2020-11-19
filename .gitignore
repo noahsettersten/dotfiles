@@ -1,0 +1,6 @@
+# Personal information
+.credentials
+.gitconfig
+newsboat_urls
+external_sync.sh
+shortcuts-personal.zsh

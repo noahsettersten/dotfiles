@@ -1,0 +1,14 @@
+session_name: gatsby
+windows:
+  - window_name: editor
+    panes:
+      - nvim
+  - window_name: shell
+    panes:
+      - clear
+  - window_name: gatsby
+    panes:
+      - gatsby develop
+  - window_name: storybook
+    panes:
+      - clear

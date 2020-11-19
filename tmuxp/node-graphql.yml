@@ -1,0 +1,15 @@
+session_name: node-graphql
+windows:
+  - window_name: nvim
+    panes:
+      - nvim
+  - window_name: shell
+    panes:
+      - clear
+  - window_name: database
+    panes:
+      - pglocal
+  - window_name: logs
+    panes:
+      - yarn start
+      # - docker logs api -f
