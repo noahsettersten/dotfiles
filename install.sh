@@ -1,7 +1,5 @@
 #!/bin/bash
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-
 function symlink_files(){
   shopt -s dotglob # Enable globbing over hidden files
 
@@ -26,9 +24,13 @@ cd $HOME
 symlink_files "$(pwd)/.dotfiles/files" $HOME
 
 ln -vnsf $HOME/.dotfiles/files/.zshrc $HOME/.zshrc
+
+mkdir $HOME/.newsboat
 ln -vnsf $HOME/.dotfiles/files/newsboat_urls $HOME/.newsboat/urls
 ln -vnsf $HOME/.dotfiles/files/newsboat_config $HOME/.newsboat/config
 ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
+
+mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/files/starship.toml $HOME/.config
 ln -vnsf $HOME/.dotfiles/files/config.fish $HOME/.config/fish
 
