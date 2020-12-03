@@ -23,23 +23,21 @@ cd $HOME
 [ -d '.dotfiles' ] || git clone git://github.com/noahsettersten/dotfiles.git .dotfiles
 symlink_files "$(pwd)/.dotfiles/files" $HOME
 
-ln -vnsf $HOME/.dotfiles/files/.zshrc $HOME/.zshrc
-
 mkdir $HOME/.vim
-ln -vnsf $HOME/.dotfiles/files/plugins.vim $HOME/.vim
+ln -vnsf $HOME/.dotfiles/config/plugins.vim $HOME/.vim
 
 mkdir $HOME/.newsboat
-ln -vnsf $HOME/.dotfiles/files/newsboat_urls $HOME/.newsboat/urls
-ln -vnsf $HOME/.dotfiles/files/newsboat_config $HOME/.newsboat/config
+ln -vnsf $HOME/.dotfiles/config/newsboat_urls $HOME/.newsboat/urls
+ln -vnsf $HOME/.dotfiles/config/newsboat_config $HOME/.newsboat/config
 ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 
 mkdir $HOME/.config
-ln -vnsf $HOME/.dotfiles/files/starship.toml $HOME/.config
-ln -vnsf $HOME/.dotfiles/files/config.fish $HOME/.config/fish
+ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
+ln -vnsf $HOME/.dotfiles/config/config.fish $HOME/.config/fish
 
 mkdir $HOME/.mutt
 curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc
 
-cp $HOME/.dotfiles/files/karabiner.json $HOME/.config/karabiner
+cp $HOME/.dotfiles/config/karabiner.json $HOME/.config/karabiner
 
 echo 'Successfully Installed'

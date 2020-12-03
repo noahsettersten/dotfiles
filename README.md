@@ -4,3 +4,9 @@ My personal configuration files, with a focus on:
 - Vim: Numerous customizations and utilities, with pluging managed by vim-plug.
 - Brewfile for installing system dependencies and tools.
 - asdf for managing language and tool versions.
+
+- `config/...`: Configuration files sstored in various locations.
+- `files/...`: Dotfiles symlinked into $HOME.
+- `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
+- `tmuxp/...`: Tmuxp profiles for initializing tmux layouts.
+- `zsh/...`: Custom Zsh aliases.
