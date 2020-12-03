@@ -35,6 +35,15 @@ let maplocalleader = "\\" "add a local leader of '\'
 " also use ; for commands
 nnoremap ; :
 
+" }}}
+
+" Auto-install vim-plug {{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $VIMRC
+endif
+
 source ~/.vim/plugins.vim
 " }}}
 

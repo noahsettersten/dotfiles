@@ -7,10 +7,12 @@ source $HOME/.dotfiles/files/.credentials
 export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
 export EDITOR=nvim
 export GIT_MERGE_AUTOEDIT=no
+export VIMRC=$HOME/.vimrc
 
 # Setup PATH (as needed)
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/opt/mongodb-community@3.4/bin
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
 # export PATH=$PATH:~/.emacs.d/bin
 
 # History search
