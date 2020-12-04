@@ -1,7 +1,7 @@
 eval "$(starship init zsh)"
 
 # Private variables
-source $HOME/.dotfiles/files/.credentials
+source $HOME/development/machine/config/.credentials
 
 # Terminal config
 export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
@@ -31,7 +31,7 @@ source ~/.dotfiles/zsh/git-aliases.zsh
 # source ~/.dotfiles/zsh/git-small.zsh
 # source ~/.dotfiles/zsh/custom-prompt.zsh
 source ~/.dotfiles/zsh/shortcuts.zsh
-source ~/.dotfiles/zsh/shortcuts-personal.zsh
+source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Additional tools
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

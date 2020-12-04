@@ -27,8 +27,8 @@ mkdir $HOME/.vim
 ln -vnsf $HOME/.dotfiles/config/plugins.vim $HOME/.vim
 
 mkdir $HOME/.newsboat
-ln -vnsf $HOME/.dotfiles/config/newsboat_urls $HOME/.newsboat/urls
 ln -vnsf $HOME/.dotfiles/config/newsboat_config $HOME/.newsboat/config
+
 ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 
 mkdir $HOME/.config
