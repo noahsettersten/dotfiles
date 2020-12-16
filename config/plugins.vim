@@ -35,6 +35,7 @@ Plug 'liuchengxu/vista.vim'               " Browse ctags and LSP symbols
 
 " Git
 Plug 'tpope/vim-fugitive'                 " git wrapper
+Plug 'tpope/vim-rhubarb'                  " fugitive extension for GitHub
 Plug 'airblade/vim-gitgutter'             " show diff in the left gutter
 
 " Airline
@@ -57,6 +58,7 @@ Plug 'StanAngeloff/php.vim'
 
 " Misc
 Plug 'preservim/nerdcommenter'           " comment multiple lines
+Plug 'ActivityWatch/aw-watcher-vim'       " Activity tracking for code editing
 Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enhancements
 " Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
