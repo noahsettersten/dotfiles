@@ -48,7 +48,7 @@ alias gss='git stash show -p'
 alias grepflags='~/.dotfiles/scripts/grep_comment_flags.sh'
 alias grepflagsdiff='~/.dotfiles/scripts/grep_comment_flags_diff.sh'
 alias unstage='git reset HEAD --'
-alias uncommit-'git reset --soft HEAD~1'
+alias uncommit='git reset --soft HEAD~1'
 alias recommit='git commit --amend --no-edit'
 
 # Postgres
