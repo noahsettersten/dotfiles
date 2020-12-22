@@ -51,6 +51,11 @@ alias unstage='git reset HEAD --'
 alias uncommit='git reset --soft HEAD~1'
 alias recommit='git commit --amend --no-edit'
 
+# Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`
+# Then view the contets of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
+alias glsearch='git log --all --full-history -- $*'
+
+
 # Postgres
 # --------
 alias pgtail='tail -f /usr/local/var/log/postgres.log'
