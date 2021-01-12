@@ -1,3 +1,5 @@
+typeset -F SECONDS
+
 eval "$(starship init zsh)"
 
 # Private variables
@@ -40,3 +42,5 @@ source /usr/local/opt/asdf/asdf.sh
 
 export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+command printf "Shell Startup Time: %.1fms\n" $(($SECONDS*1000))
