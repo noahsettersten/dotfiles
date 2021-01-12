@@ -43,30 +43,25 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Language-specific Enhancements and Syntax Highlighting
-" Plug 'thoughtbot/vim-rspec'               " Thoughtbot vim-rspec send to tmux, vim-dispatch, etc
-Plug 'slim-template/vim-slim'             " Slim
-Plug 'leafgarland/typescript-vim'         " typescript
-Plug 'ianks/vim-tsx'                      " typescript with react
+Plug 'kchmck/vim-coffee-script'           " Coffeescript
 Plug 'jparise/vim-graphql'                " GraphQL
 Plug 'elixir-editors/vim-elixir'          " Elixir
+Plug 'masukomi/vim-markdown-folding'      " Markdown
 Plug 'vim-ruby/vim-ruby'                  " Ruby
 Plug 'tpope/vim-rails'                    " Rails
-Plug 'kchmck/vim-coffee-script'
 Plug 'jondkinney/rspec.vim'               " Rspec
-Plug 'masukomi/vim-markdown-folding'
-Plug 'StanAngeloff/php.vim'
+Plug 'slim-template/vim-slim'             " Slim
+Plug 'leafgarland/typescript-vim'         " Typescript
+Plug 'ianks/vim-tsx'                      " Typescript with React
 
 " Misc
 Plug 'preservim/nerdcommenter'           " comment multiple lines
-Plug 'ActivityWatch/aw-watcher-vim'       " Activity tracking for code editing
 Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enhancements
 " Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
 Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
 
 " Unused
-" Plug 'yegappan/mru'                       " List of most-recently-used files
-" Plug 'Lenovsky/nuake'
 " Plug 'yuratomo/w3m.vim'                   " Embed w3m in vim
 " Plug 'nathanaelkane/vim-indent-guides'    " show indent guides to the left of the methods (<leader>ig)
 " TODO: Plug 'tpope/vim-commentary'               " replace nerdcommenter with Tim Pope's plugin here.
