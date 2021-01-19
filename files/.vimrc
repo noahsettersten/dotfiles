@@ -343,6 +343,8 @@ nnoremap <leader><F> :Vista finder<CR>
 " Abbreviations {{{
 :iab rbcop # rubocop:disable Metrics/LineLength
 :iab pry require 'pry'; binding.pry
+" # NOTE: (`strftime("%Y-%m-%d")`) `system("whoami | tr -d '\n'")` => ${1}
+:iab note # NOTE: (%Y-%m-%d) noah =>
 " }}}
 
 " Ruby/Rails {{{
