@@ -1,3 +1,4 @@
+# My custom configuration
 [git_status]
 stashed_count.enabled = true
 
@@ -16,10 +17,15 @@ disabled = false
 
 [custom.zsh]
 command = "echo 🚀"
-when = """ "$STARSHIP_SHELL" == "zsh" """
+when = '[ "$STARSHIP_SHELL" == "zsh" ]'
+shell = ["bash", "--noprofile", "--norc"]
 format = "[$symbol$output]($style)"
 
 [custom.fish]
 command = "echo 🐟"
-when = """ "$STARSHIP_SHELL" == "fish" """
+when = '[ "$STARSHIP_SHELL" == "fish" ]'
+shell = ["bash", "--noprofile", "--norc"]
 format = "[$symbol$output]($style)"
+
+
+# Font symbols: https://starship.rs/presets/#nerd-font-symbols
