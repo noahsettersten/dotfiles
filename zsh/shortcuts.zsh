@@ -115,6 +115,7 @@ alias spotify_current_track='~/.dotfiles/scripts/spotify_current_track.sh'
 alias slinvoke='serverless invoke local -f $*'
 alias todos='ack --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+):.*((TODO|FIXME):.*)/\2 :>> \1/"|grep -E --color=always ":>>.*:\d+"'
 alias ql='qlmanage -px &>/dev/null'
+alias brewup='brew upgrade'
 
 brewdeps () {
   brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
