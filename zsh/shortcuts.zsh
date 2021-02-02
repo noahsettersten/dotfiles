@@ -90,6 +90,7 @@ alias b='bundle exec $*'
 alias rdm='bin/rake db:migrate'
 alias rc='bin/rails console'
 alias rdbc='bin/rails dbconsole'
+alias trc='RAILS_ENV=test bundle exec rails console'
 alias kr='kill -9 `cat tmp/pids/server.pid; echo;`'
 alias wph='bin/webpack-dev-server --hot --corejs 3.6.0 '
 
@@ -116,6 +117,7 @@ alias slinvoke='serverless invoke local -f $*'
 alias todos='ack --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+):.*((TODO|FIXME):.*)/\2 :>> \1/"|grep -E --color=always ":>>.*:\d+"'
 alias ql='qlmanage -px &>/dev/null'
 alias brewup='brew upgrade'
+alias ccanalyze='~/.dotfiles/scripts/codeclimate.sh'
 
 brewdeps () {
   brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
