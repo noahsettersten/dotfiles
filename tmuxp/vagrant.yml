@@ -1,7 +1,7 @@
 session_name: vagrant
 start_directory: ./
-# shell_command_bfore:
-  # - 'vagrant up'
+shell_command_bfore:
+  - 'vagrant up'
 windows:
   - window_name: editor
     panes:
@@ -9,6 +9,9 @@ windows:
   - window_name: shell
     panes:
       - clear
-  # - window_name: server
-    # panes:
-      # - vagrant ssh
+  - window_name: console
+    panes:
+      - vagrant ssh
+  - window_name: logs
+    panes:
+      - vagrant ssh
