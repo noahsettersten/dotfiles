@@ -105,6 +105,12 @@ alias webserver='python -m SimpleHTTPServer'
 #-----
 unpair () { gh-auth remove --users=$1 }
 
+# VAGRANT
+# -------
+alias vup='vagrant up'
+alias vdf='vagrant destroy -f'
+alias vssh='vagrant ssh'
+
 # PERSONAL TOOLS
 # --------------
 alias pipt='pip --trusted-host pypi.python.org'
