@@ -55,6 +55,7 @@ Plug 'leafgarland/typescript-vim'         " Typescript
 Plug 'ianks/vim-tsx'                      " Typescript with React
 
 " Misc
+Plug 'jeetsukumaran/vim-buffergator'      " easily switch between buffers
 Plug 'preservim/nerdcommenter'           " comment multiple lines
 Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enhancements
 " Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
@@ -65,7 +66,6 @@ Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
 " Plug 'yuratomo/w3m.vim'                   " Embed w3m in vim
 " Plug 'nathanaelkane/vim-indent-guides'    " show indent guides to the left of the methods (<leader>ig)
 " TODO: Plug 'tpope/vim-commentary'               " replace nerdcommenter with Tim Pope's plugin here.
-" Plug 'jeetsukumaran/vim-buffergator'      " easily switch between buffers
 " Plug 'killphi/vim-legend'                 " Parses and displays x or check in the gutter for covered lines through cadre
 " Plug 'junegunn/goyo.vim'                  " Distraction-free writing in Vim
 
