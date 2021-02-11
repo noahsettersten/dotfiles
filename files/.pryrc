@@ -13,8 +13,12 @@ if defined?(Sidekiq)
     Sidekiq::Queue.new(name)
   end
 
+  def collect_queues
+    Sidekiq::Queue.all.map { |q| { name: q.name, size: q.size } }
+  end
+
   def print_queue_contents
-    queues = Sidekiq::Queue.all.map { |q| { name: q.name, size: q.size } }
+    queues = collect_queues
 
     output.puts('Sidekiq queues:')
     queues.each { |q| output.puts("#{format('%16s', q[:name])}: #{q[:size]} jobs") }
@@ -24,6 +28,10 @@ if defined?(Sidekiq)
   end
 
   Pry.commands.block_command('sq_list') do
+    print_queue_contents
+  end
+
+  Pry.commands.block_command('sql') do
     print_queue_contents
   end
 
