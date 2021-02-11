@@ -1,5 +1,4 @@
 session_name: vagrant
-start_directory: ./
 shell_command_bfore:
   - 'vagrant up'
 windows:
