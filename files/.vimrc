@@ -347,7 +347,7 @@ nnoremap <leader><F> :Vista finder<CR>
 :iab rbcop # rubocop:disable Metrics/LineLength
 :iab pry require 'pry'; binding.pry
 " # NOTE: (`strftime("%Y-%m-%d")`) `system("whoami | tr -d '\n'")` => ${1}
-:iab note # NOTE: (%Y-%m-%d) noah =>
+:iab note # NOTE: (YYYY-mm-md) Noah Settersten =>
 " }}}
 
 " Ruby/Rails {{{
