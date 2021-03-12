@@ -2,6 +2,9 @@
 [git_status]
 stashed_count.enabled = true
 
+[time]
+disabled=false
+
 [aws]
 disabled=true
 
@@ -17,13 +20,13 @@ disabled = false
 map_symbol = true
 
 [custom.zsh]
-command = "echo 🚀"
+command = "echo '🚀 '"
 when = '[ "$STARSHIP_SHELL" == "zsh" ]'
 shell = ["bash", "--noprofile", "--norc"]
 format = "[$symbol$output]($style)"
 
 [custom.fish]
-command = "echo 🐟"
+command = "echo 🐟 "
 when = '[ "$STARSHIP_SHELL" == "fish" ]'
 shell = ["bash", "--noprofile", "--norc"]
 format = "[$symbol$output]($style)"
