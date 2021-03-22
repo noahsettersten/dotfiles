@@ -18,6 +18,12 @@ export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH=$PATH:$HOME/.asdf/installs/nodejs/15.3.0/.npm/bin
 # export PATH=$PATH:~/.emacs.d/bin
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # History search
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=50000
