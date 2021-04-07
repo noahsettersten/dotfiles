@@ -19,17 +19,9 @@ min_time = 500
 disabled = false
 map_symbol = true
 
-[custom.zsh]
-command = "echo '🚀 '"
-when = '[ "$STARSHIP_SHELL" == "zsh" ]'
-shell = ["bash", "--noprofile", "--norc"]
-format = "[$symbol$output]($style)"
-
-[custom.fish]
-command = "echo 🐟 "
-when = '[ "$STARSHIP_SHELL" == "fish" ]'
-shell = ["bash", "--noprofile", "--norc"]
-format = "[$symbol$output]($style)"
-
+[shell]
+disabled = false
+fish_indicator = "🐟"
+zsh_indicator = "🚀"
 
 # Font symbols: https://starship.rs/presets/#nerd-font-symbols
