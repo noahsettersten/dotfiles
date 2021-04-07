@@ -110,6 +110,7 @@ unpair () { gh-auth remove --users=$1 }
 alias vup='vagrant up'
 alias vdf='vagrant destroy -f'
 alias vssh='vagrant ssh'
+alias vsus='vagrant suspend'
 
 # PERSONAL TOOLS
 # --------------
