@@ -131,8 +131,8 @@ vnoremap ˚ :m-2<CR>gv
 " }}}
 
 " NERDTree {{{
-map <Leader>d :NERDTreeMirrorToggle<CR>
-map <Leader>D :NERDTreeFind<CR>
+map <Leader>d :NERDTreeMirrorToggle<CR><CR>
+map <Leader>D :NERDTreeFind<CR><CR>
 
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
@@ -171,6 +171,29 @@ let g:NERDCustomDelimiters={
 	\ 'javascript': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 	\ 'typescript': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
+" }}}
+
+" Netrw {{{
+map <Leader>dd :Lexplore %:p:h<CR>
+map <Leader>da :Lexplore<CR>
+
+" let g:netrw_keepdir = 0
+let g:netrw_banner = 0
+
+function! NetrwMapping()
+  nmap <buffer> h -^
+  nmap <buffer> l <CR>
+
+  nmap <buffer> . gh
+
+  nmap <buffer> L <CR>:Lexplore<CR>
+  nmap <buffer> <Leader>dd :Lexplore<CR>
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
 " }}}
 
 " Tmux {{{
@@ -225,7 +248,7 @@ function! s:ag_handler(lines)
   execute 'normal!' first.col.'|zz'
 
   if len(list) > 1
-    call setqflist(list)
+    call setqflist(list, 'a')
     copen
     wincmd p
   endif
@@ -255,6 +278,31 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 
 " Keeps cursor on star search highlight
 let g:indexed_search_dont_move=1
+" }}}
+
+" Quickfix {{{
+" From https://vi.stackexchange.com/a/21255
+" using range-aware function
+function! QFdelete(bufnr) range
+    " get current qflist
+    let l:qfl = getqflist()
+    " no need for filter() and such; just drop the items in range
+    call remove(l:qfl, a:firstline - 1, a:lastline - 1)
+    " replace items in the current list, do not make a new copy of it;
+    " this also preserves the list title
+    call setqflist([], 'r', {'items': l:qfl})
+    " restore current line
+    call setpos('.', [a:bufnr, a:firstline, 1, 0])
+endfunction
+
+" using buffer-local mappings
+" note: still have to check &bt value to filter out `:e quickfix` and such
+augroup QFList | au!
+    autocmd BufWinEnter quickfix if &bt ==# 'quickfix'
+    autocmd BufWinEnter quickfix    nnoremap <silent><buffer>dd :call QFdelete(bufnr())<CR>
+    autocmd BufWinEnter quickfix    vnoremap <silent><buffer>d  :call QFdelete(bufnr())<CR>
+    autocmd BufWinEnter quickfix endif
+augroup end
 " }}}
 
 " Splits {{{
@@ -296,7 +344,7 @@ autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 " Fugitive {{{
 set diffopt+=vertical
 nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gst :Gstatus<cr>
+nnoremap <leader>gst :Git<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>ge :Gedit<cr>
 nnoremap <leader>gb :Git blame -w -M<cr>
@@ -344,6 +392,7 @@ nnoremap <leader><F> :Vista finder<CR>
 " }}}
 
 " Abbreviations {{{
+:iab entry 2021/04/01 Transaction<CR>  Account    $0.00<CR>
 :iab rbcop # rubocop:disable Metrics/LineLength
 :iab pry require 'pry'; binding.pry
 " # NOTE: (`strftime("%Y-%m-%d")`) `system("whoami | tr -d '\n'")` => ${1}
@@ -372,6 +421,51 @@ nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
 " W3M {{{
 nnoremap <leader>ws :W3mVSplit
 " nnoremap <leader>wr :W3m ruby
+" }}}
+
+ " Ledger {{{
+au BufNewFile,BufRead *.ldg,*.ledger,*.journal setf ledger | comp ledger
+
+function! LedgerHistory()
+  let commandGrid = '~/Dropbox/other/ledger/ledgerbil/main.py grid -m -p "last 2 months" -A Expenses'
+  call VimuxRunCommand(commandGrid)
+endfunction
+
+function! LedgerBudget()
+  let command = 'ledger budget -p this --effective'
+  call VimuxRunCommand(command)
+endfunction
+
+function! LedgerBudgetExport()
+  let command = '~/Dropbox/other/ledger/export_budget.sh'
+  call VimuxRunCommand(command)
+endfunction
+
+function! LedgerMonthlyReview()
+  let command = 'ledger balance -p "this month"'
+  call VimuxRunCommand(command)
+endfunction
+
+function! LedgerBalance()
+  let command = 'ledger balance Assets'
+  call VimuxRunCommand(command)
+endfunction
+
+function! LedgerRegister()
+  let command = 'ledger register -d "d>[last month]" -R Expenses'
+  call VimuxRunCommand(command)
+endfunction
+
+" Mnemonics: hh History, hb Budgets, ha Accounts, he Entries, hm Monthly budget
+" p, r, u, s
+" nmap <leader>hh :call LedgerHistory()<CR>
+nmap <leader>hb :call LedgerBudget()<CR>
+" nmap <leader>hm :call LedgerBudgetExport()<CR>
+nmap <leader>ha :call LedgerBalance()<CR>
+nmap <leader>he :call LedgerRegister()<CR>
+
+nmap <leader>hm :call LedgerMonthlyReview()<CR>
+nmap <leader>le :call ledger#entry()<CR>
 " }}}
 
 " Prose {{{
