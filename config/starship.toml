@@ -1,6 +1,7 @@
 # My custom configuration
 [git_status]
-stashed_count.enabled = true
+# stashed_count.enabled = true
+stashed = '[$count\$](orange)'
 
 [time]
 disabled=false
@@ -22,6 +23,6 @@ map_symbol = true
 [shell]
 disabled = false
 fish_indicator = "🐟"
-zsh_indicator = "🚀"
+zsh_indicator = ""
 
 # Font symbols: https://starship.rs/presets/#nerd-font-symbols
