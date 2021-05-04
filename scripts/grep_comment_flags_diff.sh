@@ -1,7 +1,7 @@
 #!/bin/sh
 # Print out TODO, FIXME, DEBUG statements
 
-FILES_PATTERN='\.(js|ts)(\..+)?$'
+FILES_PATTERN='\.(js|ts|rb|erb|slim)(\..+)?$'
 FILES=$(git diff --cached --name-only | grep -E $FILES_PATTERN)
 
 SEARCH='console.log|TODO|FIXME|DEBUG'
