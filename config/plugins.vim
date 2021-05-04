@@ -61,10 +61,11 @@ Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enha
 " Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
 Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
+Plug 'ledger/vim-ledger'
 
 " Unused
 " Plug 'yuratomo/w3m.vim'                   " Embed w3m in vim
-" Plug 'nathanaelkane/vim-indent-guides'    " show indent guides to the left of the methods (<leader>ig)
+Plug 'nathanaelkane/vim-indent-guides'    " show indent guides to the left of the methods (<leader>ig)
 " TODO: Plug 'tpope/vim-commentary'               " replace nerdcommenter with Tim Pope's plugin here.
 " Plug 'killphi/vim-legend'                 " Parses and displays x or check in the gutter for covered lines through cadre
 " Plug 'junegunn/goyo.vim'                  " Distraction-free writing in Vim
