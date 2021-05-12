@@ -1,6 +1,4 @@
-# My custom configuration
 [git_status]
-# stashed_count.enabled = true
 stashed = '[$count\$](orange)'
 
 [time]
@@ -9,8 +7,8 @@ disabled=false
 [aws]
 disabled=true
 
-# [directory]
-# fish_style_pwd_dir_length = 1
+[directory]
+fish_style_pwd_dir_length = 1
 
 [cmd_duration]
 min_time = 500
@@ -24,5 +22,3 @@ map_symbol = true
 disabled = false
 fish_indicator = "🐟"
 zsh_indicator = ""
-
-# Font symbols: https://starship.rs/presets/#nerd-font-symbols
