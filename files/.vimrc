@@ -442,7 +442,7 @@ function! LedgerBudgetExport()
 endfunction
 
 function! LedgerMonthlyReview()
-  let command = 'ledger balance -p "this month"'
+  let command = 'ledger balance -p "this month" --sort "-amount"'
   call VimuxRunCommand(command)
 endfunction
 
