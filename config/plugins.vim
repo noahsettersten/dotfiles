@@ -52,7 +52,8 @@ Plug 'tpope/vim-rails'                    " Rails
 Plug 'jondkinney/rspec.vim'               " Rspec
 Plug 'slim-template/vim-slim'             " Slim
 Plug 'leafgarland/typescript-vim'         " Typescript
-Plug 'ianks/vim-tsx'                      " Typescript with React
+Plug 'peitalin/vim-jsx-typescript'
+" Plug 'ianks/vim-tsx'                      " Typescript with React
 
 " Misc
 Plug 'jeetsukumaran/vim-buffergator'      " easily switch between buffers
@@ -62,6 +63,7 @@ Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enha
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
 Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
 Plug 'ledger/vim-ledger'
+Plug 'Lenovsky/nuake'
 
 " Unused
 " Plug 'yuratomo/w3m.vim'                   " Embed w3m in vim
