@@ -600,6 +600,16 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " }}}
 
+" Nuake {{{
+tnoremap <C-q> <C-w>N
+tnoremap <leader><C-\> <C-\><C-n>:Nuake<CR>
+nnoremap <leader><C-\> :Nuake<CR>
+inoremap <leader><C-\> <C-\><C-n>:Nuake<CR>
+let g:nuake_position = 'bottom'
+let g:nuake_size = 0.2
+let g:nuake_per_tab = 0
+" }}}
+
 " Misc Plugins {{{
 let g:StripperIgnoreFileTypes = ['sql']
 
@@ -613,6 +623,7 @@ let g:indent_guides_guide_size=1
 let g:peekaboo_window="vert bo 50new"
 
 autocmd FileType markdown set foldexpr=NestedMarkdownFolds()
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 nmap <leader>mm :MRU<CR>
 
