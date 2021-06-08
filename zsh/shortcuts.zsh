@@ -21,7 +21,8 @@ alias cpu='top -o cpu'
 alias mem='top -o rsize'
 
 # Directories
-alias l='ls -lahG'
+# alias l='ls -lahG'
+alias l='lsd -lah'
 
 # Git
 # -----------------
@@ -125,6 +126,17 @@ alias todos='ack --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+)
 alias ql='qlmanage -px &>/dev/null'
 alias brewup='brew upgrade'
 alias ccanalyze='~/.dotfiles/scripts/codeclimate.sh'
+alias lsrubyversions='find . -name .ruby-version -exec bat {} \;'
+
+mansearch () {
+  man -k . | fzf --preview "echo {} | awk '{print $1}' | xargs -r man" | awk '{print $1}' | xargs -r man
+}
+
+# Configure similar tools for AWK and JQ manipulation of content
+# awkexplore () {
+  # echo '' | fzf --print-query --preview 'echo "a\nb\nc\nd" | awk {q}'
+# }
+# https://github.com/pawelduda/fzf-live-repl/pull/5/files
 
 brewdeps () {
   brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
