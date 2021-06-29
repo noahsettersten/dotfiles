@@ -33,7 +33,7 @@ ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 
 mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
-ln -vnsf $HOME/.dotfiles/config/config.fish $HOME/.config/fish
+ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
 
 mkdir $HOME/.mutt
 curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc
