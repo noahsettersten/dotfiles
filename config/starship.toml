@@ -22,3 +22,6 @@ map_symbol = true
 disabled = false
 fish_indicator = "🐟"
 zsh_indicator = ""
+
+[git_metrics]
+disabled = false
