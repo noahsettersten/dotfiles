@@ -18,6 +18,7 @@ export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH=$PATH:$HOME/.asdf/installs/nodejs/15.3.0/.npm/bin
 export PATH=/usr/local/opt/erlang@22/bin:$PATH
 # export PATH=$PATH:~/.emacs.d/bin
+source $HOME/.cargo/env
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
