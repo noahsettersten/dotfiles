@@ -1,6 +1,6 @@
 session_name: vagrant
-shell_command_bfore:
-  - 'vagrant up'
+# shell_command_bfore:
+#   - 'vagrant up'
 windows:
   - window_name: editor
     panes:
@@ -10,7 +10,7 @@ windows:
       - clear
   - window_name: console
     panes:
-      - vagrant ssh
+      - echo "Run 'vagrant ssh' to connect to the VM"
   - window_name: logs
     panes:
-      - vagrant ssh
+      - echo "Run 'vagrant ssh' to connect to the VM"

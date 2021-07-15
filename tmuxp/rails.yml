@@ -20,3 +20,4 @@ windows:
     panes:
       - bundle exec rails server
       - bundle exec sidekiq
+      # - bundle exec sidekiq | tee ./log/sidekiq.log
