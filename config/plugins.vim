@@ -52,7 +52,8 @@ Plug 'tpope/vim-rails'                    " Rails
 Plug 'jondkinney/rspec.vim'               " Rspec
 Plug 'slim-template/vim-slim'             " Slim
 Plug 'leafgarland/typescript-vim'         " Typescript
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'peitalin/vim-jsx-typescript'        " JSX in Typescript
+Plug 'mechatroner/rainbow_csv'            " CSV column highlighting, searching, formatting
 " Plug 'ianks/vim-tsx'                      " Typescript with React
 
 " Misc
@@ -60,6 +61,7 @@ Plug 'jeetsukumaran/vim-buffergator'      " easily switch between buffers
 Plug 'preservim/nerdcommenter'           " comment multiple lines
 Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enhancements
 " Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
+" Plug 'kshenoy/vim-signature'              " Show marks in gutter
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
 Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
 Plug 'ledger/vim-ledger'
