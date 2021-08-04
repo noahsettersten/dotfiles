@@ -131,8 +131,8 @@ vnoremap ˚ :m-2<CR>gv
 " }}}
 
 " NERDTree {{{
-map <Leader>d :NERDTreeMirrorToggle<CR><CR>
-map <Leader>D :NERDTreeFind<CR><CR>
+nnoremap <Leader>d :NERDTreeMirrorToggle<CR>
+nnoremap <Leader>D :NERDTreeFind<CR>
 
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
@@ -217,7 +217,7 @@ endif
 
 " Searching {{{
 " Search as characters are typed, highlight search results, and ignore case intelligently
-set incsearch hlsearch ignorecase smartcase
+set incsearch hlsearch ignorecase " smartcase
 
 " The super-fast FZF
 nnoremap <C-f> :FZF --multi<CR>
@@ -396,7 +396,7 @@ nnoremap <leader><F> :Vista finder<CR>
 :iab rbcop # rubocop:disable Metrics/LineLength
 :iab pry require 'pry'; binding.pry
 " # NOTE: (`strftime("%Y-%m-%d")`) `system("whoami | tr -d '\n'")` => ${1}
-:iab note # NOTE: (YYYY-mm-md) Noah Settersten =>
+:iab note # NOTE: (YYYY-mm-dd) Noah Settersten =>
 " }}}
 
 " Ruby/Rails {{{
