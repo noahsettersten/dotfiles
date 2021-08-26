@@ -16,7 +16,9 @@ min_time = 500
 
 [status]
 disabled = false
+format = "[$symbol $status]($style) "
 map_symbol = true
+pipestatus = true
 
 [shell]
 disabled = false
