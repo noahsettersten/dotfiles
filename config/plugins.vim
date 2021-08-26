@@ -1,9 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
+" Theming
 Plug 'whatyouhide/vim-gotham'
+Plug 'crusoexia/vim-monokai'
+Plug 'junegunn/seoul256.vim'
+Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
 
 " File Management
-Plug 'preservim/nerdtree'                " project drawer
+Plug 'preservim/nerdtree'                 " project drawer
 Plug 'jistr/vim-nerdtree-tabs'            " makes NERDTree awesome if you use tabs
 Plug 'Xuyuanp/nerdtree-git-plugin'        " shows git status in NERDTree
 " Plug 'justinmk/vim-dirvish'
@@ -54,24 +58,24 @@ Plug 'slim-template/vim-slim'             " Slim
 Plug 'leafgarland/typescript-vim'         " Typescript
 Plug 'peitalin/vim-jsx-typescript'        " JSX in Typescript
 Plug 'mechatroner/rainbow_csv'            " CSV column highlighting, searching, formatting
-" Plug 'ianks/vim-tsx'                      " Typescript with React
+" Plug 'ianks/vim-tsx'                    " Typescript with React
 
 " Misc
 Plug 'jeetsukumaran/vim-buffergator'      " easily switch between buffers
-Plug 'preservim/nerdcommenter'           " comment multiple lines
+Plug 'preservim/nerdcommenter'            " comment multiple lines
 Plug 'easymotion/vim-easymotion'          " Quickly move around with motion enhancements
-" Plug 'gorodinskiy/vim-coloresque'         " Colorize CSS colors
-" Plug 'kshenoy/vim-signature'              " Show marks in gutter
+" Plug 'gorodinskiy/vim-coloresque'       " Colorize CSS colors
+" Plug 'kshenoy/vim-signature'            " Show marks in gutter
 Plug 'junegunn/vim-peekaboo'              " Pane to view register contents
 Plug 'itspriddle/vim-stripper'            " strip trailing whitespace on save
 Plug 'ledger/vim-ledger'
 Plug 'Lenovsky/nuake'
 
 " Unused
-" Plug 'yuratomo/w3m.vim'                   " Embed w3m in vim
+" Plug 'yuratomo/w3m.vim'                 " Embed w3m in vim
 Plug 'nathanaelkane/vim-indent-guides'    " show indent guides to the left of the methods (<leader>ig)
-" TODO: Plug 'tpope/vim-commentary'               " replace nerdcommenter with Tim Pope's plugin here.
-" Plug 'killphi/vim-legend'                 " Parses and displays x or check in the gutter for covered lines through cadre
-" Plug 'junegunn/goyo.vim'                  " Distraction-free writing in Vim
+" TODO: Plug 'tpope/vim-commentary'       " Consider replacing nerdcommenter with Tim Pope's plugin here.
+" Plug 'killphi/vim-legend'               " Parses and displays x or check in the gutter for covered lines through cadre
+" Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim
 
 call plug#end()
