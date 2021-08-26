@@ -94,6 +94,7 @@ alias rdbc='bin/rails dbconsole'
 alias trc='RAILS_ENV=test bundle exec rails console'
 alias kr='kill -9 `cat tmp/pids/server.pid; echo;`'
 alias wph='bin/webpack-dev-server --hot --corejs 3.6.0 '
+alias tpd='tail ~/Library/Logs/puma-dev.log'
 
 # OTHER (ELIXIR / PHOENIX, NODE, ...)
 # ----------------
