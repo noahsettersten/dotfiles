@@ -8,7 +8,7 @@ windows:
       - clear
   - window_name: console
     panes:
-      - iex -S mix
+      - DISABLE_JOBS=true iex -S mix
   - window_name: database
     panes:
         - pglocal

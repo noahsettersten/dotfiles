@@ -142,6 +142,9 @@ vnoremap ˚ :m-2<CR>gv
 " }}}
 
 " NERDTree {{{
+" Fix NERDTree mappings:
+" - Go to file in browser opens folders but does not change split.
+" - Open NERDTree only works after hitting enter again
 nnoremap <Leader>d :NERDTreeMirrorToggle<CR>
 nnoremap <Leader>D :NERDTreeFind<CR>
 
