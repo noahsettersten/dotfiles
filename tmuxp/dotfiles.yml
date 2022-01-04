@@ -1,9 +1,0 @@
-session_name: dotfiles
-start_directory: ~/.dotfiles
-windows:
-  - window_name: dotfiles
-    panes:
-      - nvim -c ":PlugUpdate"
-  - window_name: shell
-    panes:
-      - clear
