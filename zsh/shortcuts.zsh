@@ -31,8 +31,8 @@ alias gwc='git whatchanged --no-merges --pretty=format:"%Cgreen%h%Creset%x09%an%
 alias gt='git tag'
 alias gtl='git tag -l'
 alias gtlr='git ls-remote --tags'
-alias gbm='git branch --merged'
-alias gbnm='git branch --no-merged'
+# alias gbm='git branch --merged'
+# alias gbnm='git branch --no-merged'
 alias gf='git fetch'
 alias glog='git log --oneline --graph'
 alias glog2="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold yellow)%h%C(reset) %C(bold yellow)%d%C(reset) %C(white)%s%C(reset) - %C(bold green)(%ar)%C(reset)'"
@@ -51,6 +51,8 @@ alias grepflagsdiff='~/.dotfiles/scripts/grep_comment_flags_diff.sh'
 alias unstage='git reset HEAD --'
 alias uncommit='git reset --soft HEAD~1'
 alias recommit='git commit --amend --no-edit'
+
+alias gbranch_changes='git diff --name-only main'
 
 # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`
 # Then view the contets of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
@@ -80,7 +82,8 @@ alias wks='wemux stop'
 
 # Editors
 # ---
-alias v='nvim'
+alias nv='nvim'
+alias v='lvim'
 alias slimvim='nvim -u NONE -U NONE -N $*'
 alias vim_solarized='nvim -c "set background=dark" -c "colorscheme solarized" $*'
 alias em='emacs -nw'
@@ -101,6 +104,7 @@ alias tpd='tail ~/Library/Logs/puma-dev.log'
 alias phx='iex -S mix phx.server'
 alias herokuiex='heroku run iex -S mix'
 alias nombomb='trash node_modules; bower cache clean && trash bower_components'
+alias storybook='BROWSER=none DISABLE_ESLINT_PLUGIN=true yarn storybook'
 alias webserver='python -m SimpleHTTPServer'
 
 # PAIR
@@ -113,6 +117,12 @@ alias vup='vagrant up'
 alias vdf='vagrant destroy -f'
 alias vssh='vagrant ssh'
 alias vsus='vagrant suspend'
+
+# DOCKER
+# ------
+alias prune_docker='docker system prune -a'
+alias docker_run_bash='docker run -it --entrypoint /bin/bash $*'
+alias docker_exec_bash='docker exec -it $1 /bin/bash'
 
 # PERSONAL TOOLS
 # --------------
@@ -128,6 +138,7 @@ alias ql='qlmanage -px &>/dev/null'
 alias brewup='brew upgrade'
 alias ccanalyze='~/.dotfiles/scripts/codeclimate.sh'
 alias lsrubyversions='find . -name .ruby-version -exec bat {} \;'
+alias loc='cloc . --exclude-dir=node_modules'
 
 mansearch () {
   man -k . | fzf --preview "echo {} | awk '{print $1}' | xargs -r man" | awk '{print $1}' | xargs -r man
