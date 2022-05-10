@@ -23,8 +23,11 @@ cd $HOME
 [ -d '.dotfiles' ] || git clone git://github.com/noahsettersten/dotfiles.git .dotfiles
 symlink_files "$(pwd)/.dotfiles/files" $HOME
 
-mkdir $HOME/.vim
-ln -vnsf $HOME/.dotfiles/config/plugins.vim $HOME/.vim
+# mkdir $HOME/.vim
+# ln -vnsf $HOME/.dotfiles/config/plugins.vim $HOME/.vim
+
+# Neovim configuration folder
+ln -vnsf $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 mkdir $HOME/.newsboat
 ln -vnsf $HOME/.dotfiles/config/newsboat_config $HOME/.newsboat/config
@@ -34,6 +37,7 @@ ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
+ln -vnsf $HOME/.dotfiles/config/config.lua $HOME/.config/lvim/config.lua
 
 mkdir $HOME/.mutt
 curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc
