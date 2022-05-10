@@ -13,18 +13,7 @@ export VIMRC=$HOME/.vimrc
 
 # Setup PATH (as needed)
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:/usr/local/opt/mongodb-community@3.4/bin
-export PATH=$PATH:$HOME/Library/Python/3.9/bin
-export PATH=$PATH:$HOME/.asdf/installs/nodejs/15.3.0/.npm/bin
-export PATH=/usr/local/opt/erlang@22/bin:$PATH
-# export PATH=$PATH:~/.emacs.d/bin
 source $HOME/.cargo/env
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # History search
 export HISTFILE=$HOME/.zsh_history
@@ -48,7 +37,7 @@ source $HOME/development/machine/config/shortcuts_personal.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Install from homebrew
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh         # Install from homebrew: https://github.com/zsh-users/zsh-autosuggestions
-source /usr/local/opt/asdf/asdf.sh
+source /usr/local/opt/asdf/libexec/asdf.sh
 
 export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
