@@ -1,0 +1,16 @@
+-- let g:airline#extensions#tabline#enabled = 1
+-- let g:airline_powerline_fonts = 1
+-- let g:airline_detect_iminsert = 1
+-- let g:airline#extensions#fzf#enabled = 1
+-- let g:airline#extensions#vista#enabled = 0
+-- let g:airline#extensions#wordcount#enabled = 'readingtime'
+
+-- let g:tmuxline_preset = {
+      -- \'a'    : '#S',
+      -- \'b'    : '#(~/.dotfiles/scripts/unread_gmail.sh) Unread',
+      -- \'c'    : '#W',
+      -- \'win'  : ['#I', '#W'],
+      -- \'cwin' : ['#I', '#W'],
+      -- \'x'    : ['#(~/.dotfiles/scripts/spotify_current_track.sh)', '%a'],
+      -- \'y'    : ['%b %d', '%R'],
+      -- \'z'    : '#h'}
