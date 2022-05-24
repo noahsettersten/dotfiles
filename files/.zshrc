@@ -7,7 +7,7 @@ source $HOME/development/machine/config/.credentials
 
 # Terminal config
 export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
-export EDITOR=nvim
+export EDITOR=lvim
 export GIT_MERGE_AUTOEDIT=no
 export VIMRC=$HOME/.vimrc
 
