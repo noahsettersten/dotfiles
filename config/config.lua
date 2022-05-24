@@ -1,11 +1,10 @@
 --[[
 lvim is the global options object
 
-Linters should be filled in as strings with either
-a global executable or a path to an executable
+Linters should be filled in as strings with either a global executable or a path to an executable
 ]]
 
--- general
+-- General
 lvim.log.level = "warn"
 lvim.format_on_save = true
 -- let vim.g.sonokai_style = 'maia'
@@ -25,7 +24,6 @@ vim.opt.colorcolumn="120"
 -- TODO:
 -- :iab note # NOTE: (YYYY-mm-dd) Noah Settersten =>
 
-
 -- vim.cmd("set virtualedit=all")
 -- vim.o.indexed_search_dont_move=1
 vim.cmd("let g:indexed_search_dont_move=1")
@@ -34,28 +32,6 @@ vim.cmd("let g:indexed_search_dont_move=1")
 
 vim.cmd("let g:do_filetype_lua = 1")
 vim.cmd("let g:did_load_filetypes = 0")
-
--- let g:tmuxline_preset = {
--- vim.o.tmuxline_preset = {
---       \'a'    : '#S',
---       \'b'    : '#(~/.dotfiles/scripts/unread_gmail.sh) Unread',
---       \'c'    : '#W',
---       \'win'  : ['#I', '#W'],
---       \'cwin' : ['#I', '#W'],
---       \'x'    : ['#(~/.dotfiles/scripts/spotify_current_track.sh)', '%a'],
---       \'y'    : ['%b %d', '%R'],
---       \'z'    : '#h'}
-
--- vim.api.nvim_exec("let g:tmuxline_preset = { \
---       'a'    : '#S', \
---       'b'    : '#(~/.dotfiles/scripts/unread_gmail.sh) Unread', \
---       'c'    : '#W', \
---       'win'  : ['#I', '#W'], \
---       'cwin' : ['#I', '#W'], \
---       'x'    : ['#(~/.dotfiles/scripts/spotify_current_track.sh)', '%a'], \
---       'y'    : ['%b %d', '%R'], \
---       'z'    : '#h'} \
---       ")
 
 vim.g.tmuxline_preset = {
       a    = '#S',
@@ -82,11 +58,6 @@ lvim.builtin.nvimtree.setup.update_focused_file = {
 -- Helpful Telescope commands
 -- :Telescope commands, vim_options, autocommands, keymaps, highlights
 
--- let g:NERDCustomDelimiters={
--- 	\ 'javascript': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
--- 	\ 'typescript': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' },
--- \}
-
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- lvim.leader = ","
@@ -96,6 +67,7 @@ lvim.keys.normal_mode[";"] = ":"
 lvim.keys.normal_mode["SS"] = ":w<cr>"
 lvim.keys.normal_mode["<C-f>"] = "<cmd>Telescope find_files<cr>"
 lvim.keys.normal_mode[",<C-f>"] = "<cmd>Telescope live_grep<cr>"
+lvim.keys.normal_mode[",<C-g>"] = "<cmd>Telescope git_status<cr>"
 lvim.keys.normal_mode[",d"] = "<cmd>NvimTreeToggle<cr>"
 lvim.keys.normal_mode[",D"] = "<cmd>NvimTreeFindFile<cr>"
 
@@ -123,7 +95,7 @@ lvim.keys.visual_block_mode["<A-k>"] = false
 
 -- set diffopt+=vertical
 
--- # Ledger setup
+-- TODO: Ledger setup
 -- au BufNewFile,BufRead *.ldg,*.ledger,*.journal setf ledger | comp ledger
 
 -- function! LedgerHistory()
@@ -166,6 +138,8 @@ lvim.keys.visual_block_mode["<A-k>"] = false
 
 -- nmap <leader>hm :call LedgerMonthlyReview()<CR>
 -- nmap <leader>le :call ledger#entry()<CR>
+
+
 
 
 -- unmap a default keymapping
@@ -227,7 +201,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "ruby",
   "elixir",
   "css",
-  "yaml",
+  "yaml"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -279,18 +253,22 @@ nvim_lsp.solargraph.setup {
 
 vim.list_extend(lvim.lsp.override, { "efm" })
 require("lvim.lsp.manager").setup("efm", {
-  filetypes = {"elixir", "ruby"}
+  filetypes = {"elixir", "ruby", "eruby", "html", "css"}
 })
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    exe = "prettier",
+    filetype = { "typescript", "typescriptreact", "javascript", "javascriptreact", "eruby", "html", "css", "scss" },
+  },
+}
 
 -- Additional Plugins
 lvim.plugins = {
-  -- {"folke/tokyonight.nvim"},
   {"nvim-treesitter/playground"},
   {"sainnhe/sonokai"},
-  -- {"sainnhe/edge"},
-  -- {"sainnhe/everforest"},
   -- {'chriskempson/tomorrow-theme', rtp = 'vim'},
-  -- {'arcticicestudio/nord-vim'},
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -322,7 +300,6 @@ lvim.plugins = {
       }
     end
   },
-  -- { 'preservim/nerdcommenter' },
   { 'nathanaelkane/vim-indent-guides' },
   { 'godlygeek/tabular' },
   { 'plasticboy/vim-markdown' },
@@ -335,7 +312,6 @@ lvim.plugins = {
   { 'benmills/vimux' }
   -- { 'jgdavey/vim-turbux' }, --, { 'branch': 'main' }
   -- { 'spiegela/vimix' }
-
 
   -- {
   --   "folke/todo-comments.nvim",
