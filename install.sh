@@ -37,7 +37,10 @@ ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
+mkdir $HOME/.config/lvim
 ln -vnsf $HOME/.dotfiles/config/config.lua $HOME/.config/lvim/config.lua
+mkdir $HOME/.config/alacritty
+ln -vnsf $HOME/.dotfiles/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 mkdir $HOME/.mutt
 curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc
