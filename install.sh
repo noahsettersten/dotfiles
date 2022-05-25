@@ -27,7 +27,7 @@ symlink_files "$(pwd)/.dotfiles/files" $HOME
 # ln -vnsf $HOME/.dotfiles/config/plugins.vim $HOME/.vim
 
 # Neovim configuration folder
-ln -vnsf $HOME/.dotfiles/nvim $HOME/.config/nvim
+# ln -vnsf $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 mkdir $HOME/.newsboat
 ln -vnsf $HOME/.dotfiles/config/newsboat_config $HOME/.newsboat/config
