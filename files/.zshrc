@@ -34,10 +34,10 @@ source ~/.dotfiles/zsh/shortcuts.zsh
 source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Additional tools
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Install from homebrew
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Install from homebrew
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh         # Install from homebrew: https://github.com/zsh-users/zsh-autosuggestions
-source /usr/local/opt/asdf/libexec/asdf.sh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh         # Install from homebrew: https://github.com/zsh-users/zsh-autosuggestions
+source /opt/homebrew//opt/asdf/libexec/asdf.sh
 
 export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
