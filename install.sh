@@ -20,7 +20,7 @@ function symlink_files(){
 # get them home first
 cd $HOME
 
-[ -d '.dotfiles' ] || git clone git://github.com/noahsettersten/dotfiles.git .dotfiles
+[ -d '.dotfiles' ] || git clone https://github.com/noahsettersten/dotfiles.git .dotfiles
 symlink_files "$(pwd)/.dotfiles/files" $HOME
 
 # mkdir $HOME/.vim
