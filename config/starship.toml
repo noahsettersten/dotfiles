@@ -2,10 +2,10 @@
 stashed = '[$count\$](orange)'
 
 [time]
-disabled=false
+disabled = false
 
 [aws]
-disabled=true
+disabled = true
 
 [directory]
 fish_style_pwd_dir_length = 1
@@ -27,3 +27,33 @@ zsh_indicator = ""
 
 [git_metrics]
 disabled = false
+
+[custom.timewarrior_active]
+command = "echo '⏰'"
+when = "timew | grep -q 'Tracking'"
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.timewarrior_tag]
+command = "timew | head -n 1 | awk '{ print $2 }'"
+when = "timew | grep -q 'Tracking'"
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.timewarrior_time]
+command = "timew | tail -n 1 | awk '{ print \"(\"$2 }'"
+when = "timew | grep -q 'Tracking'"
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.timewarrior_totaltime]
+command = "timew summary | sed '/^$/d' | tail -n 1 | awk '{ print \" / \"$1\")\" }'"
+when = "timew | grep -q 'Tracking'"
+shell = ["bash", "--noprofile", "--norc"]
+
+[custom.last_git_commit_message]
+# disabled = true
+command = "git log -1 --pretty=%s | head -c50"
+when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
+format = '''
+
+<[$symbol($output)]($style)> '''
+style = "fg:136"
+shell = ["bash", "--noprofile", "--norc"]
