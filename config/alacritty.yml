@@ -8,7 +8,10 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
+import:
+  - ~/.config/alacritty/alacritty_sonokai.yml
+ # - ~/.config/alacritty/alacritty_kanagawa.yml
+ # - ~/.config/alacritty/melange_dark.yml
 #  - /path/to/alacritty.yml
 
 # Any items in the `env` entry below will be added as
@@ -182,32 +185,6 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
-
-# Colors for Sonokai: https://github.com/sainnhe/sonokai/tree/master/alacritty
-colors:
-  primary:
-    background: "0x2c2e34"
-    foreground: "0xe2e2e3"
-
-  normal:
-    black: "0x181819"
-    red: "0xfc5d7c"
-    green: "0x9ed072"
-    yellow: "0xe7c664"
-    blue: "0x76cce0"
-    magenta: "0xb39df3"
-    cyan: "0xf39660"
-    white: "0xe2e2e3"
-
-  bright:
-    black: "0x7f8490"
-    red: "0xfc5d7c"
-    green: "0x9ed072"
-    yellow: "0xe7c664"
-    blue: "0x76cce0"
-    magenta: "0xb39df3"
-    cyan: "0xf39660"
-    white: "0xe2e2e3"
 
 # Colors (Tomorrow Night)
 #colors:

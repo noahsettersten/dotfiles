@@ -12,7 +12,9 @@ export GIT_MERGE_AUTOEDIT=no
 export VIMRC=$HOME/.vimrc
 
 # Setup PATH (as needed)
-export PATH=$PATH:$HOME/.local/bin
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$HOME/.local/bin:$(python3 -m site --user-base)/bin:$HOME/.rd/bin:$ANDROID_HOME/platform-tools
+export SDKROOT=$(xcrun -sdk macosx --show-sdk-path)
 source $HOME/.cargo/env
 
 # History search
@@ -38,6 +40,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh #
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh         # Install from homebrew: https://github.com/zsh-users/zsh-autosuggestions
 source /opt/homebrew//opt/asdf/libexec/asdf.sh
+eval "$(direnv hook zsh)"
 
 export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

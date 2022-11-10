@@ -3,6 +3,8 @@ Pry::Commands.command(/^$/, 'repeat last command') do
   pry_instance.run_command Pry.history.to_a.last
 end
 
+#  ActsAsTenant.current_tenant = Account.first
+
 if defined?(Sidekiq)
   require 'sidekiq/api'
 

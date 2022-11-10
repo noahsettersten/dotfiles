@@ -102,6 +102,9 @@ alias tpd='tail ~/Library/Logs/puma-dev.log'
 # OTHER (ELIXIR / PHOENIX, NODE, ...)
 # ----------------
 alias phx='iex -S mix phx.server'
+alias fly_ip='fly dig -s aaaa $*'
+alias fly_livebook='ERL_AFLAGS="-proto_dist inet6_tcp" livebook server --name livebook@127.0.0.1'
+
 alias herokuiex='heroku run iex -S mix'
 alias nombomb='trash node_modules; bower cache clean && trash bower_components'
 alias storybook='BROWSER=none DISABLE_ESLINT_PLUGIN=true yarn storybook'
@@ -132,6 +135,7 @@ alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO'
 alias spotify_status='spotify status | grep -E "(Artist.*$|Track.*$)"'
 alias spotify_track='spotify status | sed -n "s/Track: //p"'
 alias spotify_current_track='~/.dotfiles/scripts/spotify_current_track.sh'
+alias spt_track='spt pb -f "%s %a - %t"'
 alias slinvoke='serverless invoke local -f $*'
 alias todos='ack --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+):.*((TODO|FIXME):.*)/\2 :>> \1/"|grep -E --color=always ":>>.*:\d+"'
 alias ql='qlmanage -px &>/dev/null'
