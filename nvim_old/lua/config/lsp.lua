@@ -1,0 +1,14 @@
+-- nmap <F8> :Vista!!<CR>
+-- let g:vista_default_executive = 'coc'
+-- let g:vista_icon_indent = [">>", "-"]
+-- let g:vista#renderer#enable_icon = 1
+-- let g:vista#renderer#icons = {
+      -- \ "function": "\u2A0D",
+      -- \ "variable": "\u00D7",
+      -- \ "class": "\u039A",
+      -- \ "property": "\u3A0",
+      -- \ "interface": "\u0399",
+-- \ }
+-- let g:vista_sidebar_width = 45
+
+-- nnoremap <leader><F> :Vista finder<CR>
