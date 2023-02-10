@@ -1,10 +1,13 @@
 -- Additional Plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.plugins = {
+  { "nvim-lua/plenary.nvim" },
+
   -- Colorschemes
   { "sainnhe/sonokai" },
   { "rebelot/kanagawa.nvim" },
   { "savq/melange" },
+  { "catppuccin/nvim" },
   -- { "kyazdani42/blue-moon" },
   -- { "frenzyexists/aquarium-vim" },
   -- { "EdenEast/nightfox.nvim" },
@@ -58,6 +61,23 @@ lvim.plugins = {
     end
   },
   { 'benmills/vimux' },
+  { 'danielvolchek/tailiscope.nvim' },
+  { 'ledger/vim-ledger' },
+  { 'cbochs/grapple.nvim' },
+  { 'phaazon/hop.nvim',
+    branch = 'v2',
+    as = "hop",
+    -- keys = { "s", "S" },
+    keys = { "s" },
+    config = function()
+      -- see :h hop-config
+      require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+      vim.api.nvim_set_keymap("n", "s", ":HopWord<cr>", {})
+      -- vim.api.nvim_set_keymap("n", "S", ":HopPattern<cr>", {})
+    end,
+  },
+  -- { "folke/neodev.nvim" },
+  { 'nvim-zh/colorful-winsep.nvim' },
 
   -- { "nvim-treesitter/playground" },
   -- { 'almo7aya/openingh.nvim' },

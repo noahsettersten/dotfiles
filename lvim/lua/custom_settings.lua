@@ -1,7 +1,8 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "sonokai"
+-- lvim.colorscheme = "sonokai"
+lvim.colorscheme = "catppuccin-macchiato"
 -- lvim.colorscheme = "melange"
 -- lvim.colorscheme = "kanagawa"
 
@@ -28,7 +29,7 @@ vim.g.tmuxline_preset = {
 }
 
 -- Register Crystal filetype
-vim.cmd("au BufRead,BufNewFile *.cr set filetype=crystal")
+-- vim.cmd("au BufRead,BufNewFile *.cr set filetype=crystal")
 
 vim.g.VimuxOrientation = "h"
 vim.g.VimuxHeight = "40"
@@ -85,3 +86,10 @@ lvim.builtin.telescope.defaults.preview = {
 }
 lvim.builtin.telescope.pickers = {}
 -- lvim.builtin.telescope.pickers.find_files.previewer = nil
+--
+
+-- lvim.builtin.telescope.register_extension { exports = { tailiscope = require('tailiscope') } }
+-- require("telescope").register_extension { exports = { tailiscope = require('tailiscope') } }
+require("telescope").load_extension("tailiscope")
+
+require("functions.go_to_package")

@@ -74,7 +74,7 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "mix", filetypes = { "elixir" } },
-  { command = "standardrb", filetypes = { "ruby" } },
+  -- { command = "standardrb", filetypes = { "ruby" } },
   { command = "rustfmt", filetypes = { "rust" } },
 }
 --   { command = "black", filetypes = { "python" } },
@@ -94,7 +94,8 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { command = "credo", filetypes = { "elixir" } },
-  { command = "standardrb", filetypes = { "ruby" } },
+  -- { command = "rubocop", filetypes = { "ruby" } },
+  -- { command = "standardrb", filetypes = { "ruby" } },
 }
 --   { command = "flake8", filetypes = { "python" } },
 --   {
