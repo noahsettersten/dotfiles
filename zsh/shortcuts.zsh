@@ -67,8 +67,8 @@ alias pgtail='tail -f /usr/local/var/log/postgres.log'
 # ----
 alias tl='tmux ls'
 alias ta='tmux attach -t $*'
-alias tk='tmux kill-session -t $*'
-alias tks='tmux kill-server'
+# alias tk='tmux kill-session -t $*'
+# alias tks='tmux kill-server'
 
 # Wemux
 # -----
@@ -83,7 +83,8 @@ alias wks='wemux stop'
 # Editors
 # ---
 alias nv='nvim'
-alias v='lvim'
+alias v='nvim'
+alias lv='lvim'
 alias slimvim='nvim -u NONE -U NONE -N $*'
 alias vim_solarized='nvim -c "set background=dark" -c "colorscheme solarized" $*'
 alias em='emacs -nw'
@@ -109,6 +110,9 @@ alias herokuiex='heroku run iex -S mix'
 alias nombomb='trash node_modules; bower cache clean && trash bower_components'
 alias storybook='BROWSER=none DISABLE_ESLINT_PLUGIN=true yarn storybook'
 alias webserver='python -m SimpleHTTPServer'
+
+alias pyactivate='source ./.env/bin/activate'
+alias pydeactivate='source ./.env/bin/deactivate'
 
 # PAIR
 #-----
@@ -143,6 +147,9 @@ alias brewup='brew upgrade'
 alias ccanalyze='~/.dotfiles/scripts/codeclimate.sh'
 alias lsrubyversions='find . -name .ruby-version -exec bat {} \;'
 alias loc='cloc . --exclude-dir=node_modules'
+
+# See https://twitter.com/nicoespeon/status/1605586911900438528?s=12&t=lSpZkllOA8eK-0ZIzf5doA
+alias git_most_modified='git log --format=format: --name-only --since=12.month| egrep -v '^$' | sort | uniq -c | sort -nr | head -50'
 
 mansearch () {
   man -k . | fzf --preview "echo {} | awk '{print $1}' | xargs -r man" | awk '{print $1}' | xargs -r man
