@@ -1,7 +1,0 @@
--- tnoremap <C-q> <C-w>N
--- tnoremap <leader><C-\> <C-\><C-n>:Nuake<CR>
--- nnoremap <leader><C-\> :Nuake<CR>
--- inoremap <leader><C-\> <C-\><C-n>:Nuake<CR>
--- let g:nuake_position = 'bottom'
--- let g:nuake_size = 0.2
--- let g:nuake_per_tab = 0
