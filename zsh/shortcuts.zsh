@@ -147,6 +147,8 @@ alias brewup='brew upgrade'
 alias ccanalyze='~/.dotfiles/scripts/codeclimate.sh'
 alias lsrubyversions='find . -name .ruby-version -exec bat {} \;'
 alias loc='cloc . --exclude-dir=node_modules'
+alias floc='cloc --by-file --exclude-dir=test,tmp --include_ext=rb,c,java .'
+
 
 # See https://twitter.com/nicoespeon/status/1605586911900438528?s=12&t=lSpZkllOA8eK-0ZIzf5doA
 alias git_most_modified='git log --format=format: --name-only --since=12.month| egrep -v '^$' | sort | uniq -c | sort -nr | head -50'
