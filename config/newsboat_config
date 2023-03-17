@@ -1,9 +1,11 @@
 browser "w3m %u"
 
 # Customize colors
-color listfocus black yellow
+include ~/.newsboat/dark
 
-color listnormal_unread default default bold
-color listfocus_unread black yellow bold
+# color listfocus black yellow
 
-color info yellow default
+# color listnormal_unread default default bold
+# color listfocus_unread black yellow bold
+
+# color info yellow default

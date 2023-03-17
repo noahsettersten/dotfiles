@@ -9,7 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/alacritty_sonokai.yml
+  - ~/.config/alacritty/catppuccin-macchiato.yml
+ # - ~/.config/alacritty/alacritty_sonokai.yml
  # - ~/.config/alacritty/alacritty_kanagawa.yml
  # - ~/.config/alacritty/melange_dark.yml
 #  - /path/to/alacritty.yml
