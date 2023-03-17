@@ -18,6 +18,8 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
 
+vim.opt.undofile = true
+
 -- Requires Neovim v0.9+
 -- Both relative and absolute line numbers with different
 -- highlighting for odd and even relative numbers:

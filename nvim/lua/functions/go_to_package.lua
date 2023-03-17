@@ -1,3 +1,7 @@
+-- Create a GitHub repo and a plugin:
+-- https://www.linode.com/docs/guides/write-a-neovim-plugin-with-lua/
+-- https://dev.to/evilcel3ri/how-i-wrote-my-first-neovim-plugin-357h
+
 -- Inspired by https://github.com/dkarter/dotfiles/commit/4db8ce69379be13bf94717804963e516dca51198
 local M = {}
 

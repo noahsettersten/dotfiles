@@ -4,7 +4,6 @@ require('config.bootstrap_lazy')
 
 require('config.options')
 
--- require('config.plugins')
 require('lazy').setup('plugins', {
   performance = {
     reset_packpath = true,
