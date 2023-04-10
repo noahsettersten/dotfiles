@@ -15,7 +15,7 @@ else
   SPOTIFY_STATUS=$(spt pb --format '%s' 2>/dev/null)
 
   if [[ $SPOTIFY_STATUS = '▶' ]]; then
-    spt pb --format '%a - %t' | head -c 85
+    spt pb --format '%a - %t' | head -c 120
   else
     echo 'No playback'
   fi
