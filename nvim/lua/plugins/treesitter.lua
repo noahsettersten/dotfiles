@@ -1,5 +1,6 @@
 return {
-  { 'nvim-treesitter/nvim-treesitter',
+  {
+    'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
@@ -8,7 +9,12 @@ return {
       }
     end
   },
-  { 'HiPhish/nvim-ts-rainbow2',
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    config = true
+  },
+  {
+    'HiPhish/nvim-ts-rainbow2',
     config = function()
       require("nvim-treesitter.configs").setup {
         rainbow = {

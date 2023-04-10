@@ -39,6 +39,11 @@ return {
 
   -- { 'weizheheng/ror.nvim' },
 
+  {
+    'mrjones2014/op.nvim',
+    run = 'make install'
+  },
+
   -- Language specific
   {
     'barrett-ruth/import-cost.nvim',

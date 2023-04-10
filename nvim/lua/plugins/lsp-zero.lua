@@ -1,5 +1,6 @@
 return {
-  { 'VonHeikemen/lsp-zero.nvim',
+  {
+    'VonHeikemen/lsp-zero.nvim',
     dependencies = {
       'neovim/nvim-lspconfig',
       'williamboman/mason.nvim',
@@ -33,6 +34,14 @@ return {
           -- ['<CR>'] = vim.NIL,
           ['<CR>'] = cmp.mapping.confirm({ select = false })
         })
+      })
+
+      require('lspconfig').yamlls.setup({
+        settings = {
+          yaml = {
+            keyOrdering = false
+          }
+        }
       })
 
       lsp.setup()
