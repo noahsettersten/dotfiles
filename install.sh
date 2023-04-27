@@ -34,6 +34,17 @@ ln -vnsf $HOME/.dotfiles/lvim/lua $HOME/.config/lvim/lua
 mkdir $HOME/.config/alacritty
 ln -vnsf $HOME/.dotfiles/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
+# Link window management configurations
+mkdir $HOME/.config/yabai
+ln -vnsf $HOME/.dotfiles/wm/yabairc $HOME/.config/yabai/yabairc
+
+mkdir $HOME/.config/sketchybar
+ln -vnsf $HOME/.dotfiles/wm/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+ln -vnsf $HOME/.dotfiles/wm/sketchybar_plugins $HOME/.config/sketchybar/plugins
+
+mkdir $HOME/.config/skhd
+ln -vnsf $HOME/.dotfiles/wm/skhdrc $HOME/.config/skhd/skhdrc
+
 mkdir $HOME/.mutt
 curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc
 

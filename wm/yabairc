@@ -1,0 +1,37 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+                # top_padding         17 \
+yabai -m config layout              bsp \
+                top_padding         42 \
+                bottom_padding      7 \
+                left_padding        7 \
+                right_padding       7 \
+                window_gap          7 \
+                focus_follows_mouse autoraise
+
+yabai -m config window_opacity on \
+                active_window_opacity 1.0 \
+                normal_window_opacity 0.90 \
+                active_window_border_color 0xffFFB032 \
+                normal_window_border_color 0xff555555 \
+                window_border_width 4 \
+                window_border_radius 12 \
+                window_border_hidpi on \
+                window_border off
+
+SPACEBAR_HEIGHT=$(spacebar -m config height)
+yabai -m config external_bar all:$SPACEBAR_HEIGHT:0
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^zoom.us$" manage=off
+
+# Key shortcuts:
+# Switch between active and inactive:
+  yabai -m config layout float
+  yabai -m config focus_follows_mouse off
+
+  yabai -m config layout bsp
+  yabai -m config focus_follows_mouse autoraise
+
+# Cycle active window position: ...
