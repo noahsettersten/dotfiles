@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Check for Apple Music playback
+APPLE_MUSIC=$(./am_status.sh)
+
+if [[ $? = 0 ]]; then
+  echo $APPLE_MUSIC
+  exit 0
+fi
+
 # Check for an mplayer process. Returns: 46120 mplayer los_samsonite_2023-03-23.mp3
 MPLAYER_PROCESS=$(pgrep -fl mplayer)
 
