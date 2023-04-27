@@ -2,7 +2,7 @@ return {
   {
     'vim-test/vim-test',
     keys = {
-      { ',t', "<cmd>TestFile<cr>", mode = { "n" }, desc = "Run tests for current file" },
+      { ',t', "<cmd>TestFile<cr>",    mode = { "n" }, desc = "Run tests for current file" },
       { ',T', "<cmd>TestNearest<cr>", mode = { "n" }, desc = "Run test under cursor" }
     },
     config = function()
@@ -14,4 +14,11 @@ return {
       -- vim.g["test#strategy"] = "neovim"
     end
   },
+  {
+    'andythigpen/nvim-coverage',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = true
+  }
 }
