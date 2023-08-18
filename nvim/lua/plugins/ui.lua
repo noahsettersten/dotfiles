@@ -1,14 +1,14 @@
 return {
   -- Show path to current file and LSP document symbols in winbar
-  -- {
-  -- 'utilyre/barbecue.nvim',
-  -- dependencies = {
-  -- 'neovim/nvim-lspconfig',
-  -- 'SmiteshP/nvim-navic',
-  -- 'nvim-tree/nvim-web-devicons'
-  -- },
-  -- config = true
-  -- },
+  {
+    'utilyre/barbecue.nvim',
+    dependencies = {
+      'neovim/nvim-lspconfig',
+      'SmiteshP/nvim-navic',
+      'nvim-tree/nvim-web-devicons'
+    },
+    config = true
+  },
 
 
   {

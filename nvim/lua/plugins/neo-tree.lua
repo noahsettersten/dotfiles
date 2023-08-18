@@ -1,6 +1,7 @@
 -- File browser
 return {
-  { 'nvim-neo-tree/neo-tree.nvim',
+  {
+    'nvim-neo-tree/neo-tree.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-tree/nvim-web-devicons',
@@ -24,7 +25,7 @@ return {
       }
     },
     keys = {
-      { ",d", "<CMD>Neotree toggle<CR>", mode = { "n" }, desc = "Toggle file explorer" },
+      { ",d", "<CMD>Neotree toggle<CR>",            mode = { "n" }, desc = "Toggle file explorer" },
       { ",D", "<CMD>Neotree filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
     },
     config = function()
@@ -40,7 +41,9 @@ return {
             hide_dotfiles = false,
             hide_gitignored = false
           },
-          follow_current_file = false
+          follow_current_file = {
+            enabled = false,
+          },
         }
       })
     end

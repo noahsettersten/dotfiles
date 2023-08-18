@@ -5,7 +5,6 @@ return {
   -- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
   --   end of the line without filling in a suggestion.
 
-
   -- Colorschemes
   'catppuccin/nvim',
   -- 'sainnhe/sonokai',
@@ -13,10 +12,19 @@ return {
   -- 'whatyouhide/vim-gotham',
   -- 'savg/melange-nvim',
   -- 'AlexvZyl/nordic.nvim',
+  -- { 'nyngwang/nvimgelion' },
+  -- {
+  --   "rose-pine/nvim",
+  --   name = "rose-pine",
+  --   config = function()
+  --     require("rose-pine").setup {
+  --       dark_variant = "moon",
+  --     }
+  --   end,
+  -- },
 
   { 'folke/which-key.nvim', config = true },
 
-  -- https://github.com/olexsmir/gopher.nvim
 
   -- { 'AndrewRadev/splitjoin.vim' },
   -- { 'roobert/tailwindcss-colorizer-cmp.nvim' },
@@ -24,30 +32,50 @@ return {
   {
     'akinsho/toggleterm.nvim',
     keys = {
-      { "<C-t>", "<CMD>ToggleTerm direction=float<CR>", mode = { "n", "t" }, desc = "Toggle terminal" }
+      { '<C-t>', '<CMD>ToggleTerm direction=float<CR>', mode = { 'n', 't' }, desc = 'Toggle terminal' },
     },
-    config = true
+    config = true,
   },
 
   {
-    'numToStr/Comment.nvim',
+    'andymass/vim-matchup',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        matchup = {
+          enable = true,
+          include_match_words = true,
+        },
+      }
+    end,
+  },
+
+  {
+    'terrortylor/nvim-comment',
     keys = {
-      { " /", "<Plug>(comment_toggle_linewise_current)", mode = { "n", "v" }, desc = "Comment (linewise)" }
+      { ' /', '<CMD>CommentToggle<CR>', mode = { 'n', 'v' }, desc = 'Toggle comment' },
     },
-    config = true
+    config = function()
+      require('nvim_comment').setup()
+    end,
   },
-
-  -- { 'weizheheng/ror.nvim' },
-
-  {
-    'mrjones2014/op.nvim',
-    run = 'make install'
-  },
+  -- {
+  --   'numToStr/Comment.nvim',
+  --   keys = {
+  --     { " /", "<Plug>(comment_toggle_linewise_current)", mode = { "n", "v" }, desc = "Comment (linewise)" }
+  --   },
+  --   config = true
+  -- },
 
   -- Language specific
   {
     'barrett-ruth/import-cost.nvim',
     build = 'sh install.sh yarn',
-    config = true
-  }
+    config = true,
+  },
+  { "prisma/vim-prisma",    event = "BufRead" },
+  -- https://github.com/olexsmir/gopher.nvim
+  -- { 'weizheheng/ror.nvim' },
 }
