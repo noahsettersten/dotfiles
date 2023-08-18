@@ -11,14 +11,16 @@ export BROWSER=w3m
 export EDITOR=nvim
 export GIT_MERGE_AUTOEDIT=no
 export VIMRC=$HOME/.vimrc
+export NX_NO_CLOUD=true
 
 # Setup PATH (as needed)
 export GOPATH="$HOME/go"
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$HOME/.local/bin:$(python3 -m site --user-base)/bin:$HOME/.rd/bin:$ANDROID_HOME/platform-tools
-# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="$HOME/.luarocks/bin:$PATH"
-export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.2.0/gems/foreman-0.87.2/bin"
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$HOME/.rd/bin:$ANDROID_HOME/platform-tools
+# export PATH=$PATH:$HOME/.local/bin:$(python3 -m site --user-base)/bin
+# export PATH="/opt/homebrew/opt/ruby@2.6/bin:$PATH"
+# export PATH="$HOME/.luarocks/bin:$PATH"
+# export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.2.0/gems/foreman-0.87.2/bin"
 export PATH="$PATH:$GOPATH/bin"
 
 # History search
@@ -55,3 +57,12 @@ export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prun
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 command printf "Shell Startup Time: %.1fms\n" $(($SECONDS*1000))
+# export PATH=$PATH:$HOME/.maestro/bin
+
+# pnpm
+export PNPM_HOME="/Users/noah/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
