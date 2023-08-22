@@ -1,0 +1,31 @@
+# If comments look odd in Alacritty + Tmux, see https://github.com/helix-editor/helix/issues/3801
+theme = "catppuccin_macchiato"
+# theme = "kanagawa"
+# theme = "rose-pine"
+# theme = "rose-pine-moon"
+
+[editor]
+color-modes = true
+# auto-pairs = false
+auto-format = true
+cursorline = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+# Ctrl-s: Horizontal split
+# Ctrl-v: Vertical split
+
+[editor.indent-guides]
+render = true
+
+[editor.lsp]
+display-messages = true
+
+[keys.normal]
+S = { S = ":w" }
+Z = { Z = ":q" }

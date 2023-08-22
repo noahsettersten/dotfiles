@@ -27,9 +27,12 @@ mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
 
-mkdir $HOME/.config/lvim
+# mkdir $HOME/.config/lvim
 # ln -vnsf $HOME/.dotfiles/config/config.lua $HOME/.config/lvim/config.lua
-ln -vnsf $HOME/.dotfiles/lvim/lua $HOME/.config/lvim/lua
+# ln -vnsf $HOME/.dotfiles/lvim/lua $HOME/.config/lvim/lua
+
+mkdir $HOME/.config/helix
+ln -vnsf $HOME/.dotfiles/config/helix.toml $HOME/.config/helix/config.toml
 
 mkdir $HOME/.config/alacritty
 ln -vnsf $HOME/.dotfiles/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
