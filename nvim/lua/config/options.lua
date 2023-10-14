@@ -20,6 +20,9 @@ vim.opt.expandtab = true
 
 vim.opt.undofile = true
 
+-- This allows replacements to preview live as you type (e.g. %s/pattern/replace/g)
+vim.opt.inccommand = "nosplit"
+
 -- Requires Neovim v0.9+
 -- Both relative and absolute line numbers with different
 -- highlighting for odd and even relative numbers:

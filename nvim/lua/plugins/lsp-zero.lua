@@ -2,25 +2,74 @@ return {
   {
     -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/lsp.md#you-might-not-need-lsp-zero
     'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
     dependencies = {
+      -- LSP support
       'neovim/nvim-lspconfig',
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
+
+      -- Autocompletion
       'hrsh7th/nvim-cmp',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lua',
       'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
+
+      -- 'hrsh7th/cmp-buffer',
+      -- 'hrsh7th/cmp-path',
+      -- 'saadparwaiz1/cmp_luasnip',
+      -- 'hrsh7th/cmp-nvim-lua',
+      -- 'rafamadriz/friendly-snippets',
       { 'lukas-reineke/lsp-format.nvim', config = true }
     },
     config = function()
-      local lsp = require('lsp-zero').preset('recommended')
+      -- local lsp_zero = require('lsp-zero').preset('recommended')
+      local lsp_zero = require('lsp-zero')
 
-      lsp.on_attach(function(client, bufnr)
-        lsp.default_keymaps({ buffer = bufnr, preserve_mappings = false })
+      -- Configure LSP servers
+      -- Automatically install language servers
+      require('mason').setup({})
+      require('mason-lspconfig').setup({
+        -- ensure_installed = { 'elixir', 'lua', 'ruby', 'rust', 'go' },
+        handlers = {
+          lsp_zero.default_setup,
+          lua_ls = function()
+            local lua_opts = lsp_zero.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+          end,
+          yamlls = function()
+            require('lspconfig').yamlls.setup({
+              settings = {
+                yaml = {
+                  keyOrdering = false
+                }
+              }
+            })
+          end,
+          ruby_ls = function()
+            require('lspconfig').ruby_ls.setup({
+              on_init = function(client)
+                client.server_capabilities.documentFormattingProvider = false
+                client.server_capabilities.documentFormattingRangeProvider = false
+              end
+            })
+          end,
+          solargraph = function()
+            -- require('lspconfig').solargraph.setup({
+            --   on_init = function(client)
+            --     client.server_capabilities.documentFormattingProvider = false
+            --     client.server_capabilities.documentFormattingRangeProvider = false
+            --   end
+            -- })
+          end,
+          standardrb = function()
+            require('lspconfig').standardrb.setup {}
+          end
+        }
+      })
+
+      -- Configure keymaps
+      lsp_zero.on_attach(function(client, bufnr)
+        lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 
         require('lsp-format').on_attach(client, bufnr)
 
@@ -45,29 +94,29 @@ return {
         vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', { buffer = bufnr, desc = "Go to previous" })
         vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', { buffer = bufnr, desc = "Go to next" })
       end)
-      lsp.nvim_workspace()
 
+      -- Configure completion
       local cmp = require('cmp')
-      lsp.setup_nvim_cmp({
-        mapping = lsp.defaults.cmp_mappings({
-          -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v1.x/doc/md/autocomplete.md#change-default-mapping
-          -- https://duckduckgo.com/?t=ffab&q=neovim+mapping+control+enter&ia=web
-
-          -- ['<C-CR>'] = cmp.mapping.complete(),
-          -- ['<CR>'] = vim.NIL,
+      local cmp_format = require('lsp-zero').cmp_format()
+      cmp.setup({
+        formatting = cmp_format,
+        mapping = cmp.mapping.preset.insert({
           ['<CR>'] = cmp.mapping.confirm({ select = false })
-        })
+        }),
       })
 
-      require('lspconfig').yamlls.setup({
-        settings = {
-          yaml = {
-            keyOrdering = false
-          }
-        }
-      })
+      -- lsp_zero.setup_nvim_cmp({
+      --   mapping = lsp_zero.defaults.cmp_mappings({
+      --     -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v1.x/doc/md/autocomplete.md#change-default-mapping
+      --     -- https://duckduckgo.com/?t=ffab&q=neovim+mapping+control+enter&ia=web
+      --
+      --     -- ['<C-CR>'] = cmp.mapping.complete(),
+      --     -- ['<CR>'] = vim.NIL,
+      --     ['<CR>'] = cmp.mapping.confirm({ select = false })
+      --   })
+      -- })
 
-      lsp.setup()
+      lsp_zero.setup()
       vim.diagnostic.config { virtual_text = true }
     end
   }

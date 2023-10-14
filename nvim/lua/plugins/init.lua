@@ -1,5 +1,15 @@
 return {
   -- https://github.com/rockerBOO/awesome-neovim
+  {
+    'roobert/activate.nvim',
+    keys = {
+      {
+        "<leader>P",
+        '<CMD>lua require("activate").list_plugins()<CR>',
+        desc = "Plugins"
+      },
+    }
+  },
 
   -- TODO:
   -- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
@@ -24,6 +34,7 @@ return {
   -- },
 
   { 'folke/which-key.nvim', config = true },
+  -- TODO: Perhaps replace with mini-clue: https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-clue.md
 
 
   -- { 'AndrewRadev/splitjoin.vim' },
@@ -76,6 +87,10 @@ return {
     config = true,
   },
   { "prisma/vim-prisma",    event = "BufRead" },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
+  },
   -- https://github.com/olexsmir/gopher.nvim
   -- { 'weizheheng/ror.nvim' },
 }

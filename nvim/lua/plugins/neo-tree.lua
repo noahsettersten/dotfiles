@@ -1,4 +1,5 @@
 -- File browser
+-- TODO: Perhaps replace with mini-files: https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md
 return {
   {
     'nvim-neo-tree/neo-tree.nvim',
@@ -44,7 +45,12 @@ return {
           follow_current_file = {
             enabled = false,
           },
-        }
+        },
+        buffers = {
+          follow_current_file = {
+            enabled = false,
+          },
+        },
       })
     end
   }
