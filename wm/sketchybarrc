@@ -23,7 +23,7 @@ sketchybar --default updates=when_shown \
                      background.height=30
 
 sketchybar --add item logo left \
-           --set logo icon= \
+           --set logo icon=☦ \
                  icon.color=0xff010101 \
                  icon.padding_left=16 \
                  icon.padding_right=16 \
@@ -37,7 +37,54 @@ sketchybar --add item space_separator left \
                                  background.padding_left=23 \
                                  background.padding_right=23 \
                                  label.drawing=off \
-                                 icon.color=0xff92B3F5
+                                 icon.color=0xff92B3F5 \
+                                 click_script="sketchybar -m --set \$NAME popup.drawing=toggle" \
+                                 popup.background.border_width=2 \
+                                 popup.background.corner_radius=2 \
+                                 popup.background.border_color=0xff1e1d2e \
+                                 popup.background.color=0xff1e1d2e \
+                                 popup.background.padding_left=5 \
+                                 popup.background.padding_right=5
+
+# Key mapping hints
+sketchybar --default icon.padding_left=5 \
+                     icon.padding_right=5 \
+                     padding_left=5 \
+                     padding_right=5 \
+                     background.color=0xff3C3E4F \
+                     background.padding_left=5
+                    
+sketchybar --add item hints.tmux popup.space_separator \
+           --set hints.tmux label="CAPS + vikeys: Tmux focus" \
+                            icon= 
+
+sketchybar --add item hints.terminal popup.space_separator \
+           --set hints.terminal label="ALT + enter: Open terminal" \
+                                icon= 
+
+sketchybar --add item hints.float popup.space_separator \
+           --set hints.float label="ALT + SHIFT + f/t: Switch between float / BSP layouts" \
+                            icon= 
+
+sketchybar --add item hints.focus popup.space_separator \
+           --set hints.focus label="ALT + vikeys: Focus windows" \
+                            icon= 
+
+sketchybar --add item hints.swap popup.space_separator \
+           --set hints.swap label="HYPER + h/l: Swap windows" \
+                            icon= 
+
+sketchybar --add item hints.zoom popup.space_separator \
+           --set hints.zoom label="HYPER + f: Toggle zoom/fullscreen" \
+                            icon= 
+
+sketchybar --add item hints.size popup.space_separator \
+           --set hints.size label="ALT+ SHIFT + h/l: Increase window size" \
+                            icon= 
+
+sketchybar --default background.color=0x00000000
+
+
 
 sketchybar --add item window_title left \
            --set window_title    script="~/.config/sketchybar/plugins/window_title.sh" \
