@@ -27,6 +27,7 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^zoom.us$" manage=off
 yabai -m rule --add app="^Slack$" manage=off sticky=on
 yabai -m rule --add app="^1Password$" manage=off
+yabai -m rule --add app="^KeePassXC$" manage=off
 
 # Key shortcuts:
 # Switch between active and inactive:
