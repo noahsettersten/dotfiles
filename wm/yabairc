@@ -28,6 +28,7 @@ yabai -m rule --add app="^zoom.us$" manage=off
 yabai -m rule --add app="^Slack$" manage=off sticky=on
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^KeePassXC$" manage=off
+yabai -m rule --add app="^Asana$" manage=off
 
 # Key shortcuts:
 # Switch between active and inactive:
@@ -38,3 +39,6 @@ yabai -m rule --add app="^KeePassXC$" manage=off
 #  yabai -m config focus_follows_mouse autoraise
 
 # Cycle active window position: ...
+
+# Start up FelixKratz's JankyBorders
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
