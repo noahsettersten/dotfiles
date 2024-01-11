@@ -4,11 +4,14 @@ theme = "catppuccin_macchiato"
 # theme = "rose-pine"
 # theme = "rose-pine-moon"
 
+# https://theari.dev/blog/enhanced-helix-config/
+# https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 [editor]
 color-modes = true
 # auto-pairs = false
 auto-format = true
 cursorline = true
+rulers = [120]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -17,6 +20,8 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false
+
 # Ctrl-s: Horizontal split
 # Ctrl-v: Vertical split
 
@@ -26,6 +31,103 @@ render = true
 [editor.lsp]
 display-messages = true
 
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
 [keys.normal]
 S = { S = ":w" }
 Z = { Z = ":q" }
+# Y = ["extend_to_line_end", "yank_selection"]
+# D = ["extend_to_line_end", "delete_selection"]
+
+# From https://github.com/helix-editor/helix/discussions/5764#discussioncomment-4840408
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+# C-h = "jump_view_left"
+# C-j = "jump_view_down"
+# C-k = "jump_view_up"
+# C-l = "jump_view_right"
+
+# -- Inspired by Thomas's config
+# left = "vertical resize +5"
+# right = "vertical resize -5"
+# down = "resize +5"
+# up = "resize -5"
+# 
+
+
+# Neovim options:
+# vim.opt.signcolumn = "auto"
+# vim.opt.wrap = false
+# vim.opt.virtualedit = "all"
+# vim.opt.timeoutlen = 500
+# 
+# vim.opt.ignorecase = true
+# vim.opt.smartcase = true
+# 
+# vim.opt.splitbelow = true
+# vim.opt.splitright = true
+# 
+# vim.opt.shiftwidth = 2
+# vim.opt.tabstop = 2
+# vim.opt.expandtab = true
+# 
+# vim.opt.undofile = true
+# 
+# -- This allows replacements to preview live as you type (e.g. %s/pattern/replace/g)
+# vim.opt.inccommand = "nosplit"
+# 
+# vim.cmd('set clipboard+=unnamedplus')
+
+# Custom mappings
+# 
+# -- vim.keymap.set('n', '<Esc>', require('notify').dismiss, { noremap = true, desc = 'Dismiss notification' })
+# 
+# 
+# -- Open docs for package on given line
+# vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
+# 
+# vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
+
+# Plugins:
+# - Toggle term: Tmux
+# - Tresitter
+# - Multi-line commenting
+# - Git signs, view git blame
+# - Remember last place when re-opening a file
+# - Persistent undo/redo
+# - Telescope: 
+#   - Find files
+#   - Grep through files
+#   - Search through git modified files
+#   - Tailwind class search in telescope
+#   - Send results to Trouble with <c-l>
+# - Run test under cursor / run entire current test file
+# - Seamlessly switch between editor and tmux panes
+
+# LSP mappings:
+# -- https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
+# vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', { buffer = bufnr, desc = "Show details" })
+# vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { buffer = bufnr, desc = "Go to definition" })
+# vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>',
+#   { buffer = bufnr, desc = "Go to declaration" })
+# vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>',
+#   { buffer = bufnr, desc = "Go to implementation" })
+# vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>',
+#   { buffer = bufnr, desc = "Go to type definition" })
+# vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { buffer = bufnr, desc = "Show references" })
+# vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>',
+#   { buffer = bufnr, desc = "Show signature help" })
+# vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr, desc = "Rename symbol" })
+# vim.keymap.set({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>',
+#   { buffer = bufnr, desc = "Format file" })
+# vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr, desc = "Code actions" })
+#
+# vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', { buffer = bufnr, desc = "Open float" })
+# vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', { buffer = bufnr, desc = "Go to previous" })
+# vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', { buffer = bufnr, desc = "Go to next" })
+
+# Go to package
+
+# Toggle HL search
