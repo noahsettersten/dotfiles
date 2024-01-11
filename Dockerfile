@@ -1,6 +1,8 @@
 # Grown from https://www.jamesridgway.co.uk/dotfiles-with-github-travis-ci-and-docker/
 
 # A Docker build to validate and test the dotfiles scripts
+# Build with `docker build -t dotfiles:latest ~/.dotfiles`
+# Run bash in the new image with `docker run -it --entrypoint /bin/zsh dotfiles:latest`
 FROM debian:bullseye
 
 RUN apt-get -qq update
