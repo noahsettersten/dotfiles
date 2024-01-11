@@ -1,15 +1,17 @@
 return {
   -- https://github.com/rockerBOO/awesome-neovim
-  {
-    'roobert/activate.nvim',
-    keys = {
-      {
-        "<leader>P",
-        '<CMD>lua require("activate").list_plugins()<CR>',
-        desc = "Plugins"
-      },
-    }
-  },
+  -- {
+  --   'roobert/activate.nvim',
+  --   keys = {
+  --     {
+  --       "<leader>P",
+  --       '<CMD>lua require("activate").list_plugins()<CR>',
+  --       desc = "Plugins"
+  --     },
+  --   }
+  -- },
+
+  -- { 'github/copilot.vim' },
 
   -- TODO:
   -- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
@@ -46,6 +48,16 @@ return {
       { '<C-t>', '<CMD>ToggleTerm direction=float<CR>', mode = { 'n', 't' }, desc = 'Toggle terminal' },
     },
     config = true,
+  },
+
+  {
+    'miversen33/sunglasses.nvim',
+    config = function()
+      require("sunglasses").setup({
+        filter_percent = 0.25,
+        filter_type = "SHADE"
+      })
+    end,
   },
 
   {
@@ -86,7 +98,6 @@ return {
     build = 'sh install.sh yarn',
     config = true,
   },
-  { "prisma/vim-prisma",    event = "BufRead" },
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }

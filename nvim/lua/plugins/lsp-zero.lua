@@ -45,25 +45,25 @@ return {
               }
             })
           end,
-          ruby_ls = function()
-            require('lspconfig').ruby_ls.setup({
-              on_init = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentFormattingRangeProvider = false
-              end
-            })
-          end,
-          solargraph = function()
-            -- require('lspconfig').solargraph.setup({
-            --   on_init = function(client)
-            --     client.server_capabilities.documentFormattingProvider = false
-            --     client.server_capabilities.documentFormattingRangeProvider = false
-            --   end
-            -- })
-          end,
-          standardrb = function()
-            require('lspconfig').standardrb.setup {}
-          end
+          --          ruby_ls = function()
+          --            require('lspconfig').ruby_ls.setup({
+          --              on_init = function(client)
+          --                client.server_capabilities.documentFormattingProvider = false
+          --                client.server_capabilities.documentFormattingRangeProvider = false
+          --              end
+          --            })
+          --          end,
+          --          solargraph = function()
+          --            -- require('lspconfig').solargraph.setup({
+          --            --   on_init = function(client)
+          --            --     client.server_capabilities.documentFormattingProvider = false
+          --            --     client.server_capabilities.documentFormattingRangeProvider = false
+          --            --   end
+          --            -- })
+          --          end,
+          --          standardrb = function()
+          --            require('lspconfig').standardrb.setup {}
+          --          end
         }
       })
 
