@@ -25,17 +25,17 @@ ln -vnsf $HOME/.dotfiles/tmuxp $HOME/.tmuxp
 
 mkdir $HOME/.config
 ln -vnsf $HOME/.dotfiles/config/starship.toml $HOME/.config
-ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
+# ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
 
-# mkdir $HOME/.config/lvim
-# ln -vnsf $HOME/.dotfiles/config/config.lua $HOME/.config/lvim/config.lua
-# ln -vnsf $HOME/.dotfiles/lvim/lua $HOME/.config/lvim/lua
+mkdir $HOME/.config/nvim
+ln -vnsf $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 mkdir $HOME/.config/helix
 ln -vnsf $HOME/.dotfiles/config/helix.toml $HOME/.config/helix/config.toml
 
 mkdir $HOME/.config/alacritty
-ln -vnsf $HOME/.dotfiles/config/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -vnsf $HOME/.dotfiles/config/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -vnsf $HOME/.dotfiles/config/catppuccin-macchiato.toml $HOME/.config/alacritty/catppuccin-macchiato.toml
 
 # Link window management configurations
 mkdir $HOME/.config/yabai
