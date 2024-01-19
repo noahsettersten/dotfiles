@@ -36,8 +36,7 @@ source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Language tools
 source $HOME/.cargo/env
-# source /opt/homebrew//opt/asdf/libexec/asdf.sh
-eval "$(~/.local/bin/rtx activate zsh)"
+eval "$(mise activate zsh)"
 
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
