@@ -35,9 +35,17 @@ return {
   --   end,
   -- },
 
-  { 'folke/which-key.nvim', config = true },
+  {
+    'folke/which-key.nvim',
+    config = function()
+      local wk = require 'which-key'
+      wk.setup {}
+      wk.register {
+        ['<leader>g'] = { name = 'LSP' },
+      }
+    end,
+  },
   -- TODO: Perhaps replace with mini-clue: https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-clue.md
-
 
   -- { 'AndrewRadev/splitjoin.vim' },
   -- { 'roobert/tailwindcss-colorizer-cmp.nvim' },
@@ -48,16 +56,6 @@ return {
       { '<C-t>', '<CMD>ToggleTerm direction=float<CR>', mode = { 'n', 't' }, desc = 'Toggle terminal' },
     },
     config = true,
-  },
-
-  {
-    'miversen33/sunglasses.nvim',
-    config = function()
-      require("sunglasses").setup({
-        filter_percent = 0.25,
-        filter_type = "SHADE"
-      })
-    end,
   },
 
   {
@@ -75,22 +73,21 @@ return {
     end,
   },
 
+  { 'JoosepAlviste/nvim-ts-context-commentstring' },
   {
-    'terrortylor/nvim-comment',
-    keys = {
-      { ' /', '<CMD>CommentToggle<CR>', mode = { 'n', 'v' }, desc = 'Toggle comment' },
-    },
+    'echasnovski/mini.comment',
+    version = '*',
     config = function()
-      require('nvim_comment').setup()
+      require('mini.comment').setup {
+        mappings = {
+          comment_line = '<leader>/',
+        },
+      }
     end,
   },
-  -- {
-  --   'numToStr/Comment.nvim',
-  --   keys = {
-  --     { " /", "<Plug>(comment_toggle_linewise_current)", mode = { "n", "v" }, desc = "Comment (linewise)" }
-  --   },
-  --   config = true
-  -- },
+
+  { 'folke/twilight.nvim' },
+  -- { "xiyaowong/transparent.nvim" },
 
   -- Language specific
   {
@@ -99,9 +96,10 @@ return {
     config = true,
   },
   {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" }
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
   },
+  { 'davidmh/mdx.nvim', config = true, dependencies = { 'nvim-treesitter/nvim-treesitter' } },
   -- https://github.com/olexsmir/gopher.nvim
   -- { 'weizheheng/ror.nvim' },
 }

@@ -1,6 +1,24 @@
 -- File browser
--- TODO: Perhaps replace with mini-files: https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-files.md
 return {
+  -- {
+  --   'simonmclean/triptych.nvim',
+  --   event = 'VeryLazy',
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'nvim-tree/nvim-web-devicons'
+  --   },
+  --   config = true,
+  --   keys = {
+  --     { ",d", "<CMD>Triptych<CR>", mode = { "n" }, desc = "Toggle file explorer" },
+  --     -- { ",D", "<CMD>Triptych filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
+  --   }
+  -- }
+  -- {
+  --   'echasnovski/mini.nvim',
+  --   keys = {
+  --     { ",d", "<CMD>lua MiniFiles.open()<CR>", mode = { "n" }, desc = "Toggle file explorer" },
+  --   }
+  -- },
   {
     'nvim-neo-tree/neo-tree.nvim',
     dependencies = {

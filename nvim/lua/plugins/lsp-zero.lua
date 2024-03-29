@@ -19,7 +19,7 @@ return {
       -- 'saadparwaiz1/cmp_luasnip',
       -- 'hrsh7th/cmp-nvim-lua',
       -- 'rafamadriz/friendly-snippets',
-      { 'lukas-reineke/lsp-format.nvim', config = true }
+      -- { 'lukas-reineke/lsp-format.nvim', config = true }
     },
     config = function()
       -- local lsp_zero = require('lsp-zero').preset('recommended')
@@ -45,6 +45,13 @@ return {
               }
             })
           end,
+          tsserver = function()
+            require('lspconfig').tsserver.setup({
+              on_init = function(client)
+                client.server_capabilities.documentFormattingProvider = false
+              end
+            })
+          end
           --          ruby_ls = function()
           --            require('lspconfig').ruby_ls.setup({
           --              on_init = function(client)
@@ -71,26 +78,29 @@ return {
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({ buffer = bufnr, preserve_mappings = false })
 
-        require('lsp-format').on_attach(client, bufnr)
+        -- require('lsp-format').on_attach(client, bufnr)
 
         -- https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
         vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', { buffer = bufnr, desc = "Show details" })
-        vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { buffer = bufnr, desc = "Go to definition" })
-        vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>',
+        vim.keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>',
+          { buffer = bufnr, desc = "Go to definition" })
+        vim.keymap.set('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<cr>',
           { buffer = bufnr, desc = "Go to declaration" })
-        vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>',
+        vim.keymap.set('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>',
           { buffer = bufnr, desc = "Go to implementation" })
-        vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>',
+        vim.keymap.set('n', '<leader>go', '<cmd>lua vim.lsp.buf.type_definition()<cr>',
           { buffer = bufnr, desc = "Go to type definition" })
-        vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { buffer = bufnr, desc = "Show references" })
-        vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>',
+        vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>',
+          { buffer = bufnr, desc = "Show references" })
+        vim.keymap.set('n', '<leader>gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>',
           { buffer = bufnr, desc = "Show signature help" })
-        vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr, desc = "Rename symbol" })
+        vim.keymap.set('n', '<leader>gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr, desc = "Rename symbol" })
         vim.keymap.set({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>',
           { buffer = bufnr, desc = "Format file" })
         vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr, desc = "Code actions" })
 
-        vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', { buffer = bufnr, desc = "Open float" })
+        vim.keymap.set('n', '<leader>gl', '<cmd>lua vim.diagnostic.open_float()<cr>',
+          { buffer = bufnr, desc = "Open float" })
         vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', { buffer = bufnr, desc = "Go to previous" })
         vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', { buffer = bufnr, desc = "Go to next" })
       end)
@@ -101,6 +111,7 @@ return {
       cmp.setup({
         formatting = cmp_format,
         mapping = cmp.mapping.preset.insert({
+          ['<Tab>'] = cmp.mapping.select_next_item(),
           ['<CR>'] = cmp.mapping.confirm({ select = false })
         }),
       })
@@ -116,7 +127,7 @@ return {
       --   })
       -- })
 
-      lsp_zero.setup()
+      -- lsp_zero.setup()
       vim.diagnostic.config { virtual_text = true }
     end
   }
