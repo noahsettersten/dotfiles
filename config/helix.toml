@@ -4,6 +4,8 @@ theme = "catppuccin_macchiato"
 # theme = "rose-pine"
 # theme = "rose-pine-moon"
 
+# To ease migration from Vim mappings, see https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
+
 # https://theari.dev/blog/enhanced-helix-config/
 # https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 [editor]
