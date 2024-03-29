@@ -113,7 +113,10 @@ alias vsus='vagrant suspend'
 
 # DOCKER
 # ------
+alias d_pb='docker buildx prune'
 alias prune_docker='docker system prune -a'
+alias db='docker build . -t $2'
+alias dr='docker run --env-file=./.env $*'
 alias docker_run_bash='docker run -it --entrypoint /bin/bash $*'
 alias docker_exec_bash='docker exec -it $1 /bin/bash'
 alias build_dots='docker build -t dotfiles:latest ~/.dotfiles'
