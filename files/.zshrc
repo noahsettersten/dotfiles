@@ -41,6 +41,7 @@ eval "$(mise activate zsh)"
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export STORYBOOK_DISABLE_TELEMETRY=1
 
 # Additional tools
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Install from homebrew
