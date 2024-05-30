@@ -1,19 +1,6 @@
 -- File browser
 return {
   -- {
-  --   'simonmclean/triptych.nvim',
-  --   event = 'VeryLazy',
-  --   dependencies = {
-  --     'nvim-lua/plenary.nvim',
-  --     'nvim-tree/nvim-web-devicons'
-  --   },
-  --   config = true,
-  --   keys = {
-  --     { ",d", "<CMD>Triptych<CR>", mode = { "n" }, desc = "Toggle file explorer" },
-  --     -- { ",D", "<CMD>Triptych filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
-  --   }
-  -- }
-  -- {
   --   'echasnovski/mini.nvim',
   --   keys = {
   --     { ",d", "<CMD>lua MiniFiles.open()<CR>", mode = { "n" }, desc = "Toggle file explorer" },
@@ -29,36 +16,42 @@ return {
         's1n7ax/nvim-window-picker',
         tag = 'v1.5',
         config = function()
-          require('window-picker').setup({
+          require('window-picker').setup {
             autoselect_one = true,
             include_current = false,
             filter_rules = {
               bo = {
                 filetype = { 'neo-tree', 'neo-tree-popup', 'notify' },
-                buftype = { 'terminal', 'quickfix' }
-              }
+                buftype = { 'terminal', 'quickfix' },
+              },
             },
-            other_win_hl_color = '#e35e4f'
-          })
-        end
-      }
+            other_win_hl_color = '#e35e4f',
+          }
+        end,
+      },
     },
     keys = {
-      { ",d", "<CMD>Neotree toggle<CR>",            mode = { "n" }, desc = "Toggle file explorer" },
-      { ",D", "<CMD>Neotree filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
+      { ',d', '<CMD>Neotree toggle<CR>', mode = { 'n' }, desc = 'Toggle file explorer' },
+      { ',D', '<CMD>Neotree filesystem reveal<CR>', mode = { 'n' }, desc = 'Show current file in file explorer' },
     },
     config = function()
-      require('neo-tree').setup({
+      require('neo-tree').setup {
+        sources = {
+          'filesystem',
+          'buffers',
+          'git_status',
+          'document_symbols',
+        },
         window = {
           mappings = {
             ['S'] = 'split_with_window_picker',
-            ['s'] = 'vsplit_with_window_picker'
+            ['s'] = 'vsplit_with_window_picker',
           },
         },
         filesystem = {
           filtered_items = {
             hide_dotfiles = false,
-            hide_gitignored = false
+            hide_gitignored = false,
           },
           follow_current_file = {
             enabled = false,
@@ -69,7 +62,14 @@ return {
             enabled = false,
           },
         },
-      })
-    end
-  }
+      }
+    end,
+  },
 }
+
+--   'simonmclean/triptych.nvim',
+--   keys = {
+--     { ",d", "<CMD>Triptych<CR>", mode = { "n" }, desc = "Toggle file explorer" },
+--     -- { ",D", "<CMD>Triptych filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
+--   }
+--   'mikavilpas/yazi.nvim',

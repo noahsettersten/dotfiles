@@ -1,15 +1,5 @@
 return {
   -- https://github.com/rockerBOO/awesome-neovim
-  -- {
-  --   'roobert/activate.nvim',
-  --   keys = {
-  --     {
-  --       "<leader>P",
-  --       '<CMD>lua require("activate").list_plugins()<CR>',
-  --       desc = "Plugins"
-  --     },
-  --   }
-  -- },
 
   -- { 'github/copilot.vim' },
 
@@ -19,6 +9,7 @@ return {
 
   -- Colorschemes
   'catppuccin/nvim',
+  -- https://github.com/dgox16/oldworld.nvim
   -- 'sainnhe/sonokai',
   -- 'rebelot/kanagawa.nvim',
   -- 'whatyouhide/vim-gotham',
@@ -35,6 +26,7 @@ return {
   --   end,
   -- },
 
+  -- /tris203/precognition.nvim
   {
     'folke/which-key.nvim',
     config = function()
@@ -102,4 +94,7 @@ return {
   { 'davidmh/mdx.nvim', config = true, dependencies = { 'nvim-treesitter/nvim-treesitter' } },
   -- https://github.com/olexsmir/gopher.nvim
   -- { 'weizheheng/ror.nvim' },
+
+  -- Manage iOS simulators
+  -- { 'terje/simctl.nvim' },
 }

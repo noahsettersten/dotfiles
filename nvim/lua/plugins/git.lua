@@ -2,6 +2,7 @@ return {
   -- Git
   {
     'lewis6991/gitsigns.nvim',
+    event = 'VeryLazy',
     keys = {
       { '[g', '<CMD>Gitsigns prev_hunk<CR>', mode = { 'n' }, desc = 'Go to previous change' },
       { ']g', '<CMD>Gitsigns next_hunk<CR>', mode = { 'n' }, desc = 'Go to next change' },

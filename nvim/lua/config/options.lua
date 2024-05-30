@@ -1,12 +1,12 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
-vim.opt.mouse = nil
+vim.opt.mouse = ''
 vim.opt.number = true
-vim.opt.signcolumn = "auto"
+vim.opt.signcolumn = 'auto'
 vim.opt.wrap = false
-vim.opt.virtualedit = "all"
+vim.opt.virtualedit = 'all'
 vim.opt.timeoutlen = 500
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = '120'
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -21,7 +21,7 @@ vim.opt.expandtab = true
 vim.opt.undofile = true
 
 -- This allows replacements to preview live as you type (e.g. %s/pattern/replace/g)
-vim.opt.inccommand = "nosplit"
+vim.opt.inccommand = 'nosplit'
 
 -- Requires Neovim v0.9+
 -- Both relative and absolute line numbers with different
@@ -32,13 +32,10 @@ vim.opt.inccommand = "nosplit"
 --  %#LineNr#%{&rnu&&!(v:lnum%2)?"\ ".v:relnum:""}
 -- ]]
 
-
-
 -- Configure LSP for Standard
 -- https://github.com/testdouble/standard/wiki/IDE:-neovim
 
-
-vim.cmd('set clipboard+=unnamedplus')
+vim.cmd 'set clipboard+=unnamedplus'
 
 -- vim.on_key(nil, vim.api.nvim_get_namespaces()["auto_hlsearch"])
 
@@ -46,6 +43,11 @@ vim.cmd('set clipboard+=unnamedplus')
 -- vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
 --
 
+-- Disabled unused language providers
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
 
 -- TODO: Dashboard
 --                                                _

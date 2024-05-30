@@ -5,16 +5,15 @@ return {
     dependencies = {
       'neovim/nvim-lspconfig',
       'SmiteshP/nvim-navic',
-      'nvim-tree/nvim-web-devicons'
+      'nvim-tree/nvim-web-devicons',
     },
-    config = true
+    config = true,
   },
 
-
   {
-    "nvim-lualine/lualine.nvim",
-    dependencies = "nvim-tree/nvim-web-devicons",
-    config = true
+    'nvim-lualine/lualine.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = true,
     -- config = function()
     -- require("lualine").setup {
     -- section = {
@@ -29,7 +28,7 @@ return {
   {
     'nvim-zh/colorful-winsep.nvim',
     config = function()
-      require('colorful-winsep').setup({
+      require('colorful-winsep').setup {
         -- create_event = function()
         --   local win_n = require('colorful-winsep.utils').calculate_number_windows()
         --   if win_n == 2 then
@@ -40,17 +39,17 @@ return {
         --     end
         --   end
         -- end
-      })
-    end
+      }
+    end,
   },
 
   {
     'miversen33/sunglasses.nvim',
     config = function()
-      require("sunglasses").setup({
+      require('sunglasses').setup {
         filter_percent = 0.2,
-        filter_type = "SHADE"
-      })
+        filter_type = 'SHADE',
+      }
     end,
   },
 }
