@@ -14,15 +14,6 @@ return {
     'nvim-lualine/lualine.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = true,
-    -- config = function()
-    -- require("lualine").setup {
-    -- section = {
-    -- lualine_c = {
-    -- require("auto-session-library").current_session_name
-    -- }
-    -- }
-    -- }
-    -- end
   },
 
   {

@@ -1,3 +1,6 @@
+-- TODO:
+-- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
+--   end of the line without filling in a suggestion.
 return {
   {
     'hedyhli/outline.nvim',

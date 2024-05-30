@@ -66,10 +66,3 @@ return {
     end,
   },
 }
-
---   'simonmclean/triptych.nvim',
---   keys = {
---     { ",d", "<CMD>Triptych<CR>", mode = { "n" }, desc = "Toggle file explorer" },
---     -- { ",D", "<CMD>Triptych filesystem reveal<CR>", mode = { "n" }, desc = "Show current file in file explorer" }
---   }
---   'mikavilpas/yazi.nvim',

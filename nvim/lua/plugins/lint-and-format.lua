@@ -42,9 +42,6 @@ return {
           typescriptreact = { 'prettier' },
           json = { 'prettier' },
           yaml = { 'prettier' },
-          -- javascript = { { "prettierd", "prettier" } },
-          -- typescript = { { "prettierd", "prettier" } },
-          -- typescriptreact = { { "prettier", "prettierd" } },
           elixir = { 'mix' },
           -- ruby = { "standardrb" }
         },
