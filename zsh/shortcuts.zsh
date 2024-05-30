@@ -54,6 +54,7 @@ alias gbranch_changes='git diff --name-only main'
 # Then view the contets of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
 alias glsearch='git log --all --full-history -- $*'
 
+alias gafzf='git add $(git status --short | cut -c 4- | fzf)'
 
 # Postgres
 # --------

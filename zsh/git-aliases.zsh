@@ -41,17 +41,12 @@ function work_in_progress() {
 alias g='git'
 
 alias ga='git add'
-alias gaa='git add --all'
-alias gapa='git add --patch'
-alias gau='git add --update'
-alias gap='git apply'
+# alias gaa='git add --all'
 
 alias gb='git branch'
-alias gba='git branch -a'
-alias gbd='git branch -d'
+# alias gbd='git branch -d'
 alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
-alias gbl='git blame -b -w'
-alias gbnm='git branch --no-merged'
+# alias gbl='git blame -b -w'
 alias gbr='git branch --remote'
 alias gbs='git bisect'
 alias gbsb='git bisect bad'
@@ -61,32 +56,24 @@ alias gbss='git bisect start'
 
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
-alias gcn!='git commit -v --no-edit --amend'
+# alias gcn!='git commit -v --no-edit --amend'
 alias gca='git commit -v -a'
 alias gca!='git commit -v -a --amend'
-alias gcan!='git commit -v -a --no-edit --amend'
-alias gcans!='git commit -v -a -s --no-edit --amend'
-alias gcam='git commit -a -m'
-alias gcsm='git commit -s -m'
 alias gcb='git checkout -b'
-alias gcf='git config --list'
-alias gcl='git clone --recursive'
-alias gclean='git clean -fd'
-alias gpristine='git reset --hard && git clean -dfx'
 alias gcm='git checkout main'
-alias gcd='git checkout develop'
+alias gcd='git checkout dev'
 alias gcmsg='git commit -m'
 alias gco='git checkout'
-alias gcount='git shortlog -sn'
+# alias gcount='git shortlog -sn'
 # compdef _git gcount
 alias gcp='git cherry-pick'
-alias gcpa='git cherry-pick --abort'
-alias gcpc='git cherry-pick --continue'
-alias gcs='git commit -S'
+# alias gcpa='git cherry-pick --abort'
+# alias gcpc='git cherry-pick --continue'
+# alias gcs='git commit -S'
 
 alias gd='git diff'
-alias gdca='git diff --cached'
-alias gdcw='git diff --cached --word-diff'
+# alias gdca='git diff --cached'
+# alias gdcw='git diff --cached --word-diff'
 alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
 alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdw='git diff --word-diff'
@@ -101,8 +88,8 @@ alias gfo='git fetch origin'
 function gfg() { git ls-files | grep $@ }
 # compdef _grep gfg
 
-alias gg='git gui citool'
-alias gga='git gui citool --amend'
+# alias gg='git gui citool'
+# alias gga='git gui citool --amend'
 
 ggf() {
   [[ "$#" != 1 ]] && local b="$(git_current_branch)"
@@ -149,26 +136,26 @@ ggu() {
 }
 # compdef _git ggu=git-checkout
 
-alias ggpur='ggu'
+# alias ggpur='ggu'
 # compdef _git ggpur=git-checkout
 
-alias ggpull='git pull origin $(git_current_branch)'
+# alias ggpull='git pull origin $(git_current_branch)'
 # compdef _git ggpull=git-checkout
 
-alias ggpush='git push origin $(git_current_branch)'
+# alias ggpush='git push origin $(git_current_branch)'
 # compdef _git ggpush=git-checkout
 
-alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
+# alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+# alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 alias ghh='git help'
 
-alias gignore='git update-index --assume-unchanged'
+# alias gignore='git update-index --assume-unchanged'
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 
-alias gk='\gitk --all --branches'
+# alias gk='\gitk --all --branches'
 # compdef _git gk='gitk'
-alias gke='\gitk --all $(git log -g --pretty=%h)'
+# alias gke='\gitk --all $(git log -g --pretty=%h)'
 # compdef _git gke='gitk'
 
 # alias gl='git pull'
@@ -220,10 +207,10 @@ alias gru='git reset --'
 alias grup='git remote update'
 alias grv='git remote -v'
 
-alias gsb='git status -sb'
-alias gsi='git submodule init'
-alias gsps='git show --pretty=short --show-signature'
-alias gss='git status -s'
+# alias gsb='git status -sb'
+# alias gsi='git submodule init'
+# alias gsps='git show --pretty=short --show-signature'
+# alias gss='git status -s'
 alias gst='git status'
 alias gsta='git stash save'
 alias gstaa='git stash apply'
@@ -232,16 +219,16 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash show --text'
-alias gsu='git submodule update'
+# alias gsu='git submodule update'
 
 alias gts='git tag -s'
 alias gtv='git tag | sort -V'
 
-alias gunignore='git update-index --no-assume-unchanged'
-alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
-alias gup='git pull --rebase'
-alias gupv='git pull --rebase -v'
-alias glum='git pull upstream master'
+# alias gunignore='git update-index --no-assume-unchanged'
+# alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+# alias gup='git pull --rebase'
+# alias gupv='git pull --rebase -v'
+# alias glum='git pull upstream master'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
+# alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
