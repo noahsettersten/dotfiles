@@ -17,12 +17,12 @@ return {
         mode = { 'n' },
         desc = 'Search git modifications',
       },
-      {
-        ',<C-t>',
-        '<cmd>Telescope tailiscope categories<cr>',
-        mode = { 'n' },
-        desc = 'Search Tailwind class names',
-      },
+      -- {
+      --   ',<C-t>',
+      --   '<cmd>Telescope tailiscope categories<cr>',
+      --   mode = { 'n' },
+      --   desc = 'Search Tailwind class names',
+      -- },
       {
         ',<C-h>',
         '<cmd>Telescope git_file_history<cr>',
@@ -50,12 +50,13 @@ return {
   },
 
   -- Telescope plugins
-  {
-    'danielvolchek/tailiscope.nvim',
-    config = function()
-      require('telescope').load_extension 'tailiscope'
-    end,
-  },
+  -- {
+  --   'danielvolchek/tailiscope.nvim',
+  --   config = function()
+  --     require('telescope').load_extension 'tailiscope'
+  --   end,
+  -- },
+
   {
     'isak102/telescope-git-file-history.nvim',
     dependencies = { 'tpope/vim-fugitive' },

@@ -1,4 +1,5 @@
 return {
+  -- See https://www.josean.com/posts/neovim-linting-and-formatting
   {
     'mfussenegger/nvim-lint',
     config = function()
@@ -13,7 +14,7 @@ return {
       })
     end,
   },
-  -- See https://www.josean.com/posts/neovim-linting-and-formatting
+
   {
     'stevearc/conform.nvim',
     opts = {},

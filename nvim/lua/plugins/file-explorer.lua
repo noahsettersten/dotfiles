@@ -1,11 +1,12 @@
 -- File browser
 return {
-  -- {
-  --   'echasnovski/mini.nvim',
-  --   keys = {
-  --     { ",d", "<CMD>lua MiniFiles.open()<CR>", mode = { "n" }, desc = "Toggle file explorer" },
-  --   }
-  -- },
+  {
+    'echasnovski/mini.nvim',
+    keys = {
+      { ',md', '<CMD>lua MiniFiles.open()<CR>', mode = { 'n' }, desc = 'Toggle file explorer' },
+    },
+  },
+
   {
     'nvim-neo-tree/neo-tree.nvim',
     dependencies = {

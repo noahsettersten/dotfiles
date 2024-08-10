@@ -1,6 +1,8 @@
 -- TODO:
 -- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
 --   end of the line without filling in a suggestion.
+--
+-- https://dev.to/vonheikemen/getting-started-with-neovims-native-lsp-client-in-the-year-of-2022-the-easy-way-bp3
 return {
   {
     'hedyhli/outline.nvim',
@@ -17,6 +19,7 @@ return {
       }
     end,
   },
+
   {
     -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/lsp.md#you-might-not-need-lsp-zero
     'VonHeikemen/lsp-zero.nvim',
@@ -71,14 +74,9 @@ return {
           --              end
           --            })
           --          end,
-          --          solargraph = function()
-          --            -- require('lspconfig').solargraph.setup({
-          --            --   on_init = function(client)
-          --            --     client.server_capabilities.documentFormattingProvider = false
-          --            --     client.server_capabilities.documentFormattingRangeProvider = false
-          --            --   end
-          --            -- })
-          --          end,
+          --
+          -- Configure LSP for Standard
+          -- https://github.com/testdouble/standard/wiki/IDE:-neovim
           --          standardrb = function()
           --            require('lspconfig').standardrb.setup {}
           --          end
@@ -88,8 +86,6 @@ return {
       -- Configure keymaps
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps { buffer = bufnr, preserve_mappings = false }
-
-        -- require('lsp-format').on_attach(client, bufnr)
 
         -- https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
         -- vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', { buffer = bufnr, desc = 'Show details' })

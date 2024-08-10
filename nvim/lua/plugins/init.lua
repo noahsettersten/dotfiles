@@ -1,32 +1,18 @@
 return {
-  -- https://github.com/rockerBOO/awesome-neovim
   -- { 'github/copilot.vim' },
 
-  -- Colorschemes
   'catppuccin/nvim',
-  -- 'sainnhe/sonokai',
-  -- 'rebelot/kanagawa.nvim',
-  -- 'whatyouhide/vim-gotham',
 
-  --- General plugins
   {
     -- TODO: Perhaps replace with mini-clue: https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-clue.md
     'folke/which-key.nvim',
     config = function()
       local wk = require 'which-key'
       wk.setup {}
-      wk.register {
-        ['<leader>g'] = { name = 'LSP' },
+      wk.add {
+        { '<leader>g', group = 'LSP' },
       }
     end,
-  },
-
-  {
-    'akinsho/toggleterm.nvim',
-    keys = {
-      { '<C-t>', '<CMD>ToggleTerm direction=float<CR>', mode = { 'n', 't' }, desc = 'Toggle terminal' },
-    },
-    config = true,
   },
 
   {
@@ -44,20 +30,16 @@ return {
     end,
   },
 
-  'JoosepAlviste/nvim-ts-context-commentstring',
-
   {
-    'echasnovski/mini.comment',
-    version = '*',
+    'echasnovski/mini.nvim',
+    version = false,
     config = function()
       require('mini.comment').setup {
         mappings = {
           comment_line = '<leader>/',
         },
       }
+      require('mini.files').setup()
     end,
   },
-
-  -- { 'folke/twilight.nvim' },
-  -- /tris203/precognition.nvim
 }

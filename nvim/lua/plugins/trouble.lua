@@ -24,4 +24,18 @@ return {
       focus = true,
     },
   },
+
+  -- {
+  --   'folke/todo-comments.nvim',
+  --   dependencies = { 'nvim-lua/plenary.nvim' },
+  --   opts = {
+  --     keywords = {
+  --       TODO = { icon = '🗃', color = 'info' },
+  --       TODO_API = { icon = '🔗', color = 'info', alt = { 'TODO(API)' } },
+  --       FIXME = { icon = '🔥', color = 'error' },
+  --       NOTE = { icon = '📔', color = 'hint', alt = { 'INFO' } },
+  --     },
+  --   },
+  --   config = true,
+  -- },
 }
