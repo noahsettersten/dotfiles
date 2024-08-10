@@ -5,7 +5,7 @@ My personal configuration files, with a focus on:
 - Tmux: Plus tmuxp for managing template sessions.
 - Vim: Numerous customizations and utilities, with pluging managed by vim-plug.
 - Brewfile for installing system dependencies and tools.
-- asdf for managing language and tool versions.
+- mise for managing language and tool versions.
 
 ## Structure
 

@@ -35,8 +35,9 @@ source ~/.dotfiles/zsh/shortcuts.zsh
 source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Language tools
-source $HOME/.cargo/env
+# source $HOME/.cargo/env
 eval "$(mise activate zsh)"
+# MISE_ENV_FILE=.env
 
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
