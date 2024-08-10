@@ -17,7 +17,8 @@ sketchybar --default updates=when_shown \
                      icon.font="Monaco Nerd Font:Regular:16.0" \
                      icon.color=0xffECEFF4 \
                      icon.highlight_color=0xffE48FA8 \
-                     label.font="Hack Nerd Font:Bold:16.0" \
+                     # label.font="Hack Nerd Font:Bold:16.0" \
+                     label.font="Iosevka:Bold:16.0" \
                      label.color=0xffECEFF4 \
                      background.corner_radius=5 \
                      background.height=30
@@ -30,6 +31,8 @@ sketchybar --add item logo left \
                  background.color=0xffA5E0D5 \
                  background.padding_right=8 \
                  background.padding_left=4 \
+                 background.height=30 \
+                 background.corner_radius=5
                  click_script="sketchybar --update"
 
 sketchybar --add item space_separator left \
@@ -204,17 +207,17 @@ sketchybar --add item power_logo right \
                  label.drawing=off \
                  background.color=0xffB3E1A7
 
-sketchybar --add item net right \
-           --set net script="~/.config/sketchybar/plugins/net.sh" \
-                     icon.drawing=off \
-                     background.color=0xff3C3E4F \
-                     background.padding_left=0
+# sketchybar --add item net right \
+#            --set net script="~/.config/sketchybar/plugins/net.sh" \
+#                      icon.drawing=off \
+#                      background.color=0xff3C3E4F \
+#                      background.padding_left=0
 
-sketchybar --add item net_logo right \
-           --set net_logo icon=\
-                     icon.color=0xff121219\
-                     label.drawing=off \
-                     background.color=0xffE0A3AD
+# sketchybar --add item net_logo right \
+#            --set net_logo icon=\
+#                      icon.color=0xff121219\
+#                      label.drawing=off \
+#                      background.color=0xffE0A3AD
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update
