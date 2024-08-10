@@ -10,16 +10,16 @@ zstyle -s ":vcs_info:git:*:-all-" "command" _omz_git_git_cmd
 # Back-compatibility wrapper for when this function was defined here in
 # the plugin, before being pulled in to core lib/git.zsh as git_current_branch()
 # to fix the core -> git plugin dependency.
-function current_branch() {
-  git_current_branch
-}
+# function current_branch() {
+#   git_current_branch
+# }
 # The list of remotes
-function current_repository() {
-  if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
-    return
-  fi
-  echo $($_omz_git_git_cmd remote -v | cut -d':' -f 2)
-}
+# function current_repository() {
+#   if ! $_omz_git_git_cmd rev-parse --is-inside-work-tree &> /dev/null; then
+#     return
+#   fi
+#   echo $($_omz_git_git_cmd remote -v | cut -d':' -f 2)
+# }
 # Pretty log messages
 function _git_log_prettily(){
   if ! [ -z $1 ]; then
@@ -27,11 +27,11 @@ function _git_log_prettily(){
   fi
 }
 # Warn if the current branch is a WIP
-function work_in_progress() {
-  if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
-    echo "WIP!!"
-  fi
-}
+# function work_in_progress() {
+#   if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
+#     echo "WIP!!"
+#   fi
+# }
 
 #
 # Aliases
@@ -183,13 +183,13 @@ alias gma='git merge --abort'
 
 alias gp='git push'
 alias gpd='git push --dry-run'
-alias gpoat='git push origin --all && git push origin --tags'
+# alias gpoat='git push origin --all && git push origin --tags'
 # compdef _git gpoat=git-push
-alias gpu='git push upstream'
-alias gpv='git push -v'
+# alias gpu='git push upstream'
+# alias gpv='git push -v'
 
 alias gr='git remote'
-alias gra='git remote add'
+# alias gra='git remote add'
 # alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
@@ -197,15 +197,15 @@ alias grbd='git rebase develop'
 alias grbi='git rebase -i'
 alias grbm='git rebase master'
 alias grbs='git rebase --skip'
-alias grh='git reset'
-alias grhh='git reset --hard'
-alias grmv='git remote rename'
-alias grrm='git remote remove'
-alias grset='git remote set-url'
-alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
-alias gru='git reset --'
-alias grup='git remote update'
-alias grv='git remote -v'
+# alias grh='git reset'
+# alias grhh='git reset --hard'
+# alias grmv='git remote rename'
+# alias grrm='git remote remove'
+# alias grset='git remote set-url'
+# alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
+# alias gru='git reset --'
+# alias grup='git remote update'
+# alias grv='git remote -v'
 
 # alias gsb='git status -sb'
 # alias gsi='git submodule init'
