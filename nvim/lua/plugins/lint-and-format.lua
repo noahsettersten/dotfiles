@@ -44,6 +44,7 @@ return {
           json = { 'prettier' },
           yaml = { 'prettier' },
           elixir = { 'mix' },
+          go = { 'gofmt' },
           -- ruby = { "standardrb" }
         },
         format_on_save = function(bufnr)

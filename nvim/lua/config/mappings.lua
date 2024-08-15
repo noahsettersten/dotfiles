@@ -8,6 +8,6 @@ vim.keymap.set('n', '<down>', '<CMD>resize +5<CR>')
 vim.keymap.set('n', '<up>', '<CMD>resize -5<CR>')
 
 -- Open docs for package on given line
-vim.keymap.set('n', 'gx', require('functions.go_to_package').OpenPackageDocs, { desc = 'Open package docs' })
+-- vim.keymap.set('n', 'gx', require('functions.go_to_package').OpenPackageDocs, { desc = 'Open package docs' })
 
 vim.cmd 'iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>'

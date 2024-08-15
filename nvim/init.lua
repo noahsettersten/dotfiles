@@ -36,7 +36,6 @@ require('lazy').setup('plugins', {
 --   end,
 -- })
 
-vim.cmd.colorscheme 'catppuccin-macchiato'
 require 'config.mappings'
-require 'functions.go_to_package'
+-- require 'functions.go_to_package'
 require 'functions.toggle_hlsearch'

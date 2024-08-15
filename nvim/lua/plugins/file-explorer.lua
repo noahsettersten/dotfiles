@@ -2,9 +2,26 @@
 return {
   {
     'echasnovski/mini.nvim',
+    version = false,
     keys = {
       { ',md', '<CMD>lua MiniFiles.open()<CR>', mode = { 'n' }, desc = 'Toggle file explorer' },
     },
+    config = function()
+      require('mini.comment').setup {
+        mappings = {
+          comment_line = '<leader>/',
+        },
+      }
+
+      -- https://github.com/echasnovski/mini.files?tab=readme-ov-file
+      require('mini.files').setup()
+
+      -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
+    end,
+  },
+
+  {
+    'kevinhwang91/rnvimr',
   },
 
   {
@@ -39,9 +56,6 @@ return {
       require('neo-tree').setup {
         sources = {
           'filesystem',
-          'buffers',
-          'git_status',
-          'document_symbols',
         },
         window = {
           mappings = {
