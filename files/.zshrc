@@ -12,7 +12,6 @@ export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
 
 export EDITOR=nvim
 export GIT_MERGE_AUTOEDIT=no
-# export NX_NO_CLOUD=true
 
 # Setup PATH
 export GOPATH="$HOME/go"
@@ -30,8 +29,8 @@ FPATH=/usr/local/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit
 
 # Theming and Aliases
-source ~/.dotfiles/zsh/git-aliases.zsh
-source ~/.dotfiles/zsh/shortcuts.zsh
+source ~/development/dotfiles/zsh/git-aliases.zsh
+source ~/development/dotfiles/zsh/shortcuts.zsh
 source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Language tools

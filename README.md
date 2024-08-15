@@ -1,21 +1,20 @@
 # Dotfiles
 
 My personal configuration files, with a focus on:
-- Zsh: Custom aliases, Starship prompt, FZF history search, and syntax highlighting.
-- Tmux: Plus tmuxp for managing template sessions.
-- Vim: Numerous customizations and utilities, with pluging managed by vim-plug.
-- Brewfile for installing system dependencies and tools.
-- mise for managing language and tool versions.
+- `zsh`: Custom aliases, Starship prompt, FZF history search, and syntax highlighting.
+- `tmux`: Plus tmuxp for managing template sessions.
+- `nvim`: Numerous customizations and utilities.
+- `mise` for managing language and tool versions.
 
 ## Structure
 
-- `config/...`: Configuration files sstored in various locations.
+- `config/...`: Configuration files stored in various locations.
 - `files/...`: Dotfiles symlinked into $HOME.
+- `nvim/...`: Neovim configuration.
 - `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
-- `tmuxp/...`: Tmuxp profiles for initializing tmux layouts.
+- `wm/...`: Window management configuration and scripts for Yabai, Skhd, and Sketchybar.
 - `zsh/...`: Custom Zsh aliases.
 
-## Contents of .bashrc
+## Docker
 
-        [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-        source "$HOME/.cargo/env"
+This repo contains a `Dockerfile` for spinning up the dotfiles within a container for validation. The `build_dots` and `run_dots` aliases can be used to help interact with Docker.

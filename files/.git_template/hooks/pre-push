@@ -7,13 +7,15 @@
 class PrePushHandler
 
   def handle
-    reject if pushing_to_master? && forced_push?
+    reject if pushing_to_integration_branch? && forced_push?
   end
 
   private
 
-  def pushing_to_master?
-    current_branch == 'master'
+  def pushing_to_integration_branch?
+    current_branch == 'master' ||
+    current_branch == 'main' ||
+    current_branch == 'dev'
   end
 
   def current_branch
