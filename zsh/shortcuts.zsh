@@ -33,21 +33,20 @@ alias glog='git log --oneline --graph'
 # alias glog2="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold yellow)%h%C(reset) %C(bold yellow)%d%C(reset) %C(white)%s%C(reset) - %C(bold green)(%ar)%C(reset)'"
 # alias ptl='bundle exec rake pt:list'
 # alias gmnff='git merge --no-edit --no-ff $*'
-alias gbc='git rev-parse --abbrev-ref HEAD 2>/dev/null | cut -d"/" -f 2 | tr -d "\n" | pbcopy' # copies the current branch to your clipboard (on os x)
+# alias gbc='git rev-parse --abbrev-ref HEAD 2>/dev/null | cut -d"/" -f 2 | tr -d "\n" | pbcopy' # copies the current branch to your clipboard (on os x)
 alias gp='git push;git push --tags'
 alias gs='git stash'
-# alias gst='git status --short'
 alias gsts='git status --short -b'
-alias gsp='git stash pop'
+# alias gsp='git stash pop'
 alias gsl='git stash list'
 alias gss='git stash show -p'
-alias grepflags='~/.dotfiles/scripts/grep_comment_flags.sh'
-alias grepflagsdiff='~/.dotfiles/scripts/grep_comment_flags_diff.sh'
+alias gflags='~/development/dotfiles/scripts/grep_comment_flags.sh'
+alias gflagsd='~/development/dotfiles/scripts/grep_comment_flags_diff.sh'
 # alias unstage='git reset HEAD --'
 alias uncommit='git reset --soft HEAD~1'
 # alias recommit='git commit --amend --no-edit'
 
-alias gbranch_changes='git diff --name-only main'
+# alias gbranch_changes='git diff --name-only main'
 
 # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`
 # Then view the contets of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
@@ -111,7 +110,7 @@ alias db='docker build . -t $2'
 alias dr='docker run --env-file=./.env $*'
 alias docker_run_bash='docker run -it --entrypoint /bin/bash $*'
 alias docker_exec_bash='docker exec -it $1 /bin/bash'
-alias build_dots='docker build -t dotfiles:latest ~/.dotfiles'
+alias build_dots='docker build -t dotfiles:latest ~/development/dotfiles'
 alias run_dots='docker run -it --entrypoint /bin/zsh dotfiles:latest'
 
 alias dockerlogs='docker logs --tail 80 -f $*'
@@ -146,5 +145,5 @@ brewdeps () {
 }
 
 # Edit/source this file
-alias ea='hx ~/.dotfiles/zsh/shortcuts.zsh'
-alias ea_source='source $HOME/.dotfiles/zsh/shortcuts.zsh'
+alias ea='hx ~/development/dotfiles/zsh/shortcuts.zsh'
+alias ea_source='source $HOME/development/dotfiles/zsh/shortcuts.zsh'
