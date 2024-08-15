@@ -6,5 +6,5 @@
 
 
 source $HOME/development/machine/config/.credentials
-sketchybar --set $NAME label="$($HOME/.dotfiles/scripts/unread_gmail.sh) Unread emails"
+sketchybar --set $NAME label="$($HOME/development/dotfiles/scripts/unread_gmail.sh) unread"
 

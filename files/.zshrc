@@ -29,8 +29,8 @@ FPATH=/usr/local/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit
 
 # Theming and Aliases
-source ~/development/dotfiles/zsh/git-aliases.zsh
-source ~/development/dotfiles/zsh/shortcuts.zsh
+# source $HOME/development/dotfiles/zsh/git-aliases.zsh
+source $HOME/development/dotfiles/zsh/shortcuts.zsh
 source $HOME/development/machine/config/shortcuts_personal.zsh
 
 # Language tools
@@ -51,6 +51,6 @@ eval "$(direnv hook zsh)"
 
 # FZF
 export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 command printf "Shell Startup Time: %.1fms\n" $(($SECONDS*1000))

@@ -14,13 +14,31 @@ alias hdu='du -d 1 -h | sort -h'
 alias psfind="ps ax|grep -v grep|grep -iE"
 # alias cpu='top -o cpu'
 # alias mem='top -o rsize'
+alias web='w3m https://duckduckgo.com'
 
 # Directories
 # alias l='ls -lahG'
 alias l='lsd -lah'
+alias findgit="find . -type d -exec test -e '{}/.git' ';' -print -prune"
 
 # Git
 # -----------------
+# Brought over from oh-my-zsh's git aliases
+alias g='git'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit -v'
+alias gcm='git checkout main'
+alias gcd='git checkout dev'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+function gfg() { git ls-files | grep $@ }
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias gr='git remote'
+alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+
+# Other aliases?
 # alias gg='git goggles'
 alias gwc='git whatchanged --no-merges --pretty=format:"%Cgreen%h%Creset%x09%an%x09%Cblue%ar%Creset%x09%s"'
 alias gt='git tag'
@@ -74,6 +92,10 @@ alias v='nvim'
 alias slimvim='nvim -u NONE -U NONE -N $*'
 alias em='emacs -nw'
 
+# Search nvim.sh directory
+alias nvp_tag='curl https://nvim.sh/t/$1'
+alias nvp_search='curl https://nvim.sh/s/$1'
+
 # RAILS
 # -----
 alias b='bundle exec $*'
@@ -87,6 +109,7 @@ alias tpd='tail ~/Library/Logs/puma-dev.log'
 alias phx='iex -S mix phx.server'
 alias fly_ip='fly dig -s aaaa $*'
 alias fly_livebook='ERL_AFLAGS="-proto_dist inet6_tcp" livebook server --name livebook@127.0.0.1'
+alias docker_livebook="docker run -p 8080:8080 -p 8081:8081 --pull always -u $(id -u):$(id -g) -v $(pwd):/data ghcr.io/livebook-dev/livebook"
 
 # alias herokuiex='heroku run iex -S mix'
 # alias webserver='python -m SimpleHTTPServer'
