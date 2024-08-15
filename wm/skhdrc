@@ -7,10 +7,12 @@ alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open qutebrowser
 alt + shift - return : /Applications/qutebrowser.app/Contents/MacOS/qutebrowser
-# ~/Scripts/qtb.sh
 
-# open mpv
-# cmd - m : open -na /Applications/mpv.app $(pbpaste)
+# open / raise Slack
+hyper - s: /Applications/Slack.app/Contents/MacOS/Slack
+
+# open / raise Firefox
+hyper - f: open /Applications/Firefox\ Developer\ Edition.app
 
 # --- 2: Yabai Shortcuts ---
 # 2a: Change window focus
