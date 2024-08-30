@@ -37,6 +37,9 @@ function gfg() { git ls-files | grep $@ }
 alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias gr='git remote'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gst='git status'
+alias grbc='git rebase --continue'
+# End: Brought over from oh-my-zsh's git aliases
 
 # Other aliases?
 # alias gg='git goggles'
@@ -93,8 +96,8 @@ alias slimvim='nvim -u NONE -U NONE -N $*'
 alias em='emacs -nw'
 
 # Search nvim.sh directory
-alias nvp_tag='curl https://nvim.sh/t/$1'
-alias nvp_search='curl https://nvim.sh/s/$1'
+# alias nvp_tag='curl https://nvim.sh/t/$1'
+alias nvp='curl https://nvim.sh/s/$1'
 
 # RAILS
 # -----
@@ -144,7 +147,6 @@ alias dockersh="docker run --rm -it --entrypoint=/bin/bash $0"
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO'
 alias todos='ag --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+):.*((TODO|FIXME):.*)/\2 :>> \1/"|grep -E --color=always ":>>.*:\d+"'
-# alias ql='qlmanage -px &>/dev/null'
 alias lsrubyversions='find . -name .ruby-version -exec cat {} \;'
 alias loc='cloc . --exclude-dir=node_modules'
 alias floc='cloc --by-file --exclude-dir=test,tmp --include_ext=rb,c,java .'
