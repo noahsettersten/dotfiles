@@ -23,7 +23,7 @@ pipestatus = true
 [shell]
 disabled = false
 fish_indicator = "🐟"
-zsh_indicator = ""
+zsh_indicator = "Z"
 
 [git_metrics]
 disabled = false

@@ -1,6 +1,10 @@
 import = ["/Users/noah/.config/alacritty/catppuccin-macchiato.toml"]
 working_directory = "/Users/noah"
 
+[shell]
+program = "/opt/homebrew/bin/fish"
+
+
 [font]
 size = 13.0
 
