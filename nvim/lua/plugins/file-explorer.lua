@@ -17,12 +17,11 @@ return {
       require('mini.files').setup()
 
       -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
+      -- require('mini.clue').setup()
     end,
   },
 
-  {
-    'kevinhwang91/rnvimr',
-  },
+  { 'kevinhwang91/rnvimr' },
 
   {
     'nvim-neo-tree/neo-tree.nvim',
@@ -52,32 +51,31 @@ return {
       { ',d', '<CMD>Neotree toggle<CR>', mode = { 'n' }, desc = 'Toggle file explorer' },
       { ',D', '<CMD>Neotree filesystem reveal<CR>', mode = { 'n' }, desc = 'Show current file in file explorer' },
     },
-    config = function()
-      require('neo-tree').setup {
-        sources = {
-          'filesystem',
+    opts = {
+      sources = {
+        'filesystem',
+        'git_status',
+      },
+      window = {
+        mappings = {
+          ['S'] = 'split_with_window_picker',
+          ['s'] = 'vsplit_with_window_picker',
         },
-        window = {
-          mappings = {
-            ['S'] = 'split_with_window_picker',
-            ['s'] = 'vsplit_with_window_picker',
-          },
+      },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
         },
-        filesystem = {
-          filtered_items = {
-            hide_dotfiles = false,
-            hide_gitignored = false,
-          },
-          follow_current_file = {
-            enabled = false,
-          },
+        follow_current_file = {
+          enabled = false,
         },
-        buffers = {
-          follow_current_file = {
-            enabled = false,
-          },
+      },
+      buffers = {
+        follow_current_file = {
+          enabled = false,
         },
-      }
-    end,
+      },
+    },
   },
 }

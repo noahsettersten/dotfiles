@@ -15,7 +15,7 @@ return {
     'tpope/vim-fugitive',
     keys = {
       { ',gb', '<CMD>Git blame -w -M<CR>', mode = { 'n' }, desc = 'Show git blame for current file' },
-      { ',gd', '<CMD>Gdiff<CR>', mode = { 'n' }, desc = 'Show git diff for current file' },
+      -- { ',gd', '<CMD>Gdiff<CR>', mode = { 'n' }, desc = 'Show git diff for current file' },
       { ',gst', '<CMD>Git<CR>', mode = { 'n' }, desc = 'Show git status' },
     },
   },

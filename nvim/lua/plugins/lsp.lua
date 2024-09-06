@@ -9,15 +9,13 @@ return {
     keys = {
       { '<Leader>gS', '<CMD>Outline<CR>', mode = { 'n' }, desc = 'Open sidebar of LSP symbols' },
     },
-    config = function()
-      require('outline').setup {
-        symbols = {
-          icon_fetcher = function(kind)
-            return kind:sub(1, 1)
-          end,
-        },
-      }
-    end,
+    opts = {
+      symbols = {
+        icon_fetcher = function(kind)
+          return kind:sub(1, 1)
+        end,
+      },
+    },
   },
 
   {
@@ -60,7 +58,7 @@ return {
             }
           end,
           tsserver = function()
-            require('lspconfig').tsserver.setup {
+            require('lspconfig').ts_ls.setup {
               on_init = function(client)
                 client.server_capabilities.documentFormattingProvider = false
               end,
