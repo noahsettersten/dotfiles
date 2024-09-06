@@ -8,4 +8,4 @@
 
 # sketchybar --set $NAME label="$(gcalcli agenda --nostarted --nodeclined --nocolor | head -2 | tail -1)"
 
-sketchybar --set $NAME label="$(icalBuddy -ic "noah@headway.io" -n -nc -iep "title,datetime" -b '' -ps "|: |" -po "datetime,title" eventsToday+10 | head -1)"
+sketchybar --set $NAME label="$(icalBuddy -ic "noah@headway.io" -n -nc -iep "title,datetime" -b '' -ps "|: |" -po "datetime,title" eventsToday+2 | head -1)"

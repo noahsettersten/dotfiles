@@ -1,7 +1,5 @@
-#                          ﱦ 齃     ﮂ  ﵁ 爵        ﭵ     ﱦ  ﰊ 異 ﴱ אַ  'Y⃣'
-
 ############## BAR ##############
-sketchybar --bar height=42 \
+sketchybar --bar height=28 \
                  y_offset=5 \
                  blur_radius=0 \
                  position=top \
@@ -9,7 +7,6 @@ sketchybar --bar height=42 \
                  padding_right=2 \
                  margin=10 \
                  corner_radius=12 \
-                 color=0xff1e1d2e \
                  shadow=on
 
 ############## GLOBAL DEFAULTS ##############
@@ -26,19 +23,19 @@ sketchybar --default updates=when_shown \
 sketchybar --add item logo left \
            --set logo icon=☦ \
                  icon.color=0xff010101 \
-                 icon.padding_left=16 \
-                 icon.padding_right=16 \
+                 icon.padding_left=8 \
+                 icon.padding_right=8 \
                  background.color=0xffA5E0D5 \
-                 background.padding_right=8 \
+                 background.padding_right=4 \
                  background.padding_left=4 \
-                 background.height=30 \
+                 background.height=22 \
                  background.corner_radius=5
                  click_script="sketchybar --update"
 
 sketchybar --add item space_separator left \
            --set space_separator icon= \
-                                 background.padding_left=23 \
-                                 background.padding_right=23 \
+                                 background.padding_left=12 \
+                                 background.padding_right=12 \
                                  label.drawing=off \
                                  icon.color=0xff92B3F5 \
                                  click_script="sketchybar -m --set \$NAME popup.drawing=toggle" \
@@ -92,8 +89,15 @@ sketchybar --default background.color=0x00000000
 sketchybar --add item window_title left \
            --set window_title    script="~/.config/sketchybar/plugins/window_title.sh" \
                                  icon.drawing=off \
-                                 label.color=0xffb7bdf4 \
+                                 label.color=0xffffffff \
+                                 label.padding_left=6 \ 
+                                 label.padding_right=6 \ 
+                     background.height=22 \
+                     background.padding_right=4 \
+                     background.padding_left=4 \
+                                 background.color=0xBB3C3C3C \
                                  padding_right=24 \
+                                 background.corner_radius=5 \
            --subscribe window_title front_app_switched
 
 
@@ -103,10 +107,11 @@ sketchybar --default label.padding_left=6 \
                      label.padding_right=6 \
                      icon.padding_left=6 \
                      icon.padding_right=6 \
-                     icon.font="Monaco Nerd Font:Regular:20.0" \
-                     background.height=30 \
+                     icon.font="Monaco Nerd Font:Regular:16.0" \
+                     background.height=22 \
                      background.padding_right=4 \
                      background.padding_left=4 \
+                     background.color=0xBB3C3C3C \
                      background.corner_radius=5
 
 
@@ -115,12 +120,11 @@ sketchybar --add item mail_logo left                                    \
            --set mail_logo icon=                                  \
            label.drawing=off \
            icon.color=0xff121219 \
-           background.color=0xffEDC4E5
+           background.color=0xff92B3F5
 
 sketchybar --add item mail left                                    \
            --set mail script="~/.config/sketchybar/plugins/mail.sh"                 \
                        icon.drawing=off \
-                       background.color=0xff3C3E4F \
                        background.padding_left=0 \
                            update_freq=120
 
@@ -133,79 +137,74 @@ sketchybar --add item calendar_logo left                                    \
 sketchybar --add item calendar left                                \
            --set calendar script="~/.config/sketchybar/plugins/cal.sh"              \
                            icon.drawing=off \
-                       background.color=0xff3C3E4F \
                        background.padding_left=0 \
                            update_freq=120
 
-sketchybar --add item liturgical_logo left                                    \
+sketchybar --add item liturgical_logo center                                    \
            --set liturgical_logo icon=☦                        \
            label.drawing=off \
            icon.color=0xff121219 \
-           background.color=0xffEDC4E5
+           background.color=0xffEE8D82
 
-sketchybar --add item liturgical_calendar left                     \
+sketchybar --add item liturgical_calendar center                     \
            --set liturgical_calendar script="~/.config/sketchybar/plugins/liturgical_calendar.sh" \
                                      icon.drawing=off \
-                       background.color=0xff3C3E4F \
                        background.padding_left=0 \
                                      update_freq=3600
 # End Noah's customizations
 
 
-sketchybar --add item spot_logo center \
+sketchybar --add item spot right \
+           --set spot update_freq=1 \
+                      icon.drawing=off \
+                      updates=on \
+                      script="~/.config/sketchybar/plugins/spotifyIndicator.sh" \
+                      background.padding_left=0
+
+sketchybar --add item spot_logo right \
            --set spot_logo icon= \
                            label.drawing=off \
                            icon.color=0xff121219 \
                            background.color=0xffEDC4E5
 
-sketchybar --add item spot center \
-           --set spot update_freq=1 \
-                      icon.drawing=off \
-                      updates=on \
-                      script="~/.config/sketchybar/plugins/spotifyIndicator.sh" \
-                      background.color=0xff3C3E4F \
-                      background.padding_left=0
 
 ############## RIGHT ITEMS ##############
-sketchybar --add item time right \
-           --set time update_freq=1 \
-                      icon.drawing=off \
-                      script="~/.config/sketchybar/plugins/time.sh" \
-                      background.color=0xff3C3E4F \
-                      background.padding_left=0
+# sketchybar --add item time right \
+#            --set time update_freq=1 \
+#                       icon.drawing=off \
+#                       script="~/.config/sketchybar/plugins/time.sh" \
+#                       background.padding_left=0
 
-sketchybar --add item time_logo right\
-           --set time_logo icon= \
-                           label.drawing=off \
-                           icon.color=0xff121219 \
-                           label.drawing=off \
-                           background.color=0xffF5E3B5
+# sketchybar --add item time_logo right\
+#            --set time_logo icon= \
+#                            label.drawing=off \
+#                            icon.color=0xff121219 \
+#                            label.drawing=off \
+#                            background.color=0xffF5E3B5
 
-sketchybar --add item date right \
-           --set date update_freq=1000 \
-                      icon.drawing=off \
-                      script="~/.config/sketchybar/plugins/date.sh" \
-                      background.color=0xff3C3E4F \
-                      background.padding_left=0
+# sketchybar --add item date right \
+#            --set date update_freq=10 \
+#                       icon.drawing=off \
+#                       script="~/development/dotfiles/scripts/current_timer.sh" \
+#                       background.padding_left=0
 
-sketchybar --add item clock_logo right\
-           --set clock_logo icon= \
-                            icon.color=0xff121219\
-                            label.drawing=off \
-                            background.color=0xff92B3F5
+# sketchybar --add item clock_logo right\
+#            --set clock_logo icon= \
+#                             icon.color=0xff121219\
+#                             label.drawing=off \
+#                             background.color=0xff92B3F5
 
-sketchybar --add item battery right \
-           --set battery update_freq=3 \
-                         icon.drawing=off \
-                         script="~/.config/sketchybar/plugins/power.sh" \
-                         background.color=0xff3C3E4F \
-                         background.padding_left=0
-
-sketchybar --add item power_logo right \
-           --set power_logo icon= \
-                 icon.color=0xff121219 \
-                 label.drawing=off \
-                 background.color=0xffB3E1A7
+# sketchybar --add item battery right \
+#            --set battery update_freq=3 \
+#                          icon.drawing=off \
+#                          script="~/.config/sketchybar/plugins/power.sh" \
+#                          background.padding_left=0
+#
+# sketchybar --add item power_logo right \
+#            --set power_logo icon=󰂁 \
+#                  icon.color=0xff121219 \
+#                  label.drawing=off \
+#                  background.color=0xffB3E1A7
 
 # sketchybar --add item net right \
 #            --set net script="~/.config/sketchybar/plugins/net.sh" \
