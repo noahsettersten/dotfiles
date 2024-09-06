@@ -29,24 +29,13 @@ zsh_indicator = ""
 disabled = false
 
 [custom.timewarrior_active]
-command = "echo '⏰'"
+command = "~/development/dotfiles/scripts/current_timer.sh"
 when = "timew | grep -q 'Tracking'"
 shell = ["bash", "--noprofile", "--norc"]
-
-[custom.timewarrior_tag]
-command = "timew | head -n 1 | awk '{ print $2 }'"
-when = "timew | grep -q 'Tracking'"
-shell = ["bash", "--noprofile", "--norc"]
-
-[custom.timewarrior_time]
-command = "timew | tail -n 1 | awk '{ print \"(\"$2 }'"
-when = "timew | grep -q 'Tracking'"
-shell = ["bash", "--noprofile", "--norc"]
-
-[custom.timewarrior_totaltime]
-command = "timew summary | sed '/^$/d' | tail -n 1 | awk '{ print \" / \"$1\")\" }'"
-when = "timew | grep -q 'Tracking'"
-shell = ["bash", "--noprofile", "--norc"]
+symbol = '⏰ '
+format = '''
+ 
+[$symbol($output)]($style) '''
 
 [custom.last_git_commit_message]
 # disabled = true
