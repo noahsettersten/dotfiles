@@ -1,0 +1,16 @@
+[[language]]
+name = "typescript"
+# formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.ts"] }
+formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+# formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.tsx"] }
+formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.js"] }
+auto-format = true
