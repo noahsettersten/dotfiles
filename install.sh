@@ -22,11 +22,9 @@ ln -vnsf $HOME/development/dotfiles/files/.git_template $HOME/.git_template
 mkdir $HOME/.newsboat
 ln -vnsf $HOME/development/dotfiles/config/newsboat_config $HOME/.newsboat/config
 
-ln -vnsf $HOME/development/dotfiles/tmuxp $HOME/.tmuxp
-
 mkdir $HOME/.config
 ln -vnsf $HOME/development/dotfiles/config/starship.toml $HOME/.config
-# ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
+ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
 
 mkdir $HOME/.config/nvim
 ln -vnsf $HOME/development/dotfiles/nvim $HOME/.config/nvim
