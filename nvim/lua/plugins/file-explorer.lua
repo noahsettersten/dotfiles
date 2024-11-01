@@ -23,6 +23,13 @@ return {
 
   { 'kevinhwang91/rnvimr' },
 
+  --! {'stevearc/oil.nvim'},
+  -- {'Xuyuanp/yanil'},
+  --! {'tamago324/lir.nvim'},
+  -- {'luukvbaal/nnn.nvim'},
+  --! {'SidOfc/carbon.nvim'},
+  -- {'dinhhuy258/sfm.nvim'},
+
   {
     'nvim-neo-tree/neo-tree.nvim',
     dependencies = {

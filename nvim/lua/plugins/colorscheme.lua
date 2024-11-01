@@ -6,5 +6,8 @@ return {
     end,
   },
 
-  -- { 'yorickpeterse/vim-paper' },
+  { 'yorickpeterse/vim-paper' },
+  {
+    'yorik1984/newpaper.nvim',
+  },
 }

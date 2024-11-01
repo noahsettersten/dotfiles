@@ -48,4 +48,8 @@
 
 -- { 'TiagoMDG/react-comp-gen.nvim' },
 -- { 'davidmh/mdx.nvim', config = true, dependencies = { 'nvim-treesitter/nvim-treesitter' } },
+--
+-- https://github.com/mawkler/refjump.nvim
+-- https://github.com/miroshQa/rittli.nvim?tab=readme-ov-file
+
 return {}

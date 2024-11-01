@@ -19,15 +19,15 @@ set imap_keepalive = 150
 
 # Sidebar config
 set sidebar_visible=no
-set sidebar_width=30
+# set sidebar_width=30
 # set sidebar_folderindent=yes
 # set sidebar_sort=yes
 # set sidebar_shortpath=yes
 # set sidebar_delim=" | "
-color sidebar_new brightred default
+# color sidebar_new brightred default
 # b toggles sidebar visibility
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
+# macro index b '<enter-command>toggle sidebar_visible<enter>'
+# macro pager b '<enter-command>toggle sidebar_visible<enter>'
 # Remap bounce-message function to Ã¢â‚¬Å“BÃ¢â‚¬Â�
 bind index B bounce-message
 

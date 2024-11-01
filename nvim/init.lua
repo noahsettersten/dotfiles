@@ -37,5 +37,6 @@ require('lazy').setup('plugins', {
 -- })
 
 require 'config.mappings'
+require 'config.autocmds'
 -- require 'functions.go_to_package'
 require 'functions.toggle_hlsearch'

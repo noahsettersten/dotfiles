@@ -1,0 +1,8 @@
+session_name: storybook
+windows:
+  - window_name: nvim
+    panes:
+      - nvim
+  - window_name: storybook
+    panes:
+      - yarn storybook -- --no-open

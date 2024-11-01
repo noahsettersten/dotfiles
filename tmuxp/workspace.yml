@@ -1,0 +1,18 @@
+session_name: ww
+start_directory: ~
+windows:
+  - window_name: mail
+    layout: even-horizontal
+    panes:
+      - today
+      - mutt
+  - window_name: news
+    panes:
+      - newsboat -r
+  - window_name: web
+    panes:
+      - clear
+      # - w3m
+  - window_name: chat
+    panes:
+      - weechat

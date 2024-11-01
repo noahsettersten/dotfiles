@@ -1,9 +1,6 @@
-import = ["/Users/noah/.config/alacritty/catppuccin-macchiato.toml"]
+[general]
 working_directory = "/Users/noah"
-
-[shell]
-program = "/opt/homebrew/bin/fish"
-
+import = ["/Users/noah/.config/alacritty/catppuccin-macchiato.toml"]
 
 [font]
 size = 13.0
@@ -37,3 +34,6 @@ mods = "None"
 [window]
 decorations = "buttonless"
 opacity = 0.95
+
+[terminal.shell]
+program = "/opt/homebrew/bin/fish"

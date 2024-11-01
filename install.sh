@@ -8,6 +8,8 @@ function symlink_files() {
 
 # Start at home
 cd $HOME
+
+mkdir development
 cd development
 
 # Link general dotfiles into $HOME
@@ -24,7 +26,9 @@ ln -vnsf $HOME/development/dotfiles/config/newsboat_config $HOME/.newsboat/confi
 
 mkdir $HOME/.config
 ln -vnsf $HOME/development/dotfiles/config/starship.toml $HOME/.config
-ln -vnsf $HOME/.dotfiles/config/fish/config.fish $HOME/.config/fish
+
+mkdir $HOME/.config/fish
+ln -vnsf $HOME/development/dotfiles/config/config.fish $HOME/.config/fish
 
 mkdir $HOME/.config/nvim
 ln -vnsf $HOME/development/dotfiles/nvim $HOME/.config/nvim
@@ -37,15 +41,17 @@ ln -vnsf $HOME/development/dotfiles/config/alacritty.toml $HOME/.config/alacritt
 ln -vnsf $HOME/development/dotfiles/config/catppuccin-macchiato.toml $HOME/.config/alacritty/catppuccin-macchiato.toml
 
 # Link window management configurations
-mkdir $HOME/.config/yabai
-ln -vnsf $HOME/development/dotfiles/wm/yabairc $HOME/.config/yabai/yabairc
+# mkdir $HOME/.config/yabai
+# ln -vnsf $HOME/development/dotfiles/wm/yabairc $HOME/.config/yabai/yabairc
 
-mkdir $HOME/.config/sketchybar
-ln -vnsf $HOME/development/dotfiles/wm/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
-ln -vnsf $HOME/development/dotfiles/wm/sketchybar_plugins $HOME/.config/sketchybar/plugins
+# mkdir $HOME/.config/sketchybar
+# ln -vnsf $HOME/development/dotfiles/wm/sketchybarrc $HOME/.config/sketchybar/sketchybarrc
+# ln -vnsf $HOME/development/dotfiles/wm/sketchybar_plugins $HOME/.config/sketchybar/plugins
 
-mkdir $HOME/.config/skhd
-ln -vnsf $HOME/development/dotfiles/wm/skhdrc $HOME/.config/skhd/skhdrc
+# mkdir $HOME/.config/skhd
+# ln -vnsf $HOME/development/dotfiles/wm/skhdrc $HOME/.config/skhd/skhdrc
+
+ln -vnsf $HOME/development/machine/tmuxp $HOME/.tmuxp
 
 # Copy Mutt colorscheme
 mkdir $HOME/.mutt
@@ -53,5 +59,13 @@ curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master
 
 # Link Karabiner Elements configuration
 cp $HOME/development/dotfiles/config/karabiner.json $HOME/.config/karabiner
+
+# Install core dependencies
+curl -sS https://starship.rs/install.sh > install_starship.sh
+chmod +x ./install_starship.sh
+./install_starship.sh -f
+rm ./install_starship.sh
+
+curl https://mise.run | sh
 
 echo 'Successfully Installed'

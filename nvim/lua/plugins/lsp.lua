@@ -19,6 +19,15 @@ return {
   },
 
   {
+    'williamboman/mason.nvim',
+    dependencies = { 'Zeioth/mason-extra-cmds', opts = {} },
+    cmd = {
+      'Mason',
+      'MasonUpdateAll',
+    },
+  },
+
+  {
     -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v2.x/doc/md/lsp.md#you-might-not-need-lsp-zero
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
@@ -41,7 +50,7 @@ return {
       -- Automatically install language servers
       require('mason').setup {}
       require('mason-lspconfig').setup {
-        ensure_installed = { 'elixirls', 'lua_ls', 'ruby_lsp', 'tailwindcss', 'tsserver' },
+        -- ensure_installed = { 'elixirls', 'lua_ls', 'ruby_lsp', 'tailwindcss', 'ts_ls' },
         handlers = {
           lsp_zero.default_setup,
           lua_ls = function()
@@ -57,7 +66,7 @@ return {
               },
             }
           end,
-          tsserver = function()
+          ts_ls = function()
             require('lspconfig').ts_ls.setup {
               on_init = function(client)
                 client.server_capabilities.documentFormattingProvider = false

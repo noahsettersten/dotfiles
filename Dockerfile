@@ -2,13 +2,13 @@
 
 # A Docker build to validate and test the dotfiles scripts
 # Build with `docker build -t dotfiles:latest ~/.dotfiles`
-# Run bash in the new image with `docker run -it --entrypoint /bin/zsh dotfiles:latest`
+# Run fish in the new image with `docker run -it --entrypoint /usr/bin/fish dotfiles:latest`
 FROM debian:bullseye
 
 RUN apt-get -qq update
-RUN apt-get install curl git zsh sudo -qq -y
+RUN apt-get install curl direnv git fish fzf sudo -qq -y
 
-RUN useradd -m -s /bin/zsh tester
+RUN useradd -m -s /bin/fish tester
 RUN usermod -aG sudo tester
 RUN echo "tester    ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
 
@@ -16,11 +16,12 @@ RUN echo "tester    ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers
 RUN chown -R tester:tester /home/tester
 
 USER tester
-ENV HOME /home/tester
+ENV HOME=/home/tester
 
 WORKDIR /home/tester/
 
-# RUN ./install.sh
-RUN curl -sS https://raw.githubusercontent.com/noahsettersten/dotfiles/main/install.sh | bash
+COPY ./install.sh $HOME/install.sh
+RUN ./install.sh
+# RUN curl -sS https://raw.githubusercontent.com/noahsettersten/dotfiles/main/install.sh | bash
 
-CMD ["/bin/zsh"]
+CMD ["/usr/bin/fish"]

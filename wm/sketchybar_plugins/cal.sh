@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 # The $NAME variable is passed from sketchybar and holds the name of

@@ -9,7 +9,6 @@ if status is-interactive
 end
 
 # Extend configuration
-#source $HOME/development/machine/config/.credentials
 source $HOME/development/dotfiles/fish/abbreviations.fish
 source $HOME/development/machine/config/abbreviations_personal.fish
 
@@ -24,5 +23,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export STORYBOOK_DISABLE_TELEMETRY=1
 
 # Tools
-mise activate fish | source
 direnv hook fish | source

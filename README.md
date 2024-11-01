@@ -1,7 +1,7 @@
 # Dotfiles
 
 My personal configuration files, with a focus on:
-- `zsh`: Custom aliases, Starship prompt, FZF history search, and syntax highlighting.
+- `fish`: Custom aliases, Starship prompt, FZF history search.
 - `tmux`: Plus tmuxp for managing template sessions.
 - `nvim`: Numerous customizations and utilities.
 - `mise` for managing language and tool versions.
@@ -10,10 +10,10 @@ My personal configuration files, with a focus on:
 
 - `config/...`: Configuration files stored in various locations.
 - `files/...`: Dotfiles symlinked into $HOME.
+- `fish/...`: Custom Fish aliases.
 - `nvim/...`: Neovim configuration.
 - `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
 - `wm/...`: Window management configuration and scripts for Yabai, Skhd, and Sketchybar.
-- `zsh/...`: Custom Zsh aliases.
 
 ## Docker
 
