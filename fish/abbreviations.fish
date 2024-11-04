@@ -68,3 +68,9 @@ abbr -a run_dots 'docker run -it --entrypoint /usr/bin/fish dotfiles:latest'
 # -- Tmuxp shortcuts
 abbr -a ww tmuxp load workspace
 abbr -a trails tmuxp load rails
+
+# -- Personal Tools
+abbr -a churchcal ~/development/dotfiles/scripts/liturgical_calendar.sh
+abbr -a lectionary ~/development/dotfiles/scripts/lectionary.sh
+
+# abbr -a tp_attach='$HOME/development/dotfiles/scripts/tmuxp_attach.sh'

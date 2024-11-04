@@ -9,10 +9,9 @@ windows:
   - window_name: news
     panes:
       - newsboat -r
-  - window_name: web
-    panes:
-      - clear
-      # - w3m
-  - window_name: chat
-    panes:
-      - weechat
+  # - window_name: web
+  #   panes:
+  #     - w3m
+  # - window_name: chat
+  #   panes:
+  #     - weechat
