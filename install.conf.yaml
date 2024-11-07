@@ -1,0 +1,47 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- create:
+    - ~/.mutt
+    - ~/.newsboat
+    - ~/.config
+    - ~/development
+    - ~/.config/alacritty
+    - ~/.config/helix
+    - ~/.config/karabiner
+
+- link:
+    ~/.newsboat/config: config/newsboat_config
+    ~/.config/starship.toml: config/starship.toml
+    ~/.config/fish/config.fish: config/config.fish
+    ~/.config/nvim: ./nvim
+    ~/.config/helix/config.toml: config/helix.toml
+    ~/.config/alacritty/alacritty.toml: config/alacritty.toml
+    ~/.config/alacritty/catppuccin-macchiato.toml: config/catppuccin-macchiato.toml
+    ~/.git_template: files/.git_template
+    ~/.gitconfig: config/.gitconfig
+    ~/.muttrc: files/.muttrc
+    ~/.config/karabiner/karabiner.json: config/karabiner.json
+    ~/.tmux.conf: files/.tmux.conf
+    ~/.tmux_mac.conf: files/.tmux_mac.conf
+    ~/.tmuxp: ./tmuxp
+    ~/.config/yabai/yabairc: wm/yabairc
+    ~/.config/sketchybar/sketchybarrc: wm/sketchybarrc
+    ~/.config/sketchybar/plugins: wm/sketchybar_plugins
+    ~/.config/skhd/skhdrc: wm/skhdrc
+
+- shell:
+    - [
+        curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
+      ]
+    # - [curl -sS https://starship.rs/install.sh > install_starship.sh]
+    # - [chmod +x ./install_starship.sh]
+    # - [./install_starship.sh -f]
+    # - [rm ./install_starship.sh]
+    # - [curl https://mise.run | sh]
+#
+# - shell:
+#     - [git submodule update --init --recursive, Installing submodules]
