@@ -24,4 +24,6 @@ return {
     },
     config = true,
   },
+
+  { 'johmsalas/text-case.nvim', config = true, keys = { 'ga' } },
 }
