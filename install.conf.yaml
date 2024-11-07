@@ -37,11 +37,14 @@
     - [
         curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
       ]
-    # - [curl -sS https://starship.rs/install.sh > install_starship.sh]
-    # - [chmod +x ./install_starship.sh]
-    # - [./install_starship.sh -f]
-    # - [rm ./install_starship.sh]
-    # - [curl https://mise.run | sh]
+# - brewfile:
+#     - setup/Brewfile
+
+# - [curl -sS https://starship.rs/install.sh > install_starship.sh]
+# - [chmod +x ./install_starship.sh]
+# - [./install_starship.sh -f]
+# - [rm ./install_starship.sh]
+# - [curl https://mise.run | sh]
 #
 # - shell:
 #     - [git submodule update --init --recursive, Installing submodules]
