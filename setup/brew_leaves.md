@@ -45,3 +45,12 @@ tmuxp
 tree
 w3m
 weechat
+
+# Casks
+
+- Alacritty
+- Chromedriver
+- Font-iosevka
+- Imageoptim
+- Qutebrowser
+- VLC
