@@ -13,22 +13,10 @@ return {
         },
       }
 
-      -- https://github.com/echasnovski/mini.files?tab=readme-ov-file
-      require('mini.files').setup()
-
       -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
       -- require('mini.clue').setup()
     end,
   },
-
-  { 'kevinhwang91/rnvimr' },
-
-  --! {'stevearc/oil.nvim'},
-  -- {'Xuyuanp/yanil'},
-  --! {'tamago324/lir.nvim'},
-  -- {'luukvbaal/nnn.nvim'},
-  --! {'SidOfc/carbon.nvim'},
-  -- {'dinhhuy258/sfm.nvim'},
 
   {
     'nvim-neo-tree/neo-tree.nvim',
@@ -61,7 +49,7 @@ return {
     opts = {
       sources = {
         'filesystem',
-        'git_status',
+        -- 'git_status',
       },
       window = {
         mappings = {
@@ -70,18 +58,11 @@ return {
         },
       },
       filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-        },
-        follow_current_file = {
-          enabled = false,
-        },
+        filtered_items = { hide_dotfiles = false, hide_gitignored = false },
+        follow_current_file = { enabled = false },
       },
       buffers = {
-        follow_current_file = {
-          enabled = false,
-        },
+        follow_current_file = { enabled = false },
       },
     },
   },

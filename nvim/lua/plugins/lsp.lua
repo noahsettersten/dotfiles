@@ -21,10 +21,7 @@ return {
   {
     'williamboman/mason.nvim',
     dependencies = { 'Zeioth/mason-extra-cmds', opts = {} },
-    cmd = {
-      'Mason',
-      'MasonUpdateAll',
-    },
+    cmd = { 'Mason', 'MasonUpdateAll' },
   },
 
   {

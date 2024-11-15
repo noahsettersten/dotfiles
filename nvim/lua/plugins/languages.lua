@@ -7,8 +7,8 @@ return {
     config = true,
   },
 
-  -- {
-  --   'pmizio/typescript-tools.nvim',
-  --   dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-  -- },
+  -- Folding for JSON (https://vi.stackexchange.com/a/10563)
+  -- :set filetype=json
+  -- :syntax on
+  -- :set foldmethod=syntax
 }

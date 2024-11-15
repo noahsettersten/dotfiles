@@ -3,6 +3,7 @@ return {
 
   -- https://github.com/mirlge/kak.nvim
   -- { 'mirlge/kak.nvim' },
+
   {
     'folke/which-key.nvim',
     event = 'VeryLazy',
@@ -11,6 +12,8 @@ return {
       wk.setup {}
       wk.add {
         { '<leader>g', group = 'LSP' },
+        { '<leader>t', group = 'Diagnostics with Trouble' },
+        { '<leader>s', group = 'Internet Search' },
       }
     end,
   },

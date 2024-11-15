@@ -51,5 +51,19 @@
 --
 -- https://github.com/mawkler/refjump.nvim
 -- https://github.com/miroshQa/rittli.nvim?tab=readme-ov-file
+--
+--
+-- File explorers:
+-- https://github.com/echasnovski/mini.files?tab=readme-ov-file
+-- require('mini.files').setup()
+-- { 'kevinhwang91/rnvimr' },
+--! {'stevearc/oil.nvim'},
+-- {'Xuyuanp/yanil'},
+--! {'tamago324/lir.nvim'},
+-- {'luukvbaal/nnn.nvim'},
+--! {'SidOfc/carbon.nvim'},
+-- {'dinhhuy258/sfm.nvim'},
+
+-- https://github.com/meznaric/key-analyzer.nvim
 
 return {}
