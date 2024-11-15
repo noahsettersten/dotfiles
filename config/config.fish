@@ -10,7 +10,9 @@ end
 
 # Extend configuration
 source $HOME/development/dotfiles/fish/abbreviations.fish
-source $HOME/development/machine/config/abbreviations_personal.fish
+source $HOME/development/machine/abbreviations_personal.fish
+
+set PATH $PATH:/opt/homebrew/bin
 
 # Variables
 export GOPATH="$HOME/go"

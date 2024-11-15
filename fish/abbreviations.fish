@@ -49,6 +49,7 @@ abbr -a nvp "curl https://nvim.sh/s/"
 # -- Frameworks --
 abbr -a b bundle exec $argv
 abbr -a yb yarn build
+abbr -a sb yarn run lerna run storybook -- --no-open
 
 # -- Time Warrior --
 abbr -a t timew
