@@ -14,19 +14,21 @@
     - ~/.config/karabiner
 
 - link:
+    ~/.config/nvim: ./nvim
+
     ~/.newsboat/config: config/newsboat_config
     ~/.config/starship.toml: config/starship.toml
     ~/.config/fish/config.fish: config/config.fish
-    ~/.config/nvim: ./nvim
     ~/.config/helix/config.toml: config/helix.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     ~/.config/alacritty/catppuccin-macchiato.toml: config/catppuccin-macchiato.toml
-    ~/.git_template: files/.git_template
-    ~/.gitconfig: config/.gitconfig
-    ~/.muttrc: files/.muttrc
     ~/.config/karabiner/karabiner.json: config/karabiner.json
-    ~/.tmux.conf: files/.tmux.conf
-    ~/.tmux_mac.conf: files/.tmux_mac.conf
+    ~/.git_template: config/git_template
+    ~/.gitconfig: config/.gitconfig
+    ~/.muttrc: config/.muttrc
+    ~/.tmux.conf: config/.tmux.conf
+    ~/.tmux_mac.conf: config/.tmux_mac.conf
+
     ~/.tmuxp: ./tmuxp
     ~/.config/yabai/yabairc: wm/yabairc
     ~/.config/sketchybar/sketchybarrc: wm/sketchybarrc
