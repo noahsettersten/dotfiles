@@ -13,6 +13,13 @@ return {
         },
       }
 
+      require('mini.icons').setup {
+        style = 'ascii',
+      }
+      require('mini.icons').mock_nvim_web_devicons()
+
+      require('mini.files').setup()
+
       -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
       -- require('mini.clue').setup()
     end,
@@ -22,7 +29,7 @@ return {
     'nvim-neo-tree/neo-tree.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons',
+      -- 'nvim-tree/nvim-web-devicons',
       'MunifTanjim/nui.nvim',
       {
         's1n7ax/nvim-window-picker',
@@ -63,6 +70,38 @@ return {
       },
       buffers = {
         follow_current_file = { enabled = false },
+      },
+
+      default_component_configs = {
+        icon = {
+          provider = function(icon, node) -- setup a custom icon provider
+            local text, hl
+            local mini_icons = require 'mini.icons'
+            if node.type == 'file' then -- if it's a file, set the text/hl
+              text, hl = mini_icons.get('file', node.name)
+            elseif node.type == 'directory' then -- get directory icons
+              text, hl = mini_icons.get('directory', node.name)
+              -- only set the icon text if it is not expanded
+              if node:is_expanded() then
+                text = nil
+              end
+            end
+
+            -- set the icon text/highlight only if it exists
+            if text then
+              icon.text = text
+            end
+            if hl then
+              icon.highlight = hl
+            end
+          end,
+        },
+        kind_icon = {
+          provider = function(icon, node)
+            local mini_icons = require 'mini.icons'
+            icon.text, icon.highlight = mini_icons.get('lsp', node.extra.kind.name)
+          end,
+        },
       },
     },
   },

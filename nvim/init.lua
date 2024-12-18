@@ -3,9 +3,7 @@
 require 'config.bootstrap_lazy'
 require 'config.options'
 require('lazy').setup('plugins', {
-  rocks = {
-    enabled = false,
-  },
+  rocks = { enabled = false },
   performance = {
     reset_packpath = true,
     rtp = {
@@ -22,19 +20,6 @@ require('lazy').setup('plugins', {
     },
   },
 })
-
--- vim.opt.signcolumn = "yes" -- otherwise it bounces in and out, not strictly needed though
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "ruby",
---   group = vim.api.nvim_create_augroup("RubyLSP", { clear = true }), -- also this is not /needed/ but it's good practice
---   callback = function()
---     vim.lsp.start {
---       name = "standard",
---       -- cmd = { "~/.rbenv/shims/standardrb", "--lsp" },
---       cmd = { "~/.local/share/rtx/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/standard-1.30.1/exe/standardrb", "--lsp" },
---     }
---   end,
--- })
 
 require 'config.mappings'
 require 'config.autocmds'
