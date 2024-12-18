@@ -27,7 +27,7 @@
     ~/.gitconfig: config/.gitconfig
     ~/.muttrc: config/.muttrc
     ~/.tmux.conf: config/.tmux.conf
-    ~/.tmux_mac.conf: config/.tmux_mac.conf
+    # ~/.tmux_mac.conf: config/.tmux_mac.conf
 
     ~/.tmuxp: ./tmuxp
     ~/.config/yabai/yabairc: wm/yabairc
