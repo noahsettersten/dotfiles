@@ -5,6 +5,7 @@ return {
     config = function()
       require('lint').linters_by_ft = {
         javascript = { 'eslint' },
+        swift = { 'swiftlint' },
       }
 
       vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
@@ -30,6 +31,7 @@ return {
           yaml = { 'prettier' },
           elixir = { 'mix' },
           go = { 'gofmt' },
+          -- swift = { 'swiftformat' },
           -- ruby = { "standardrb" }
         },
         format_on_save = function(bufnr)

@@ -14,6 +14,7 @@ return {
         { '<leader>g', group = 'LSP' },
         { '<leader>t', group = 'Diagnostics with Trouble' },
         { '<leader>s', group = 'Internet Search' },
+        { '<leader>x', group = 'Xcode' },
       }
     end,
   },
