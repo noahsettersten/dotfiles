@@ -20,6 +20,7 @@
     ~/.config/starship.toml: config/starship.toml
     ~/.config/fish/config.fish: config/config.fish
     ~/.config/helix/config.toml: config/helix.toml
+    ~/.config/helix/languages.toml: config/languages.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     ~/.config/alacritty/catppuccin-macchiato.toml: config/catppuccin-macchiato.toml
     ~/.config/karabiner/karabiner.json: config/karabiner.json
