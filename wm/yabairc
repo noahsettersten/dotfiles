@@ -7,8 +7,8 @@ yabai -m config layout              bsp \
                 bottom_padding      7 \
                 left_padding        10 \
                 right_padding       10 \
-                window_gap          7
-                # focus_follows_mouse autoraise
+                window_gap          7 \
+                focus_follows_mouse autoraise
 
 yabai -m config window_opacity on \
                 active_window_opacity 1.0 \
@@ -29,6 +29,7 @@ yabai -m rule --add app="^Slack$" manage=off sticky=on
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^KeePassXC$" manage=off
 yabai -m rule --add app="^Asana$" manage=off
+yabai -m rule --add app="^Xcode$" manage=off
 
 # Key shortcuts:
 # Switch between active and inactive:
