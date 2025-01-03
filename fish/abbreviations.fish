@@ -75,3 +75,7 @@ abbr -a churchcal ~/development/dotfiles/scripts/liturgical_calendar.sh
 abbr -a lectionary ~/development/dotfiles/scripts/lectionary.sh
 
 # abbr -a tp_attach='$HOME/development/dotfiles/scripts/tmuxp_attach.sh'
+
+# Retrieve today's bibleinayearonline.com reading:
+abbr -a bible ~/development/dotfiles/scripts/bible_in_a_year.sh
+
