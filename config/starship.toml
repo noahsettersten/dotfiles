@@ -1,3 +1,13 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory$git_branch$git_metrics$git_status $fill ${custom.timewarrior_active}$all$cmd_duration$character
+"""
+right_format = """${custom.last_git_commit_message}"""
+
+[fill]
+symbol = ' '
+
 [git_status]
 stashed = '[$count\$](orange)'
 
@@ -8,22 +18,16 @@ disabled = false
 disabled = true
 
 [directory]
-fish_style_pwd_dir_length = 1
+fish_style_pwd_dir_length = 2
 
 [cmd_duration]
 min_time = 500
-# show_milliseconds = true
 
 [status]
 disabled = false
 format = "[$symbol $status]($style) "
 map_symbol = true
 pipestatus = true
-
-[shell]
-disabled = false
-fish_indicator = "🐟"
-zsh_indicator = "Z"
 
 [git_metrics]
 disabled = false
@@ -33,16 +37,16 @@ command = "~/development/dotfiles/scripts/current_timer.sh"
 when = "timew | grep -q 'Tracking'"
 shell = ["bash", "--noprofile", "--norc"]
 symbol = '⏰ '
-format = '''
- 
-[$symbol($output)]($style) '''
+format = '''[$symbol($output)]($style)'''
 
 [custom.last_git_commit_message]
-# disabled = true
 command = "git log -1 --pretty=%s | head -c50"
 when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
-format = '''
-
-<[$symbol($output)]($style)> '''
-style = "fg:136"
 shell = ["bash", "--noprofile", "--norc"]
+symbol = '⛏️ '
+format = '''[$symbol($output)]($style) '''
+style = "fg:136"
+
+# 🔔
+# ⛏️
+# ⚙️

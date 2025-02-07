@@ -51,8 +51,12 @@ abbr -a b bundle exec $argv
 abbr -a yb yarn build
 abbr -a sb yarn run lerna run storybook -- --no-open
 
+# -- Xcode --
+abbr -a xclist xcrun simctl list
+
 # -- Time Warrior --
 abbr -a t timew
+abbr -a tt ~/development/dotfiles/scripts/timewarrior_summary.sh
 abbr -a ts timew summary :ids
 abbr -a tw timew week
 abbr -a ttags timew tagsum today
@@ -73,6 +77,7 @@ abbr -a trails tmuxp load rails
 # -- Personal Tools
 abbr -a churchcal ~/development/dotfiles/scripts/liturgical_calendar.sh
 abbr -a lectionary ~/development/dotfiles/scripts/lectionary.sh
+abbr -a cdl cd ~/development/files/to_listen
 
 # abbr -a tp_attach='$HOME/development/dotfiles/scripts/tmuxp_attach.sh'
 
