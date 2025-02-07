@@ -1,8 +1,17 @@
+-- Ideas: https://github.com/rockerBOO/awesome-neovim
+
 return {
+  -- (Start screen) https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
   -- { 'github/copilot.vim' },
 
-  -- https://github.com/mirlge/kak.nvim
-  -- { 'mirlge/kak.nvim' },
+  -- { 'mirlge/kak.nvim', event = 'VeryLazy' },
+
+  -- (Show available motions)
+  { 'tris203/precognition.nvim' },
+
+  -- (Show available keybinds)
+  -- :KeyAnalyzer <leader> or :KeyAnalyzer <C- or :KeyAnalyzer <M-
+  { 'meznaric/key-analyzer.nvim' },
 
   {
     'folke/which-key.nvim',
@@ -28,6 +37,4 @@ return {
     },
     config = true,
   },
-
-  { 'johmsalas/text-case.nvim', config = true, keys = { 'ga' } },
 }

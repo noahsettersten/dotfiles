@@ -6,4 +6,7 @@ return {
     },
     config = true,
   },
+
+  -- (Launch terminal tasks)
+  -- { 'miroshQa/rittli.nvim' },
 }

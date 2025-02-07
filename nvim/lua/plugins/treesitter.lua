@@ -4,16 +4,13 @@ return {
     -- build = ':TSUpdate',
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'elixir', 'lua', 'ruby', 'rust', 'go', 'typescript' },
+        ensure_installed = { 'elixir', 'lua', 'ruby', 'rust', 'go', 'typescript', 'swift', 'objc' },
         highlight = { enable = true },
       }
     end,
   },
 
-  -- {
-  --   'nvim-treesitter/nvim-treesitter-context',
-  --   config = true,
-  -- },
+  -- { 'nvim-treesitter/nvim-treesitter-context', config = true },
 
   'HiPhish/rainbow-delimiters.nvim',
 

@@ -2,11 +2,11 @@ vim.g.mapleader = ' '
 
 vim.opt.mouse = ''
 vim.opt.number = true
--- vim.opt.signcolumn = 'auto'
 vim.opt.wrap = false
 vim.opt.virtualedit = 'all'
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 500 -- Default of 1000
 vim.opt.colorcolumn = '120'
+-- vim.opt.signcolumn = 'auto'
 
 vim.opt.cursorline = true
 
@@ -32,3 +32,5 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
+
+-- vim.on_key(nil, vim.api.nvim_get_namespaces()["auto_hlsearch"])

@@ -1,4 +1,18 @@
 -- File browser
+--
+-- Other ideas:
+-- https://github.com/lewis6991/brodir.nvim
+-- https://github.com/echasnovski/mini.files
+-- https://github.com/nvim-tree/nvim-tree.lua
+-- require('mini.files').setup()
+-- { 'kevinhwang91/rnvimr' },
+--! {'stevearc/oil.nvim'},
+-- {'Xuyuanp/yanil'},
+--! {'tamago324/lir.nvim'},
+-- {'luukvbaal/nnn.nvim'},
+--! {'SidOfc/carbon.nvim'},
+-- {'dinhhuy258/sfm.nvim'},
+
 return {
   {
     'echasnovski/mini.nvim',
@@ -13,14 +27,11 @@ return {
         },
       }
 
-      require('mini.icons').setup {
-        style = 'ascii',
-      }
+      require('mini.icons').setup { style = 'ascii' }
       require('mini.icons').mock_nvim_web_devicons()
 
       require('mini.files').setup()
 
-      -- https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
       -- require('mini.clue').setup()
     end,
   },

@@ -46,9 +46,7 @@ return {
             async = false,
           }
         end,
-        format = {
-          quiet = false,
-        },
+        format = { quiet = false },
         notify_on_error = true,
       }
 

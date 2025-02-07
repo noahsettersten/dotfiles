@@ -12,14 +12,11 @@ return {
 
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    -- dependencies = 'nvim-tree/nvim-web-devicons',
     config = true,
   },
 
-  {
-    'nvim-zh/colorful-winsep.nvim',
-    config = true,
-  },
+  { 'nvim-zh/colorful-winsep.nvim', config = true },
 
   {
     'miversen33/sunglasses.nvim',

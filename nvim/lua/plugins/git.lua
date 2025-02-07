@@ -1,5 +1,4 @@
 return {
-  -- Git
   {
     'lewis6991/gitsigns.nvim',
     event = 'VeryLazy',
@@ -16,6 +15,4 @@ return {
     },
     config = true,
   },
-
-  -- https://www.joshmedeski.com/posts/github-in-the-terminal/
 }

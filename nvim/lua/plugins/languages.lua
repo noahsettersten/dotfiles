@@ -1,17 +1,20 @@
 -- Language-specific plugins
 return {
+  -- (Manage curl requests) https://github.com/oysandvik94/curl.nvim#-features
+
   -- Typescript
-  {
-    'barrett-ruth/import-cost.nvim',
-    build = 'sh install.sh yarn',
-    config = true,
-  },
+  -- {
+  --   'barrett-ruth/import-cost.nvim',
+  --   build = 'sh install.sh yarn',
+  --   config = true,
+  -- },
 
   -- Folding for JSON (https://vi.stackexchange.com/a/10563)
   -- :set filetype=json
   -- :syntax on
   -- :set foldmethod=syntax
 
+  -- Golang
   {
     'fatih/vim-go',
     config = function()
@@ -19,6 +22,9 @@ return {
     end,
   },
 
+  -- { 'elixir-tools/elixir-tools.nvim' },
+
+  -- Xcode / iOS / Objective-C / Swift
   {
     'wojciech-kulik/xcodebuild.nvim',
     dependencies = {

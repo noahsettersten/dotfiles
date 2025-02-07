@@ -11,5 +11,3 @@ vim.keymap.set('n', '<up>', '<CMD>resize -5<CR>')
 -- vim.keymap.set('n', 'gx', require('functions.go_to_package').OpenPackageDocs, { desc = 'Open package docs' })
 
 vim.cmd 'iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>'
-
--- vim.cmd 'iabbrev API // TODO(API): Implement when endpoint is available.'

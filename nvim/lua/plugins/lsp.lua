@@ -1,5 +1,5 @@
 -- TODO:
--- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to enter at the
+-- Set up nvim-cmp to require a tab to start inserting suggestions. This will make it easier to press enter at the
 --   end of the line without filling in a suggestion.
 --
 -- https://dev.to/vonheikemen/getting-started-with-neovims-native-lsp-client-in-the-year-of-2022-the-easy-way-bp3
@@ -87,7 +87,15 @@ return {
         },
       }
 
-      require('lspconfig').sourcekit.setup {}
+      require('lspconfig').sourcekit.setup {
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      }
 
       -- Configure keymaps
       lsp_zero.on_attach(function(client, bufnr)
@@ -186,4 +194,6 @@ return {
       vim.diagnostic.config { virtual_text = true }
     end,
   },
+
+  -- (Jump to next/previous LSP reference) https://github.com/mawkler/refjump.nvim
 }
