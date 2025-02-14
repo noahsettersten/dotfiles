@@ -5,17 +5,11 @@ return {
     dependencies = {
       'neovim/nvim-lspconfig',
       'SmiteshP/nvim-navic',
-      'nvim-tree/nvim-web-devicons',
     },
     config = true,
   },
 
-  {
-    'nvim-lualine/lualine.nvim',
-    -- dependencies = 'nvim-tree/nvim-web-devicons',
-    config = true,
-  },
-
+  { 'nvim-lualine/lualine.nvim', config = true },
   { 'nvim-zh/colorful-winsep.nvim', config = true },
 
   {

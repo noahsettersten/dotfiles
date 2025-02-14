@@ -6,9 +6,7 @@
 return {
   {
     'hedyhli/outline.nvim',
-    keys = {
-      { '<Leader>gS', '<CMD>Outline<CR>', mode = { 'n' }, desc = 'Open sidebar of LSP symbols' },
-    },
+    keys = { { '<Leader>gS', '<CMD>Outline<CR>', desc = 'Open sidebar of LSP symbols' } },
     opts = {
       symbols = {
         icon_fetcher = function(kind)

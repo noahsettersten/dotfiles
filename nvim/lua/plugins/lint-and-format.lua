@@ -1,5 +1,5 @@
+-- See https://www.josean.com/posts/neovim-linting-and-formatting
 return {
-  -- See https://www.josean.com/posts/neovim-linting-and-formatting
   {
     'mfussenegger/nvim-lint',
     config = function()
@@ -34,20 +34,16 @@ return {
           -- swift = { 'swiftformat' },
           -- ruby = { "standardrb" }
         },
+        notify_on_error = true,
+        format = { quiet = false },
         format_on_save = function(bufnr)
           -- Disable with a global or buffer-local variable
           if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
             return
           end
 
-          return {
-            -- timeout_ms = 500,
-            lsp_fallback = true,
-            async = false,
-          }
+          return { lsp_fallback = true, async = false, }
         end,
-        format = { quiet = false },
-        notify_on_error = true,
       }
 
       vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"

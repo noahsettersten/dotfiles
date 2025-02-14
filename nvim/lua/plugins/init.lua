@@ -1,4 +1,4 @@
--- Ideas: https://github.com/rockerBOO/awesome-neovim
+j-- Ideas: https://github.com/rockerBOO/awesome-neovim
 
 return {
   -- (Start screen) https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
@@ -31,9 +31,9 @@ return {
   {
     'aliqyan-21/wit.nvim',
     keys = {
-      { '<Leader>sq', '<CMD>WitSearch ', mode = { 'n' }, desc = 'Search the web' },
-      { '<Leader>sv', '<CMD>WitSearchVisual<CR>', mode = { 'n' }, desc = 'Search the web with visual selection' },
-      { '<Leader>sw', '<CMD>WitSearchWiki ', mode = { 'n' }, desc = 'Search Wikipeda' },
+      { '<Leader>sq', '<CMD>WitSearch<CR>', desc = 'Search the web' },
+      { '<Leader>sv', '<CMD>WitSearchVisual<CR>', desc = 'Search the web with visual selection' },
+      { '<Leader>sw', '<CMD>WitSearchWiki<CR>', desc = 'Search Wikipeda' },
     },
     config = true,
   },

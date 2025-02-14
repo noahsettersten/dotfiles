@@ -2,8 +2,8 @@ return {
   -- {
   --   'vim-test/vim-test',
   --   keys = {
-  --     { ',t', '<cmd>TestFile<cr>', mode = { 'n' }, desc = 'Run tests for current file' },
-  --     { ',T', '<cmd>TestNearest<cr>', mode = { 'n' }, desc = 'Run test under cursor' },
+  --     { ',t', '<cmd>TestFile<cr>', desc = 'Run tests for current file' },
+  --     { ',T', '<cmd>TestNearest<cr>', desc = 'Run test under cursor' },
   --   },
   --   config = function()
   --     vim.g['VimuxOrientation'] = 'h'
