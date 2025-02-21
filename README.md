@@ -8,11 +8,11 @@ My personal configuration files, with a focus on:
 
 ## Structure
 
-- `config/...`: Configuration files stored in various locations.
-- `files/...`: Dotfiles symlinked into $HOME.
+- `config/...`: Configuration files stored in various locations, including $HOME.
 - `fish/...`: Custom Fish aliases.
 - `nvim/...`: Neovim configuration.
 - `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
+- `tmuxp/...`: Tmux configuration files managed by tmuxp.
 - `wm/...`: Window management configuration and scripts for Yabai, Skhd, and Sketchybar.
 
 ## Docker
