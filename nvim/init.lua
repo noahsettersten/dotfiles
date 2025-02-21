@@ -7,21 +7,14 @@ require('lazy').setup('plugins', {
   performance = {
     reset_packpath = true,
     rtp = {
-      disabled_plugins = {
-        'gzip',
-        'matchit',
-        'matchitparen',
-        'netrwPlugin',
-        'tarPlugin',
-        'tohtml',
-        'tutor',
-        -- "zipPlugin"
-      },
+      -- "zipPlugin"
+      disabled_plugins = { 'gzip', 'matchit', 'matchitparen', 'netrwPlugin', 'tarPlugin', 'tohtml', 'tutor' },
     },
   },
 })
 
 require 'config.mappings'
 require 'config.autocmds'
+require 'config.lsp'
 -- require 'functions.go_to_package'
-require 'functions.toggle_hlsearch'
+-- require 'functions.toggle_hlsearch'

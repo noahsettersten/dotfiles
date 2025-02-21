@@ -15,12 +15,8 @@ return {
         defaults = {
           -- Inspired by Thomas's additions: https://github.com/tomxkay/astronvim_config/blob/main/plugins/telescope.lua
           mappings = {
-            i = {
-              ['<c-l>'] = require('trouble.sources.telescope').open,
-            },
-            n = {
-              ['<c-l>'] = require('trouble.sources.telescope').open,
-            },
+            i = { ['<c-l>'] = require('trouble.sources.telescope').open },
+            n = { ['<c-l>'] = require('trouble.sources.telescope').open },
           },
         },
       }

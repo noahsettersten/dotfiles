@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd('User', {
   end,
 })
 
--- Automatically set foldmethod=syntax for .json
+-- Automatically set foldmethod=syntax for .json (https://vi.stackexchange.com/a/10563)
 -- vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
 --   pattern = '*.json',
 --   callback = function()

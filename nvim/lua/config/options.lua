@@ -1,9 +1,9 @@
 vim.g.mapleader = ' '
 
-vim.opt.mouse = ''
-vim.opt.number = true
-vim.opt.wrap = false
-vim.opt.virtualedit = 'all'
+vim.opt.mouse = '' -- Disable mouse
+vim.opt.number = true -- Show line numbers
+vim.opt.wrap = false -- Disable line wrap
+vim.opt.virtualedit = 'all' -- Allow editing beyond the end of the line
 vim.opt.timeoutlen = 500 -- Default of 1000
 vim.opt.colorcolumn = '120'
 -- vim.opt.signcolumn = 'auto'

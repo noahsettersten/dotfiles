@@ -1,17 +1,23 @@
-j-- Ideas: https://github.com/rockerBOO/awesome-neovim
+-- Ideas: https://github.com/rockerBOO/awesome-neovim
 
 return {
+  -- Colorscheme (others: 'sainnhe/sonokai', 'rebelot/kanagawa.nvim', 'whatyouhide/vim-gotham')
+  {
+    'catppuccin/nvim',
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-macchiato'
+    end,
+  },
+
   -- (Start screen) https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-starter.md
+
   -- { 'github/copilot.vim' },
 
   -- { 'mirlge/kak.nvim', event = 'VeryLazy' },
 
-  -- (Show available motions)
-  { 'tris203/precognition.nvim' },
-
   -- (Show available keybinds)
   -- :KeyAnalyzer <leader> or :KeyAnalyzer <C- or :KeyAnalyzer <M-
-  { 'meznaric/key-analyzer.nvim' },
+  { 'meznaric/key-analyzer.nvim', config = true },
 
   {
     'folke/which-key.nvim',
@@ -28,13 +34,5 @@ return {
     end,
   },
 
-  {
-    'aliqyan-21/wit.nvim',
-    keys = {
-      { '<Leader>sq', '<CMD>WitSearch<CR>', desc = 'Search the web' },
-      { '<Leader>sv', '<CMD>WitSearchVisual<CR>', desc = 'Search the web with visual selection' },
-      { '<Leader>sw', '<CMD>WitSearchWiki<CR>', desc = 'Search Wikipeda' },
-    },
-    config = true,
-  },
+  { 'ethanholz/nvim-lastplace', config = true },
 }
