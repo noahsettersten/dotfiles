@@ -3,11 +3,11 @@ return {
   -- (Manage curl requests) { 'oysandvik94/curl.nvim' },
 
   -- Typescript
-  -- {
-  --   'barrett-ruth/import-cost.nvim',
-  --   build = 'sh install.sh yarn',
-  --   config = true,
-  -- },
+  {
+    'barrett-ruth/import-cost.nvim',
+    build = 'sh install.sh yarn',
+    config = true,
+  },
 
   -- Golang
   {
