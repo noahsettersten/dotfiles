@@ -1,6 +1,5 @@
 # -- Core --
 abbr -a .. cd ..
-abbr -a hdu "du -d 1 -h | sort -h"
 abbr -a l lsd -lah --date relative
 abbr -a d cd $HOME/development/
 
@@ -9,7 +8,7 @@ abbr -a ga git add
 abbr -a gb git branch
 abbr -a gc git commit -v
 abbr -a gcm git checkout main
-abbr -a gcd git checkout dev
+abbr -a gcd git checkout develop
 abbr -a gco git checkout
 abbr -a gd git diff
 # abbr --add gr='git remote'
@@ -22,7 +21,10 @@ abbr -a gs git stash
 abbr -a gsl git stash list
 abbr -a gss git stash show -p
 abbr -a uncommit 'git reset --soft HEAD~1'
-#abbr -a gd_branch git diff --name-only main
+
+# Show files that have been changed in this branch
+abbr -a diffm git diff --name-only main
+abbr -a diffd git diff --name-only develop
 
 # -- Extended Git --
 # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`
@@ -48,8 +50,8 @@ abbr -a nvp "curl https://nvim.sh/s/"
 
 # -- Frameworks --
 abbr -a b bundle exec $argv
-abbr -a yb yarn build
-abbr -a sb yarn run lerna run storybook -- --no-open
+#abbr -a yb yarn build
+#abbr -a sb yarn run lerna run storybook -- --no-open
 
 # -- Xcode --
 abbr -a xclist xcrun simctl list
@@ -60,8 +62,10 @@ abbr -a tt ~/development/dotfiles/scripts/timewarrior_summary.sh
 abbr -a ts timew summary :ids
 abbr -a tw timew week
 abbr -a ttags timew tagsum today
+abbr -a tc timew client
 
 # -- Utilities --
+abbr -a hdu "du -d 1 -h | sort -h"
 abbr -a today ~/development/dotfiles/scripts/today.sh
 abbr -a mc musikcube
 
@@ -78,6 +82,7 @@ abbr -a trails tmuxp load rails
 abbr -a churchcal ~/development/dotfiles/scripts/liturgical_calendar.sh
 abbr -a lectionary ~/development/dotfiles/scripts/lectionary.sh
 abbr -a cdl cd ~/development/files/to_listen
+abbr -a dash ~/development/investment/dashboard/dashboard
 
 # abbr -a tp_attach='$HOME/development/dotfiles/scripts/tmuxp_attach.sh'
 
