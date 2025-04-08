@@ -89,3 +89,8 @@ abbr -a dash ~/development/investment/dashboard/dashboard
 # Retrieve today's bibleinayearonline.com reading:
 abbr -a bible ~/development/dotfiles/scripts/bible_in_a_year.sh
 
+# TODO: Retrieve Joshua Project's people group of the day (https://unreachedoftheday.org/)
+
+
+# TODO: Count commands in fish history to see how many times each abbreviation is used.
+# history | LC_ALL=C sort | uniq -c | LC_ALL=C sort -nr | head -n 40

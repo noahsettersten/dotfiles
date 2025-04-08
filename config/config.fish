@@ -8,6 +8,8 @@ if status is-interactive
     set -g fish_greeting
 end
 
+source $HOME/.credentials
+
 # Extend configuration
 source $HOME/development/dotfiles/fish/abbreviations.fish
 source $HOME/development/machine/abbreviations_personal.fish
