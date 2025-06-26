@@ -9,6 +9,7 @@ abbr -a gb git branch
 abbr -a gc git commit -v
 abbr -a gcm git checkout main
 abbr -a gcd git checkout develop
+abbr -a gcs git checkout staging
 abbr -a gco git checkout
 abbr -a gd git diff
 # abbr --add gr='git remote'
@@ -51,18 +52,24 @@ abbr -a nvp "curl https://nvim.sh/s/"
 # -- Frameworks --
 abbr -a b bundle exec $argv
 #abbr -a yb yarn build
-#abbr -a sb yarn run lerna run storybook -- --no-open
+abbr -a rc 'bin/rails console'
+abbr -a rdbc 'bin/rails dbconsole'
+abbr -a btest 'PARALLEL_WORKERS=4 bundle exec rails test'
+
+abbr -a d "cd $HOME/development/"
+abbr -a gg "cd $HOME/Code/groups"
+abbr -a dd "cd $HOME/development/dotfiles"
 
 # -- Xcode --
 abbr -a xclist xcrun simctl list
 
 # -- Time Warrior --
-abbr -a t timew
-abbr -a tt ~/development/dotfiles/scripts/timewarrior_summary.sh
-abbr -a ts timew summary :ids
-abbr -a tw timew week
-abbr -a ttags timew tagsum today
-abbr -a tc timew client
+# abbr -a t timew
+# abbr -a tt ~/development/dotfiles/scripts/timewarrior_summary.sh
+# abbr -a ts timew summary :ids
+# abbr -a tw timew week
+# abbr -a ttags timew tagsum today
+# abbr -a tc timew client
 
 # -- Utilities --
 abbr -a hdu "du -d 1 -h | sort -h"
@@ -73,16 +80,24 @@ abbr -a mc musikcube
 abbr -a build_dots 'docker build -t dotfiles:latest ~/development/dotfiles --no-cache'
 abbr -a run_dots 'docker run -it --entrypoint /usr/bin/fish dotfiles:latest'
 #abbr -a web w3m https://duckduckgo.com
+abbr -a loc 'cloc --vcs git .'
+abbr -a todos 'ag --nobreak --nocolor "(TODO|FIXME):"|sed -E "s/(.*:[[:digit:]]+):.*((TODO|FIXME):.*)/\2 :>> \1/"|grep -E --color=always ":>>.*:\d+"'
+abbr -a lsrubyversions 'find . -name .ruby-version -exec cat {} \;'
+abbr -a floc 'cloc --by-file --exclude-dir=test,tmp --include_ext=rb,c,java .'
 
 # -- Tmuxp shortcuts
-abbr -a ww tmuxp load workspace
-abbr -a trails tmuxp load rails
+# abbr -a ww tmuxp load workspace
+# abbr -a trails tmuxp load rails
 
 # -- Personal Tools
 abbr -a churchcal ~/development/dotfiles/scripts/liturgical_calendar.sh
 abbr -a lectionary ~/development/dotfiles/scripts/lectionary.sh
 abbr -a cdl cd ~/development/files/to_listen
 abbr -a dash ~/development/investment/dashboard/dashboard
+
+# -- Calendar
+abbr -a agenda icalBuddy -f -sd -ss "" -df "%A, %B %e, %Y" -n -nc -iep "title,datetime,location" -ps "|: |\n  |" -po "datetime,title,location" eventsToday+7
+abbr -a next_event icalBuddy -ic "noah@headway.io" -n -nc -iep "title,datetime" -b '' -ps "|: |" -po "datetime,title" eventsToday+2 | head -1
 
 # abbr -a tp_attach='$HOME/development/dotfiles/scripts/tmuxp_attach.sh'
 
@@ -94,3 +109,14 @@ abbr -a bible ~/development/dotfiles/scripts/bible_in_a_year.sh
 
 # TODO: Count commands in fish history to see how many times each abbreviation is used.
 # history | LC_ALL=C sort | uniq -c | LC_ALL=C sort -nr | head -n 40
+
+
+# abbr -a ea 'hx ~/development/dotfiles/zsh/shortcuts.zsh'
+# abbr -a ea_source 'source $HOME/development/dotfiles/zsh/shortcuts.zsh'
+abbr -a claude "/Users/noah/.claude/local/claude"
+
+# Devbox
+abbr -a db devbox
+abbr -a dbg "devbox global"
+abbr -a outdated "brew outdated && devbox global list --outdated"
+# abbr -a updates outdated
