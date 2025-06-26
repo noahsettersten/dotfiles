@@ -7,13 +7,13 @@ not_in_tmux() {
   [ -z "$TMUX" ]
 }
 
-TMUXP_DIR="$HOME/development/machine/tmuxp"
+TMUXP_DIR="$HOME/development/dotfiles/tmuxp"
 
 tmuxp_file=$(ls $TMUXP_DIR | fzf --reverse --header="Select Tmuxp Configuration >")
 session_name=$(echo $tmuxp_file | cut -f 1 -d '.')
 
-echo Tmuxp Configuration is $tmuxp_file 
-echo Session name is \"$session_name\"
+# echo Tmuxp Configuration is $tmuxp_file 
+# echo Session name is \"$session_name\"
 
 if [ -z "$tmuxp_file" ]; then
   # User cancelled the operation.

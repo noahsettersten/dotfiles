@@ -3,9 +3,13 @@ windows:
   - window_name: editor
     panes:
       - nvim
-  - window_name: console
-    panes:
-      - bundle exec rails console
+  # - window_name: console
+  #   panes:
+  #     - bundle exec rails console
   - window_name: logs
     panes:
-      - ./bin/dev
+      - tail_groups_logs
+      - box bg-log
+  # - window_name: logs
+  #   panes:
+  #     - ./bin/dev
