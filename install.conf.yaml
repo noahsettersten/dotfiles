@@ -36,6 +36,9 @@
     ~/.config/sketchybar/sketchybarrc: wm/sketchybarrc
     ~/.config/sketchybar/plugins: wm/sketchybar_plugins
     ~/.config/skhd/skhdrc: wm/skhdrc
+    ~/.local/share/devbox/global/default/devbox.json: 
+      force: true
+      path: setup/devbox.json
 
 - shell:
     - [

@@ -1,3 +1,9 @@
+# Setup global Nix packages with devbox
+export DEVBOX_USE_VERSION=0.13.7
+export __DEVBOX_VERSION_CHECK="1"
+set -gx SHELL fish
+devbox global shellenv --init-hook | source
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     starship init fish | source
