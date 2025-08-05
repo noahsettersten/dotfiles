@@ -2,6 +2,7 @@
 abbr -a .. cd ..
 abbr -a l lsd -lah --date relative
 abbr -a d cd $HOME/development/
+abbr -a drive cd $HOME/Library/CloudStorage/ProtonDrive-noah.settersten@proton.me-folder
 
 # -- Git (Brought over from oh-my-zsh's git aliases) --
 abbr -a ga git add
@@ -25,7 +26,7 @@ abbr -a uncommit 'git reset --soft HEAD~1'
 
 # Show files that have been changed in this branch
 abbr -a diffm git diff --name-only main
-abbr -a diffd git diff --name-only develop
+# abbr -a diffd git diff --name-only develop
 
 # -- Extended Git --
 # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`
@@ -55,6 +56,8 @@ abbr -a b bundle exec $argv
 abbr -a rc 'bin/rails console'
 abbr -a rdbc 'bin/rails dbconsole'
 abbr -a btest 'PARALLEL_WORKERS=4 bundle exec rails test'
+abbr -a test_branch 'bundle exec rails test $(git diff --name-only main | grep "^test")'
+abbr -a rt "$HOME/development/dotfiles/scripts/rubotree_changed.sh"
 
 abbr -a d "cd $HOME/development/"
 abbr -a gg "cd $HOME/Code/groups"
@@ -62,14 +65,6 @@ abbr -a dd "cd $HOME/development/dotfiles"
 
 # -- Xcode --
 abbr -a xclist xcrun simctl list
-
-# -- Time Warrior --
-# abbr -a t timew
-# abbr -a tt ~/development/dotfiles/scripts/timewarrior_summary.sh
-# abbr -a ts timew summary :ids
-# abbr -a tw timew week
-# abbr -a ttags timew tagsum today
-# abbr -a tc timew client
 
 # -- Utilities --
 abbr -a hdu "du -d 1 -h | sort -h"
@@ -106,17 +101,13 @@ abbr -a bible ~/development/dotfiles/scripts/bible_in_a_year.sh
 
 # TODO: Retrieve Joshua Project's people group of the day (https://unreachedoftheday.org/)
 
-
 # TODO: Count commands in fish history to see how many times each abbreviation is used.
 # history | LC_ALL=C sort | uniq -c | LC_ALL=C sort -nr | head -n 40
-
-
-# abbr -a ea 'hx ~/development/dotfiles/zsh/shortcuts.zsh'
-# abbr -a ea_source 'source $HOME/development/dotfiles/zsh/shortcuts.zsh'
-abbr -a claude "/Users/noah/.claude/local/claude"
 
 # Devbox
 abbr -a db devbox
 abbr -a dbg "devbox global"
 abbr -a outdated "brew outdated && devbox global list --outdated"
 # abbr -a updates outdated
+
+abbr -a n "nnn -ce"

@@ -20,7 +20,7 @@ if status is-interactive
 end
 
 # Extend configuration
-source $HOME/development/dotfiles/fish/abbreviations.fish
+source $HOME/development/dotfiles/scripts/abbreviations.fish
 source $HOME/development/machine/private_abbreviations.fish
 
 fish_add_path /opt/homebrew/bin
