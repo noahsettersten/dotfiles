@@ -28,7 +28,13 @@
     "lua-language-server@latest",
     "yaml-language-server@latest",
     "typescript-language-server@latest",
-    "tree@latest"
+    "tree@latest",
+    "helix@latest",
+    "nnn@latest",
+    "yazi@latest",
+    "neovim@latest",
+    "claude-code@latest",
+    "rclone@latest"
   ],
   "shell": {
     "init_hook": [

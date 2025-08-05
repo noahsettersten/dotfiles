@@ -12,7 +12,8 @@ export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
 # export BROWSER=w3m
 # export BROWSER='/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
 
-export EDITOR=nvim
+export EDITOR=hx
+# export VISUAL=~/development/dotfiles/scripts/nnn_open.sh
 export GIT_MERGE_AUTOEDIT=no
 
 # Setup PATH
@@ -37,7 +38,7 @@ autoload -Uz compinit && compinit
 
 # Theming and Aliases
 source $HOME/development/dotfiles/shell/shortcuts.zsh
-source $HOME/development/machine/shortcuts_personal.zsh
+source $HOME/development/machine/private_shortcuts.zsh
 
 
 # Disable telemetry/analytics

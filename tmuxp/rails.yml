@@ -2,14 +2,17 @@ session_name: rails
 windows:
   - window_name: editor
     panes:
-      - nvim
-  # - window_name: console
-  #   panes:
-  #     - bundle exec rails console
-  - window_name: logs
+      - nnn -e
+      - hx
+  - window_name: console
     panes:
-      - tail_groups_logs
-      - box bg-log
+      - bundle exec rails console
+  - window_name: scratch
+    panes:
+      - scratch
+  - window_name: dots
+    panes:
+      - cd $HOME/development/dotfiles && hx
   # - window_name: logs
   #   panes:
   #     - ./bin/dev

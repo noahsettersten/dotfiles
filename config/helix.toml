@@ -1,12 +1,5 @@
-# If comments look odd in Alacritty + Tmux, see https://github.com/helix-editor/helix/issues/3801
-theme = "catppuccin_macchiato"
-# theme = "kanagawa"
-# theme = "rose-pine"
-# theme = "rose-pine-moon"
+theme = "catppuccin_macchiato" # Others: "kanagawa", "rose-pine", "rose-pine-moon"
 
-# To ease migration from Vim mappings, see https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
-
-# https://theari.dev/blog/enhanced-helix-config/
 # https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 [editor]
 color-modes = true
@@ -14,6 +7,9 @@ color-modes = true
 auto-format = true
 cursorline = true
 rulers = [120]
+bufferline = "multiple"
+true-color = true
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -22,13 +18,14 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
-
-# Ctrl-s: Horizontal split
-# Ctrl-v: Vertical split
+# git-ignore = false
+# Show staged files in git picker
 
 [editor.indent-guides]
 render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [editor.lsp]
 display-messages = true
@@ -40,96 +37,71 @@ left = ["mode", "spinner", "version-control", "file-name"]
 S = { S = ":w" }
 Z = { Z = ":q" }
 # Y = ["extend_to_line_end", "yank_selection"]
-# D = ["extend_to_line_end", "delete_selection"]
+D = ["extend_to_line_end", "delete_selection"]
 
 # From https://github.com/helix-editor/helix/discussions/5764#discussioncomment-4840408
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-# C-h = "jump_view_left"
-# C-j = "jump_view_down"
-# C-k = "jump_view_up"
-# C-l = "jump_view_right"
+# From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update
+C-g = [
+  ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit",
+  ":reload-all"
+]
 
-# -- Inspired by Thomas's config
-# left = "vertical resize +5"
-# right = "vertical resize -5"
-# down = "resize +5"
-# up = "resize -5"
-# 
+# From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
+C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cut -d' ' -f1-4 | sed 's/$/)/g'}"
+# C-b = ":sh echo %sh{git show --no-patch --format='%%h \\(%%an: %%ar\\): %%s' (git blame -p %{buffer_name} -L%{cursor_line},+1 | head -1 | cut -d' ' -f1)}"
 
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
 
-# Neovim options:
-# vim.opt.signcolumn = "auto"
-# vim.opt.wrap = false
-# vim.opt.virtualedit = "all"
-# vim.opt.timeoutlen = 500
-# 
-# vim.opt.ignorecase = true
-# vim.opt.smartcase = true
-# 
-# vim.opt.splitbelow = true
-# vim.opt.splitright = true
-# 
-# vim.opt.shiftwidth = 2
-# vim.opt.tabstop = 2
-# vim.opt.expandtab = true
-# 
-# vim.opt.undofile = true
-# 
-# -- This allows replacements to preview live as you type (e.g. %s/pattern/replace/g)
-# vim.opt.inccommand = "nosplit"
-# 
-# vim.cmd('set clipboard+=unnamedplus')
+# From https://tqwewe.com/blog/enhanced-helix-config/
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
 
-# Custom mappings
+[keys.select]
+# A-x = "extend_to_line_bounds"
+X = "select_line_above"
+
+[keys.normal.space]
+t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
+
+[keys.normal.t]
+t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
+T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
+
+[keys.normal.space.z]
+f = [
+  ":write",
+  ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh"
+]
+r =  ":reload-all"
+
+### Remaining neovim features
+#### Things for me to fix
+# - Seamlessly switch between editor and tmux panes
+# - Run test under cursor / run entire current test file (mapping to a :sh command)
 # 
-# -- vim.keymap.set('n', '<Esc>', require('notify').dismiss, { noremap = true, desc = 'Dismiss notification' })
+#### Active work/discussion
+# - Undofile: https://github.com/helix-editor/helix/pull/9154
+# - Remember last place when re-opening a file: See above?
+# - View git blame: https://github.com/helix-editor/helix/pull/13133
 # 
+#### Unknown features
+# - Send picker results to quickfix
+# - Virtual edit (vim.opt.virtualedit = "all") # I don't think this is possible at the moment.
 # 
+# - Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
+# - Turn off HL search
+# - Tab/spaces: vim.opt.shiftwidth = 2, vim.opt.tabstop = 2, vim.opt.expandtab = true
+# - NOTE abbreviation: vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
 # -- Open docs for package on given line
 # vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
 # 
-# vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
-
-# Plugins:
-# - Toggle term: Tmux
-# - Tresitter
-# - Multi-line commenting
-# - Git signs, view git blame
-# - Remember last place when re-opening a file
-# - Persistent undo/redo
-# - Telescope: 
-#   - Find files
-#   - Grep through files
-#   - Search through git modified files
-#   - Tailwind class search in telescope
-#   - Send results to Trouble with <c-l>
-# - Run test under cursor / run entire current test file
-# - Seamlessly switch between editor and tmux panes
-
-# LSP mappings:
-# -- https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
-# vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', { buffer = bufnr, desc = "Show details" })
-# vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', { buffer = bufnr, desc = "Go to definition" })
-# vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>',
-#   { buffer = bufnr, desc = "Go to declaration" })
-# vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>',
-#   { buffer = bufnr, desc = "Go to implementation" })
-# vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>',
-#   { buffer = bufnr, desc = "Go to type definition" })
-# vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', { buffer = bufnr, desc = "Show references" })
-# vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>',
-#   { buffer = bufnr, desc = "Show signature help" })
-# vim.keymap.set('n', 'gR', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr, desc = "Rename symbol" })
-# vim.keymap.set({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>',
-#   { buffer = bufnr, desc = "Format file" })
-# vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr, desc = "Code actions" })
-#
-# vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', { buffer = bufnr, desc = "Open float" })
-# vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', { buffer = bufnr, desc = "Go to previous" })
-# vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', { buffer = bufnr, desc = "Go to next" })
-
-# Go to package
-
-# Toggle HL search
+## Quickref
+# - Find and replace: %s <find> Enter c <replace>
+# - If comments look odd in Alacritty + Tmux, see https://github.com/helix-editor/helix/issues/3801
+# - :append-output (Alt-!), :pipe (|), :sh

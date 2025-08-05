@@ -12,6 +12,8 @@
     - ~/.config/alacritty
     - ~/.config/helix
     - ~/.config/karabiner
+    - ~/.config/yabai
+    - ~/.config/skhd
 
 - link:
     ~/.config/nvim: ./nvim
@@ -24,17 +26,16 @@
     ~/.config/helix/languages.toml: config/helix_languages.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     ~/.config/alacritty/catppuccin-macchiato.toml: config/alacritty-catppuccin-macchiato.toml
-    ~/.config/karabiner/karabiner.json: config/karabiner.json
+    ~/.config/karabiner/karabiner.json:
+      force: true
+      path: config/karabiner.json
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
     ~/.muttrc: config/.muttrc
     ~/.tmux.conf: config/.tmux.conf
-    # ~/.tmux_mac.conf: config/.tmux_mac.conf
 
     ~/.tmuxp: ./tmuxp
     ~/.config/yabai/yabairc: wm/yabairc
-    ~/.config/sketchybar/sketchybarrc: wm/sketchybarrc
-    ~/.config/sketchybar/plugins: wm/sketchybar_plugins
     ~/.config/skhd/skhdrc: wm/skhdrc
     ~/.local/share/devbox/global/default/devbox.json: 
       force: true

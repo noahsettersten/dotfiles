@@ -1,16 +1,29 @@
+# https://helix-editor.vercel.app/reference/formatters#json
 [[language]]
-name = "typescript"
-# formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.ts"] }
-formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "tsx"
-# formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.tsx"] }
-formatter = { command = "npx", args = ["--no-install", "prettier", "--parser", "typescript"] }
+name = "json"
+formatter = { command = "jq", args = ["."] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-formatter = { command = "npx", args = ["--no-install", "prettier", "--stdin-filename", "file.js"] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+# auto-format = true
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+config = { diagnostics = true, formatting = true }

@@ -2,9 +2,10 @@
 
 My personal configuration files, with a focus on:
 - `fish`: Custom aliases, Starship prompt, FZF history search.
+- `zsh`: Custom aliases, Starship prompt, FZF history search.
 - `tmux`: Plus tmuxp for managing template sessions.
 - `nvim`: Numerous customizations and utilities.
-- `mise` for managing language and tool versions.
+- `mise`: Managing language and tool versions.
 
 ## Structure
 
@@ -13,7 +14,7 @@ My personal configuration files, with a focus on:
 - `nvim/...`: Neovim configuration.
 - `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
 - `tmuxp/...`: Tmux configuration files managed by tmuxp.
-- `wm/...`: Window management configuration and scripts for Yabai, Skhd, and Sketchybar.
+- `wm/...`: Window management configuration and scripts for [Yabai](https://github.com/koekeishiya/yabai), [Skhd](https://github.com/koekeishiya/skhd), and [Jankyborders](https://github.com/FelixKratz/JankyBorders).
 
 ## Docker
 
