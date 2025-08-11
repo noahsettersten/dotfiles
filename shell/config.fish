@@ -1,3 +1,5 @@
+# Manual pco-box setup. Pulled from $HOME/pco-box/env.sh
+source $HOME/pco-box/env.auth.sh
 export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_PORT=3307
@@ -20,7 +22,7 @@ if status is-interactive
 end
 
 # Extend configuration
-source $HOME/development/dotfiles/scripts/abbreviations.fish
+source $HOME/development/dotfiles/shell/abbreviations.fish
 source $HOME/development/machine/private_abbreviations.fish
 
 fish_add_path /opt/homebrew/bin
@@ -47,3 +49,10 @@ fish_add_path $ANDROID_HOME/platform-tools
 
 # Configure bat as viewer for manpages
 # TODO: batman --export-env | source
+
+# Attempt to run pco in fish
+# https://github.com/edc/bass
+# bass $HOME/Code/pco/bin/pco init -
+# source ($HOME/Code/pco/bin/pco init - | psub)
+
+export SLACK_DEVELOPER_MENU=true

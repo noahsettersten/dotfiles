@@ -19,9 +19,9 @@
     ~/.config/nvim: ./nvim
 
     ~/.newsboat/config: config/newsboat_config
-    ~/.config/starship.toml: config/starship.toml
-    ~/.config/fish/config.fish: config/config.fish
-    ~/.zshrc: config/.zshrc
+    ~/.config/starship.toml: shell/starship.toml
+    ~/.config/fish/config.fish: shell/config.fish
+    ~/.zshrc: compat/.zshrc
     ~/.config/helix/config.toml: config/helix.toml
     ~/.config/helix/languages.toml: config/helix_languages.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
@@ -32,7 +32,7 @@
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
     ~/.muttrc: config/.muttrc
-    ~/.tmux.conf: config/.tmux.conf
+    ~/.tmux.conf: shell/.tmux.conf
 
     ~/.tmuxp: ./tmuxp
     ~/.config/yabai/yabairc: wm/yabairc

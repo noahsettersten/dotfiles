@@ -37,7 +37,7 @@ FPATH=/usr/local/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit
 
 # Theming and Aliases
-source $HOME/development/dotfiles/scripts/shortcuts.zsh
+source $HOME/development/dotfiles/compat/shortcuts.zsh
 source $HOME/development/machine/private_shortcuts.zsh
 
 
