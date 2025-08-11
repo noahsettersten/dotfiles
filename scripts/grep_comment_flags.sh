@@ -5,7 +5,7 @@ FILES_PATTERN='\.(js|ts|rb|erb|slim)(\..+)?$'
 FILES=$(git ls-files --cached -- . ':!:vendor/*' . ':!:*min.js' | grep -E $FILES_PATTERN)
 
 SEARCH='console.log|TODO|FIXME|DEBUG'
-echo "$FILES" | GREP_COLOR='4;5;37;41' xargs grep --color --with-filename -n -E $SEARCH
+echo "$FILES" | GREP_COLOR='mt=4;5;37;41' xargs grep --color --with-filename -n -E $SEARCH
 
 GREP_RESULT=$?
 
