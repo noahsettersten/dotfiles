@@ -34,7 +34,8 @@
     "yazi@latest",
     "neovim@latest",
     "claude-code@latest",
-    "rclone@latest"
+    "rclone@latest",
+    "aerc@latest"
   ],
   "shell": {
     "init_hook": [
