@@ -39,14 +39,14 @@
     ~/.config/skhd/skhdrc: wm/skhdrc
     ~/.local/share/devbox/global/default/devbox.json: 
       force: true
-      path: setup/devbox.json
+      path: config/devbox.json
 
 - shell:
     - [
         curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
       ]
 # - brewfile:
-#     - setup/Brewfile
+#     - config/Brewfile
 
 # - [curl -sS https://starship.rs/install.sh > install_starship.sh]
 # - [chmod +x ./install_starship.sh]
