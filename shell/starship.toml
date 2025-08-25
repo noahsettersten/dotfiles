@@ -13,7 +13,7 @@ $cmd_duration\
 $character\
 """
 # ${custom.last_commit} \
-# right_format = """${custom.last_commit}"""
+right_format = """${custom.last_commit}"""
 
 [fill]
 symbol = ' '
@@ -56,13 +56,13 @@ pipestatus = true
 [git_metrics]
 disabled = false
 
-# [custom.last_commit]
-# command = "git log -1 --pretty=%s | head -c50"
-# when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
-# shell = ["bash", "--noprofile", "--norc"]
-# symbol = '⛏️ '
-# format = '''[$symbol($output)]($style)'''
-# style = "fg:136"
+[custom.last_commit]
+command = "git log -1 --pretty=%s | head -c50"
+when = "[ -d .git ] && echo .git || git rev-parse --git-dir > /dev/null 2>&1"
+shell = ["bash", "--noprofile", "--norc"]
+symbol = '⛏️ '
+format = '''[$symbol($output)]($style)'''
+style = "fg:136"
 
 # 🔔
 # ⛏️
