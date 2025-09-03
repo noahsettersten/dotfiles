@@ -14,7 +14,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     /opt/homebrew/bin/starship init fish | source
 
-    export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
+    # export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
     # TODO: fzf --fish | source
     # # [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
@@ -35,7 +35,7 @@ export GIT_MERGE_AUTOEDIT=no
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
 export DO_NOT_TRACK=1 # For Devbox
-export STORYBOOK_DISABLE_TELEMETRY=1
+# export STORYBOOK_DISABLE_TELEMETRY=1
 export SAM_CLI_TELEMETRY=0
 
 # Tools
