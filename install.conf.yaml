@@ -35,8 +35,8 @@
     ~/.tmux.conf: shell/.tmux.conf
 
     ~/.tmuxp: ./tmuxp
-    ~/.config/yabai/yabairc: wm/yabairc
-    ~/.config/skhd/skhdrc: wm/skhdrc
+    ~/.config/yabai/yabairc: config/yabairc
+    ~/.config/skhd/skhdrc: config/skhdrc
     ~/.local/share/devbox/global/default/devbox.json: 
       force: true
       path: config/devbox.json

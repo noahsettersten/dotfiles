@@ -1,6 +1,8 @@
+# Load scripting addition
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+# Configure general settings
                 # top_padding         17 \
 yabai -m config layout              bsp \
                 top_padding         12 \
@@ -19,29 +21,20 @@ yabai -m config window_opacity on \
                 window_border_hidpi on \
                 window_border off
 
-SPACEBAR_HEIGHT=$(spacebar -m config height)
-yabai -m config external_bar all:$SPACEBAR_HEIGHT:0
-
+# Add ignore rules
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^zoom.us$" manage=off
 yabai -m rule --add app="^Slack$" manage=off sticky=on
 yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^KeePassXC$" manage=off
-yabai -m rule --add app="^Asana$" manage=off
 yabai -m rule --add app="^qemu-system-aarch64$" manage=off
-yabai -m rule --add app="^Todoist$" manage=off
 yabai -m rule --add app="^Clean Shot" manage=off
 # yabai -m rule --add app="^Xcode$" manage=off
 
-# Key shortcuts:
-# Switch between active and inactive:
-#  yabai -m config layout float
 #  yabai -m config focus_follows_mouse off
-#
-#  yabai -m config layout bsp
 #  yabai -m config focus_follows_mouse autoraise
 
-# Cycle active window position: ...
+# Key shortcuts: Configured in wm/skhdrc
 
 # Start up FelixKratz's JankyBorders
 borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
