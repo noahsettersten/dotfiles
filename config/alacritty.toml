@@ -21,19 +21,6 @@ y = 1
 # family = "FantasqueSansM Nerd Font Mono" # Use with font size 14.0
 # family = "EnvyCodeR Nerd Font Mono" # Use with font size 14.0, offset.y -1
 
-[[hints.enabled]]
-command = "open"
-post_processing = true
-regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
-
-[hints.enabled.binding]
-key = "U"
-mods = "Control|Shift"
-
-[hints.enabled.mouse]
-enabled = true
-mods = "None"
-
 [window]
 decorations = "buttonless"
 opacity = 0.95
