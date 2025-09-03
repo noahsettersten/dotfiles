@@ -27,3 +27,19 @@ formatter = { command = 'prettier', args = ["--parser", "markdown"] }
 [language-server.ruby-lsp]
 command = "ruby-lsp"
 config = { diagnostics = true, formatting = true }
+
+[language-server.rubocop]
+command = "bundle"
+args = ["exec", "rubocop", "--lsp"]
+
+[[language]]
+name = "ruby"
+language-servers = [ { name = "ruby-lsp" }, { name = "rubocop" } ]
+
+[language-server.herb]
+command = "herb-language-server --stdio"
+config = { diagnostics = true } #, formatting = true }
+
+[[language]]
+name = "erb"
+language-servers = [ { name = "herb" } ]
