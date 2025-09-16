@@ -4,26 +4,18 @@ export PATH="/opt/homebrew/bin:$PATH"
 eval "$(devbox global shellenv --init-hook)"
 eval "$(starship init zsh)"
 
-# Load private variables
-# source $HOME/development/machine/config/.credentials
-
 # Terminal config
 export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
 # export BROWSER=w3m
-# export BROWSER='/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'
 
 export EDITOR=hx
 # export VISUAL=~/development/dotfiles/scripts/nnn_open.sh
 export GIT_MERGE_AUTOEDIT=no
 
-# Setup PATH
-# export GOPATH="$HOME/go"
-# export PATH="$PATH:$GOPATH/bin"
-
 # Setup Android Studio
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools
 
 # History search
 export HISTFILE=$HOME/.zsh_history
@@ -36,13 +28,13 @@ bindkey -M vicmd '^R' history-incremental-search-backward
 FPATH=/usr/local/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit
 
-# Theming and Aliases
+# Aliases
 source $HOME/development/dotfiles/compat/shortcuts.zsh
-source $HOME/development/machine/private_shortcuts.zsh
-
 
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
+export DO_NOT_TRACK=1 # For Devbox
+export SAM_CLI_TELEMETRY=0
 
 # Additional tools
 source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

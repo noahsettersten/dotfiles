@@ -1,4 +1,6 @@
 # Manual pco-box setup. Pulled from $HOME/pco-box/env.sh
+fish_add_path $HOME/pco-box/bin
+fish_add_path $HOME/Code/pco/bin
 source $HOME/pco-box/env.auth.sh
 export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
@@ -31,11 +33,11 @@ fish_add_path /opt/homebrew/bin
 export EDITOR=hx
 export NNN_OPENER=$HOME/development/dotfiles/scripts/nnn_open.sh
 export GIT_MERGE_AUTOEDIT=no
+# export BROWSER=w3m
 
 # Disable telemetry/analytics
 export HOMEBREW_NO_ANALYTICS=1
 export DO_NOT_TRACK=1 # For Devbox
-# export STORYBOOK_DISABLE_TELEMETRY=1
 export SAM_CLI_TELEMETRY=0
 
 # Tools
@@ -54,5 +56,3 @@ fish_add_path $ANDROID_HOME/platform-tools
 # https://github.com/edc/bass
 # bass $HOME/Code/pco/bin/pco init -
 # source ($HOME/Code/pco/bin/pco init - | psub)
-
-export SLACK_DEVELOPER_MENU=true
