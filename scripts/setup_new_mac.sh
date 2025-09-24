@@ -63,7 +63,7 @@ echo "Set remaining macOS defaults"
   # shell 'defaults write com.apple.screensaver askForPassword -int 1'
   # shell 'defaults write com.apple.screensaver askForPasswordDelay -int 0'
 
-  # shell "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true" # Enable tap to click (Trackpad)
+  shell "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true" # Enable tap to click (Trackpad)
 
   defaults write com.apple.Safari IncludeDebugMenu -bool true # Enable Safari's debug menu
 

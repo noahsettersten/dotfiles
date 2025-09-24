@@ -1,13 +1,11 @@
 theme = "catppuccin_macchiato" # Others: "kanagawa", "rose-pine", "rose-pine-moon"
 
-# Main configuration
 # https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 [editor]
 color-modes = true
-# auto-pairs = false
 auto-format = true
 cursorline = true
-rulers = [120]
+rulers = [100]
 bufferline = "multiple"
 true-color = true
 end-of-line-diagnostics = "hint"
@@ -26,37 +24,25 @@ render = true
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
-[editor.lsp]
-display-messages = true
-
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
 
-# Additional mappings
+# -- Mappings --
 [keys.normal]
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 
-# Move lines up/down: From https://github.com/helix-editor/helix/discussions/5764#discussioncomment-4840408
-"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-
 # From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update
-C-g = [
-  ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit",
-  ":reload-all"
-]
+C-g = [":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit", ":reload-all"]
 
 # From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
 C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cut -d' ' -f1-4 | sed 's/$/)/g'}"
 
 # From https://tqwewe.com/blog/enhanced-helix-config/
 [keys.select]
-# A-x = "extend_to_line_bounds"
 X = "select_line_above"
 
-
-# My custom tooling
+# -- My custom tooling --
 [keys.normal.space]
 t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 
@@ -65,32 +51,7 @@ t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 # Try https://github.com/helix-editor/helix/discussions/14227
 T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
 
-[keys.normal.space.z]
+[keys.normal.space.z] # Holds personal mappings
 f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh"]
 i = ":toggle file-picker.git-ignore"
 r =  ":reload-all"
-
-# - TODO: Seamlessly switch between editor and tmux panes (move between splits with same keys as Tmux mappings)
-
-
-### Remaining neovim features
-#### Active work/discussion
-# - Undofile: https://github.com/helix-editor/helix/pull/9154
-# - Remember last place when re-opening a file: See above?
-# - View git blame: https://github.com/helix-editor/helix/pull/13133
-# 
-#### Unknown features
-# - Send picker results to quickfix?
-# - Virtual edit (vim.opt.virtualedit = "all"). I don't think this is possible at the moment.
-# 
-# - Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
-# - Turn off HL search
-# - Tab/spaces: vim.opt.shiftwidth = 2, vim.opt.tabstop = 2, vim.opt.expandtab = true
-# - NOTE abbreviation: vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
-# -- Open docs for package on given line
-# vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
- 
-## Quickref
-# - Find and replace: %s <find> Enter c <replace>
-# - If comments look odd in Alacritty + Tmux, see https://github.com/helix-editor/helix/issues/3801
-# - :append-output (Alt-!), :pipe (|), :sh

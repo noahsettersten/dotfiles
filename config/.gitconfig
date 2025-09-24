@@ -4,43 +4,25 @@
 [branch]
   autosetuprebase = always
 [core]
-	editor = nvim
+	pager = delta
 [init]
 	templatedir = ~/.git_template
 	defaultBranch = main
-[color]
-    diff = auto
-    ui = true
-[pager]
-    branch = false
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
 [delta]
     plus-style = "syntax #012800"
     minus-style = "syntax #340001"
     syntax-theme = zenburn
     plus-style = syntax bold "#134008"
     navigate = true
-[interactive]
-    diffFilter = delta --color-only
 [push]
     default = current
 [merge]
     ff = false
 [pull]
     rebase = true
-[rebase]
-    autosquash = true
-[mergetool]
-    keepBackup = true
+# [rebase]
+    # autosquash = true
 [alias]
     cp = cherry-pick
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [tig]
   history-size = 0
