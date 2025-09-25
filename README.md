@@ -7,7 +7,6 @@ My personal configuration files, built around Alacritty, Fish, Helix, and Tmux.
 - `config/...`: Configuration files stored in various locations, including $HOME.
 - `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
 - `shell/...`: Fish configuration (+ abbreviations), Starship prompt, Tmuxline snapshot.
-- `tmuxp/...`: Tmux configuration files managed by tmuxp.
 - `wm/...`: Window management configuration and scripts for [Yabai](https://github.com/koekeishiya/yabai), [Skhd](https://github.com/koekeishiya/skhd), and [Jankyborders](https://github.com/FelixKratz/JankyBorders).
 
 ## Docker
