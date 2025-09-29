@@ -6,7 +6,7 @@ export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_PORT=3307
 
-#. Setup global Nix packages with devbox
+# Setup global Nix packages with devbox
 export DEVBOX_USE_VERSION=0.13.7
 export __DEVBOX_VERSION_CHECK="1"
 set -gx SHELL fish
@@ -25,7 +25,7 @@ end
 
 # Extend configuration
 source $HOME/development/dotfiles/shell/abbreviations.fish
-source $HOME/development/machine/private_abbreviations.fish
+source $HOME/development/dotfiles/shell/private_abbreviations.fish
 
 fish_add_path /opt/homebrew/bin
 
@@ -51,8 +51,3 @@ fish_add_path $ANDROID_HOME/platform-tools
 
 # Configure bat as viewer for manpages
 # TODO: batman --export-env | source
-
-# Attempt to run pco in fish
-# https://github.com/edc/bass
-# bass $HOME/Code/pco/bin/pco init -
-# source ($HOME/Code/pco/bin/pco init - | psub)
