@@ -24,22 +24,13 @@ name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
 # auto-format = true
 
-[language-server.ruby-lsp]
-command = "ruby-lsp"
-config = { diagnostics = true, formatting = true }
-
 [language-server.rubocop]
 command = "bundle"
 args = ["exec", "rubocop", "--lsp"]
 
 [[language]]
 name = "ruby"
-language-servers = [ { name = "ruby-lsp" }, { name = "rubocop" } ]
+language-servers = [ { name = "ruby-lsp", except-features=["diagnostics"] }, { name = "rubocop", only-features=["diagnostics"] } ]
+formatter = { command = "bundle", args = ["exec", "stree", "format", "--print-width=100", "--plugins=plugin/trailing_comma"] }
+auto-format = true
 
-[language-server.herb]
-command = "herb-language-server --stdio"
-config = { diagnostics = true } #, formatting = true }
-
-[[language]]
-name = "erb"
-language-servers = [ { name = "herb" } ]

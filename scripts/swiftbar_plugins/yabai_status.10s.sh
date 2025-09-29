@@ -10,5 +10,5 @@ else
   echo "🪶"
 fi
 echo '---'
-echo 'Switch to BSP layout | yabai -m config layout bsp'
-echo 'Switch to float layout | yabai -m config layout float'
+echo "Switch to BSP layout | shell='yabai -m config layout bsp' terminal=false refresh=true"
+echo "Switch to float layout | shell='yabai -m config layout float' refresh=true"
