@@ -5,10 +5,10 @@ source $HOME/pco-box/env.auth.sh
 export MYSQL_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_ADDR=127.0.0.1
 export MYSQL_READER_PORT_3306_TCP_PORT=3307
-
-# Setup global Nix packages with devbox
 export DEVBOX_USE_VERSION=0.13.7
 export __DEVBOX_VERSION_CHECK="1"
+
+# Setup global Nix packages with devbox
 set -gx SHELL fish
 devbox global shellenv --init-hook | source
 
@@ -42,12 +42,10 @@ export SAM_CLI_TELEMETRY=0
 
 # Tools
 direnv hook fish | source
+# TODO: batman --export-env | source # Configure bat as viewer for manpages
 
 # Setup Android Studio
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 fish_add_path $ANDROID_HOME/emulator
 fish_add_path $ANDROID_HOME/platform-tools
-
-# Configure bat as viewer for manpages
-# TODO: batman --export-env | source

@@ -10,15 +10,13 @@
 - Undofile: https://github.com/helix-editor/helix/pull/9154
 - Remember last place when re-opening a file: See above?
 - View git blame: https://github.com/helix-editor/helix/pull/13133
+- Send picker results to quickfix: https://github.com/helix-editor/helix/discussions/5902
  
 ### Unknown features
-- Send picker results to quickfix?
 - Virtual edit (vim.opt.virtualedit = "all"). I don't think this is possible at the moment.
- 
-- Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
+- Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus'):  y = ["yank", "yank_to_clipboard"]
 - Turn off HL search
 - Tab/spaces: vim.opt.shiftwidth = 2, vim.opt.tabstop = 2, vim.opt.expandtab = true
-- NOTE abbreviation: vim.cmd("iabbrev NOTE # NOTE: (%Y-%m-%d) Noah Settersten =>")
 - Open docs for package on given line
 # vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
  

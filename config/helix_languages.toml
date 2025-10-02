@@ -1,4 +1,7 @@
 # https://helix-editor.vercel.app/reference/formatters#json
+# [language.config.completion.snippets.custom.abbrev]
+# note = "# NOTE: (%Y-%m-%d) Noah Settersten =>"
+
 [[language]]
 name = "json"
 formatter = { command = "jq", args = ["."] }
@@ -33,4 +36,3 @@ name = "ruby"
 language-servers = [ { name = "ruby-lsp", except-features=["diagnostics"] }, { name = "rubocop", only-features=["diagnostics"] } ]
 formatter = { command = "bundle", args = ["exec", "stree", "format", "--print-width=100", "--plugins=plugin/trailing_comma"] }
 auto-format = true
-

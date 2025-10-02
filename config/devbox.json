@@ -8,7 +8,6 @@
     "w3m@latest",
     "lsd@latest",
     "fzf@latest",
-    "mutt@latest",
     "zsh-autosuggestions@latest",
     "zsh-syntax-highlighting@latest",
     "tealdeer@latest",
@@ -30,7 +29,6 @@
     "helix@latest",
     "nnn@latest",
     "yazi@latest",
-    "neovim@latest",
     "claude-code@latest",
     "rclone@latest",
     "aerc@latest"

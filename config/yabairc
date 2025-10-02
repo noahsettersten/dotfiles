@@ -29,7 +29,6 @@ yabai -m rule --add app="^1Password$" manage=off
 yabai -m rule --add app="^KeePassXC$" manage=off
 yabai -m rule --add app="^qemu-system-aarch64$" manage=off
 yabai -m rule --add app="^Clean Shot" manage=off
-# yabai -m rule --add app="^Xcode$" manage=off
 
 #  yabai -m config focus_follows_mouse off
 #  yabai -m config focus_follows_mouse autoraise

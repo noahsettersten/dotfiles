@@ -54,7 +54,7 @@ abbr -a rc 'bin/rails console'
 # abbr -a btest 'PARALLEL_WORKERS=4 bundle exec rails test'
 # abbr -a test_branch 'bundle exec rails test $(git diff --name-only main | grep "^test")'
 # abbr -a rt "$HOME/development/dotfiles/scripts/rubotree_changed.sh"
-abbr -a local_db mysql -h 127.0.0.1 -u root
+abbr -a localdb mysql -h 127.0.0.1 -u root
 # alias rbcop="bundle exec rubocop --format offenses"
 # alias lint="bundle exec rubocop --format offenses && yarn lint && yarn format:check"
 # alias test_rb="COVERAGE=true bundle exec rails test"

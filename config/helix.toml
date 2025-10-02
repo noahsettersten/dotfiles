@@ -27,8 +27,11 @@ cursor-line = "warning"
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
 
+
+# --------------
 # -- Mappings --
 [keys.normal]
+y = ["yank", "yank_to_clipboard"]
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 
@@ -42,6 +45,8 @@ C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cu
 [keys.select]
 X = "select_line_above"
 
+
+# -----------------------
 # -- My custom tooling --
 [keys.normal.space]
 t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
