@@ -1,7 +1,7 @@
 # Grown from https://www.jamesridgway.co.uk/dotfiles-with-github-travis-ci-and-docker/
 
 # A Docker build to validate and test the dotfiles scripts
-# Build with `docker build -t dotfiles:latest ~/.dotfiles`
+# Build with `docker build -t dotfiles:latest ~/development/dotfiles --no-cache`
 # Run fish in the new image with `docker run -it --entrypoint /usr/bin/fish dotfiles:latest`
 FROM debian:bullseye
 

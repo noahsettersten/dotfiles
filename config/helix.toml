@@ -1,6 +1,5 @@
 theme = "catppuccin_macchiato" # Others: "kanagawa", "rose-pine", "rose-pine-moon"
 
-# https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 [editor]
 color-modes = true
 auto-format = true
@@ -28,32 +27,30 @@ cursor-line = "warning"
 left = ["mode", "spinner", "version-control", "file-name"]
 
 
-# --------------
 # -- Mappings --
 [keys.normal]
 y = ["yank", "yank_to_clipboard"]
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 
-# From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update
+## From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update
 C-g = [":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit", ":reload-all"]
 
-# From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
+## From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
 C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cut -d' ' -f1-4 | sed 's/$/)/g'}"
 
-# From https://tqwewe.com/blog/enhanced-helix-config/
+## From https://tqwewe.com/blog/enhanced-helix-config/
 [keys.select]
 X = "select_line_above"
 
 
-# -----------------------
 # -- My custom tooling --
 [keys.normal.space]
 t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 
 [keys.normal.t]
-# - TODO: Run test under cursor / run entire current test file (mapping to a :sh command)
-# Try https://github.com/helix-editor/helix/discussions/14227
+## - TODO: Run test under cursor / run entire current test file (mapping to a :sh command)
+## Try https://github.com/helix-editor/helix/discussions/14227
 T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
 
 [keys.normal.space.z] # Holds personal mappings

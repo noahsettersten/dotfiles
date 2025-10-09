@@ -3,6 +3,7 @@
 ## Missing features
 
 - TODO: Seamlessly switch between editor and tmux panes (move between splits with same keys as Tmux mappings)
+- See https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 
 ## Features from neovim
 

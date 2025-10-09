@@ -9,10 +9,6 @@ My personal configuration files, built around Alacritty, Fish, Helix, and Tmux.
 - `shell/...`: Fish configuration (+ abbreviations), Starship prompt, Tmuxline snapshot.
 - `wm/...`: Window management configuration and scripts for [Yabai](https://github.com/koekeishiya/yabai), [Skhd](https://github.com/koekeishiya/skhd), and [Jankyborders](https://github.com/FelixKratz/JankyBorders).
 
-## Docker
-
-This repo contains a `Dockerfile` for spinning up the dotfiles within a container for validation. The `build_dots` and `run_dots` aliases can be used to help interact with Docker.
-
 ## Key mappings
 
 (Using shkd and yabai)
@@ -34,8 +30,7 @@ https://w3m.sourceforge.net/MANUAL#Key:orig
 
 ## Older tooling kept for compatibility
 
-- `compat/...`: Zsh configuration
-- `nvim/...`: Numerous customizations and utilities.
+- `compat/...`: Zsh and Neovim configuration.
 
 # Ideas
 - Consider kanata for key mapping instead of Karabiner Elements: https://github.com/jtroo/kanata/blob/main/cfg_samples/simple.kbd#L62

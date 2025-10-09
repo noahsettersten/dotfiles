@@ -1,7 +1,7 @@
 # -- Core --
 abbr -a .. cd ..
 abbr -a l lsd -lah --date relative
-abbr -a d cd $HOME/development/
+# abbr -a d cd $HOME/development/
 abbr -a dd "cd $HOME/development/dotfiles"
 abbr -a drive cd $HOME/Library/CloudStorage/ProtonDrive-noah.settersten@proton.me-folder
 
@@ -14,13 +14,13 @@ abbr -a gcs git checkout staging
 abbr -a gco git checkout
 abbr -a gd git diff
 abbr -a gst git status
-abbr -a grbc git rebase --continue
+# abbr -a grbc git rebase --continue
 
 # -- Git (From other sources?) --
 abbr -a gp git push
 abbr -a gs git stash
-abbr -a gsl git stash list
-abbr -a gss git stash show -p
+# abbr -a gsl git stash list
+# abbr -a gss git stash show -p
 abbr -a uncommit 'git reset --soft HEAD~1'
 abbr -a diffm git diff --name-only main # Show files that have been changed in this branch
 #abbr -a glsearch 'git log --all --full-history --' # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`. Then view the contents of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
@@ -43,8 +43,6 @@ abbr -a pc 'cd ~/pco-box && devbox run process-compose attach'
 abbr -a hdu "du -d 1 -h | sort -h"
 abbr -a loc 'cloc --vcs git .'
 abbr -a floc 'cloc --by-file --exclude-dir=test,tmp,.devbox --include_ext=rb,c,java .'
-# abbr -a build_dots 'docker build -t dotfiles:latest ~/development/dotfiles --no-cache'
-# abbr -a run_dots 'docker run -it --entrypoint /usr/bin/fish dotfiles:latest'
 #abbr -a web w3m https://duckduckgo.com
 
 # -- Ruby and Rails --
@@ -66,3 +64,6 @@ abbr -a bible ~/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h
 # history | LC_ALL=C sort | uniq -c | LC_ALL=C sort -nr | head -n 40 # TODO: Count commands in fish history to see how many times each abbreviation is used.
 
 abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf input.pdf
+
+# GH abbreviations
+# gh api notifications

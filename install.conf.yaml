@@ -5,8 +5,8 @@
 - clean: ["~"]
 
 - create:
-    - ~/.mutt
-    - ~/.newsboat
+    # - ~/.mutt
+    # - ~/.newsboat
     - ~/.config
     - ~/development
     - ~/.config/alacritty
@@ -16,11 +16,11 @@
     - ~/.config/skhd
 
 - link:
-    ~/.config/nvim: ./nvim
 
     ~/.newsboat/config: config/newsboat_config
     ~/.config/starship.toml: shell/starship.toml
     ~/.config/fish/config.fish: shell/config.fish
+    ~/.config/nvim: compat/nvim
     ~/.zshrc: compat/.zshrc
     ~/.config/helix/config.toml: config/helix.toml
     ~/.config/helix/languages.toml: config/helix_languages.toml
@@ -31,7 +31,7 @@
       path: config/karabiner.json
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
-    ~/.muttrc: config/.muttrc
+    # ~/.muttrc: config/.muttrc
     ~/.tmux.conf: shell/.tmux.conf
 
     ~/.config/yabai/yabairc: config/yabairc
@@ -40,10 +40,11 @@
       force: true
       path: config/devbox.json
 
-- shell:
-    - [
-        curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
-      ]
+# - shell:
+#     - [
+#         curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
+#       ]
+
 # - brewfile:
 #     - config/Brewfile
 
