@@ -27,11 +27,11 @@ disabled = true
 # [line_break]
 # disabled = true
 
-[time]
-disabled = true
+# [time]
+# disabled = true
 
-[aws]
-disabled = true
+# [aws]
+# disabled = true
 
 [docker_context]
 disabled = true
@@ -70,7 +70,7 @@ style = "fg:136"
 
 
 # Palette definitions
-[character]
+# [character]
 # Note the use of Catppuccin color 'peach'
 # success_symbol = "[[󰄛](green) ❯](peach)"
 # error_symbol = "[[󰄛](red) ❯](peach)"

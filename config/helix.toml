@@ -29,7 +29,7 @@ left = ["mode", "spinner", "version-control", "file-name"]
 
 # -- Mappings --
 [keys.normal]
-y = ["yank", "yank_to_clipboard"]
+y = ["yank", "yank_to_clipboard"] # Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 
@@ -54,6 +54,6 @@ t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
 
 [keys.normal.space.z] # Holds personal mappings
-f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh"]
+f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh", ":reload-all"]
 i = ":toggle file-picker.git-ignore"
 r =  ":reload-all"

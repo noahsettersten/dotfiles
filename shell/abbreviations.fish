@@ -37,7 +37,6 @@ abbr -a lg lazygit
 abbr -a db devbox
 abbr -a dbg "devbox global"
 abbr -a outdated "brew outdated && devbox global list --outdated"
-abbr -a pc 'cd ~/pco-box && devbox run process-compose attach'
 
 # -- Other utilities --
 abbr -a hdu "du -d 1 -h | sort -h"

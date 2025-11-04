@@ -15,11 +15,9 @@
  
 ### Unknown features
 - Virtual edit (vim.opt.virtualedit = "all"). I don't think this is possible at the moment.
-- Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus'):  y = ["yank", "yank_to_clipboard"]
 - Turn off HL search
 - Tab/spaces: vim.opt.shiftwidth = 2, vim.opt.tabstop = 2, vim.opt.expandtab = true
-- Open docs for package on given line
-# vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
+- Open docs for package on given line: vim.keymap.set("n", "gx", require("functions.go_to_package").OpenPackageDocs, { desc = "Open package docs" })
  
 ## Quickref
 - Find and replace: %s <find> Enter c <replace>

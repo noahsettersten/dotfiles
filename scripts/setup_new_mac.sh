@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# echo "Setting shell to fish"
-  # chsh -s /opt/homebrew/bin/fish
-
 echo "Configure locatedb"
   sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
@@ -23,7 +20,7 @@ echo "Set remaining macOS defaults"
 
   # Put the Dock on the left, autohide, etc.
   defaults write com.apple.dock orientation -string left
-  defaults write com.apple.dock autohide -bool true
+  # defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock "show-recents" -bool false
 
   defaults write com.apple.dock launchanim -bool false # Don't animate opening applications from the Dock
