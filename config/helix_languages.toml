@@ -31,3 +31,13 @@ name = "ruby"
 language-servers = [ { name = "ruby-lsp", except-features=["diagnostics"] }, { name = "rubocop", only-features=["diagnostics"] } ]
 formatter = { command = "bundle", args = ["exec", "stree", "format", "--print-width=100", "--plugins=plugin/trailing_comma"] }
 auto-format = true
+
+[language-server.herb]
+command = "yarn"
+args = ["exec", "herb-language-server", "--", "--stdio"]
+
+[[language]]
+name = "erb"
+language-servers = ["herb"]
+file-types = ["erb", "html.erb"]
+roots = ["Gemfile", "package.json"]
