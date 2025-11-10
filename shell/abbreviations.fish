@@ -24,6 +24,7 @@ abbr -a gs git stash
 abbr -a uncommit 'git reset --soft HEAD~1'
 abbr -a diffm git diff --name-only main # Show files that have been changed in this branch
 #abbr -a glsearch 'git log --all --full-history --' # Search through git log to find changes to a file (incl. deleted). E.g. `glsearch **/user.rb`. Then view the contents of a given commit with `git show {SHA}` or `git show {SHA} -- {FILEPATH}`
+abbr -a flags 'rg "console.log|TODO|FIXME|DEBUG" --max-columns=60 --max-columns-preview --no-heading --sort=path'
 # abbr -a flags '~/development/dotfiles/scripts/grep_comment_flags.sh'
 # abbr -a git_most_modified "git log --format=format: --name-only --since=12.month| egrep -v '^\$' | sort | uniq -c | sort -nr | head -50" # See https://twitter.com/nicoespeon/status/1605586911900438528?s=12&t=lSpZkllOA8eK-0ZIzf5doA
 
