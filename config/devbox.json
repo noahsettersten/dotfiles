@@ -29,6 +29,7 @@
     "rclone@latest",
     "aerc@latest",
     "ripgrep@latest",
+    "prettier@latest",
   ],
   "shell": {},
   "comments": {
