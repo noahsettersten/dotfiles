@@ -30,6 +30,7 @@
     "aerc@latest",
     "ripgrep@latest",
     "prettier@latest",
+    "vscode-langservers-extracted@latest",
   ],
   "shell": {},
   "comments": {
