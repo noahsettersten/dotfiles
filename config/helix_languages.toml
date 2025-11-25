@@ -29,6 +29,9 @@ language-servers = ["typescript-language-server", "vscode-eslint-language-server
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
+# [language-server.typescript]
+# timeout = 5
+
 [language-server.rubocop]
 command = "bundle"
 args = ["exec", "rubocop", "--lsp"]

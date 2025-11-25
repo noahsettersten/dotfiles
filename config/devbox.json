@@ -29,6 +29,7 @@
     "rclone@latest",
     "aerc@latest",
     "ripgrep@latest",
+    "mycli@latest",
     "prettier@latest",
     "vscode-langservers-extracted@latest",
   ],

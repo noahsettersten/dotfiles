@@ -9,12 +9,11 @@
 LAYOUT=$(/opt/homebrew/bin/yabai -m config layout)
 
 if [ $LAYOUT = 'bsp' ]; then
-  # echo "◳"
   echo "🍱"
 else
   echo "🪶"
 fi
 
 echo '---'
-echo "Switch to BSP layout | shell='/opt/homebrew/bin/yabai -m config layout bsp' terminal=false refresh=true"
-echo "Switch to float layout | shell='/opt/homebrew/bin/yabai -m config layout float' refresh=true"
+echo 'Switch to BSP layout | shell="$HOME/development/dotfiles/scripts/yabai_to_bsp.sh" terminal=false refresh=true'
+echo 'Switch to float layout | shell="$HOME/development/dotfiles/scripts/yabai_to_float.sh" terminal=false refresh=true'

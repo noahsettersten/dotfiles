@@ -5,10 +5,8 @@
 - clean: ["~"]
 
 - create:
-    # - ~/.mutt
-    # - ~/.newsboat
     - ~/.config
-    - ~/development
+    # - ~/development
     - ~/.config/alacritty
     - ~/.config/helix
     - ~/.config/karabiner
@@ -31,7 +29,6 @@
       path: config/karabiner.json
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
-    # ~/.muttrc: config/.muttrc
     ~/.tmux.conf: shell/.tmux.conf
 
     ~/.config/yabai/yabairc: config/yabairc
@@ -48,11 +45,11 @@
 # - brewfile:
 #     - config/Brewfile
 
-# - [curl -sS https://starship.rs/install.sh > install_starship.sh]
-# - [chmod +x ./install_starship.sh]
-# - [./install_starship.sh -f]
-# - [rm ./install_starship.sh]
-# - [curl https://mise.run | sh]
+# - shell:
+  # - [curl -sS https://starship.rs/install.sh > install_starship.sh]
+  # - [chmod +x ./install_starship.sh]
+  # - [./install_starship.sh -f]
+  # - [rm ./install_starship.sh]
 #
 # - shell:
 #     - [git submodule update --init --recursive, Installing submodules]
