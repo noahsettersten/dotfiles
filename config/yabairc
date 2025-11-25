@@ -2,7 +2,7 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-# Configure general settings (paddings and gap default to 0)
+# Configure general settings
 yabai -m config layout              bsp \
                 top_padding         12 \
                 bottom_padding      7 \
@@ -14,12 +14,12 @@ yabai -m config window_opacity on \
                 active_window_opacity 1.0 \
                 normal_window_opacity 0.5
 
-# Ignore certain apps
-yabai -m rule --add app="^zoom.us$" manage=off
-yabai -m rule --add app="^Clean Shot" manage=off
-# "^System Settings$", "^Slack$", "^1Password$", "^KeePassXC$", "^qemu-system-aarch64"
-
 yabai -m config focus_follows_mouse autoraise
+
+# Ignore certain apps
+# yabai -m rule --add app="^zoom.us$" manage=off
+# yabai -m rule --add app="^Clean Shot" manage=off
+# "^System Settings$", "^Slack$", "^1Password$", "^KeePassXC$", "^qemu-system-aarch64"
 
 # Key shortcuts: Configured in ./skhdrc
 

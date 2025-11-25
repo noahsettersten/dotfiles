@@ -12,9 +12,15 @@ class PrePushHandler
 
   private
 
-  def pushing_to_integration_branch? =  PROTECTED_BRANCHES.include?(current_branch)
-  def current_branch = %x{git branch --show-current}.strip
-  def forced_push? = %x{ps -ocommand= -p #{Process.ppid}}.match(/--force|-f/)
+  def pushing_to_integration_branch?
+    PROTECTED_BRANCHES.include?(current_branch)
+  end
+  def current_branch
+    %x{git branch --show-current}.strip
+  end
+  def forced_push?
+    %x{ps -ocommand= -p #{Process.ppid}}.match(/--force|-f/)
+  end
 
   def reject
     messages =[

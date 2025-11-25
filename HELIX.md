@@ -9,7 +9,7 @@
 
 ### Active work/discussion
 - Undofile: https://github.com/helix-editor/helix/pull/9154
-- Remember last place when re-opening a file: See above?
+- Remember last place when re-opening a file: See above? / https://gist.github.com/noahbald/8f525036c6b118fadaaae3d9d7467bd7
 - View git blame: https://github.com/helix-editor/helix/pull/13133
 - Send picker results to quickfix: https://github.com/helix-editor/helix/discussions/5902
  
@@ -25,3 +25,4 @@
 - :append-output (Alt-!), :pipe (|), :sh
 - gw to jump to anywhere by two characters
 - f + [char] to jump to the next character (F + [char] for previous)
+- m + m/a/i to match, m + s/r/d to modify
