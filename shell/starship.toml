@@ -12,32 +12,17 @@ $all\
 $cmd_duration\
 $character\
 """
-# ${custom.last_commit} \
 right_format = """${custom.last_commit}"""
 
-[fill]
-symbol = ' '
+nix_shell.disabled = true
+docker_context.disabled = true
+package.disabled = true
+
+# [fill]
+# symbol = ' '
 
 [git_status]
-stashed = '[$count\$](orange)'
-
-[nix_shell]
-disabled = true
-
-# [line_break]
-# disabled = true
-
-# [time]
-# disabled = true
-
-# [aws]
-# disabled = true
-
-[docker_context]
-disabled = true
-
-[package]
-disabled = true
+stashed = '[$count\$](yellow)'
 
 [directory]
 fish_style_pwd_dir_length = 2
@@ -64,18 +49,7 @@ symbol = '⛏️ '
 format = '''[$symbol($output)]($style)'''
 style = "fg:136"
 
-# 🔔
-# ⛏️
-# ⚙️
-
-
 # Palette definitions
-# [character]
-# Note the use of Catppuccin color 'peach'
-# success_symbol = "[[󰄛](green) ❯](peach)"
-# error_symbol = "[[󰄛](red) ❯](peach)"
-# vimcmd_symbol = "[󰄛 ❮](subtext1)" # For use with zsh-vi-mode
-
 [git_branch]
 style = "bold mauve"
 

@@ -4,6 +4,6 @@
 readings=`/opt/homebrew/bin/bkt --ttl=8h --stale=45m -- curl -s "https://bibleinayearonline.com/rss/oybosingledayglobalfeedweb.xml"`
 lines = readings[readings.rindex('<description>')+47...readings.rindex('</description>')].split(' | ')
 
-puts "Bible In a Year Readings"
+puts "📚"
 puts "---"
 lines.each { |line| puts line }

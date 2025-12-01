@@ -3,7 +3,9 @@
 #
 # by Noah Settersten (??@noahts.com)
 #
-# Shows the current layout mode for Yabai
+# metadata
+# <xbar.title>Yabai status</xbar.title>
+# <xbar.desc>Shows the current layout mode for Yabai</xbar.desc>
 
 # Either bsp or float
 LAYOUT=$(/opt/homebrew/bin/yabai -m config layout)
