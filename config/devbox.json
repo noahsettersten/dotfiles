@@ -32,6 +32,9 @@
     "mycli@latest",
     "prettier@latest",
     "vscode-langservers-extracted@latest",
+    "gitty@latest",
+    "posting@latest",
+    "amfora@latest"
   ],
   "shell": {},
   "comments": {
@@ -39,7 +42,7 @@
       "bat-extras.batman@latest",
       "bkt@latest",
       "ripgrep@latest",
-      "tree@latest",
-    ],
-  },
+      "tree@latest"
+    ]
+  }
 }
