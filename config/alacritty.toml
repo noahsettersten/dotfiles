@@ -1,6 +1,6 @@
 [general]
-working_directory = "/Users/noah"
-import = ["/Users/noah/.config/alacritty/catppuccin-macchiato.toml"]
+working_directory = "~"
+import = ["~/.config/alacritty/catppuccin-macchiato.toml"]
 
 # Font options
 [font]
