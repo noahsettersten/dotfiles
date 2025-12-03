@@ -33,8 +33,7 @@ abbr -a lg lazygit
 
 # -- Devbox --
 abbr -a db devbox
-abbr -a dbg "devbox global"
-abbr -a outdated "brew outdated && devbox global list --outdated"
+abbr -a outdated "brew outdated"
 
 # -- Other utilities --
 abbr -a hdu "du -d 1 -h | sort -h"

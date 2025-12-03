@@ -7,8 +7,8 @@ set -gx MYSQL_READER_PORT_3306_TCP_ADDR 127.0.0.1
 set -gx MYSQL_READER_PORT_3306_TCP_PORT 3307
 
 # Setup global Nix packages with devbox (this slows shell startup considerably)
-set -gx SHELL fish
-devbox global shellenv --init-hook | source
+# set -gx SHELL fish
+# devbox global shellenv --init-hook | source
 
 # Variables
 set -gx EDITOR hx
