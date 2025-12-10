@@ -13,6 +13,11 @@
     - ~/.config/yabai
     - ~/.config/skhd
 
+- shell:
+  - [
+    curl "https://raw.githubusercontent.com/alacritty/alacritty-theme/refs/heads/master/themes/catppuccin_macchiato.toml" > ~/.config/alacritty/catppuccin-macchiato.toml
+    ]
+
 - link:
 
     ~/.newsboat/config: config/newsboat_config
