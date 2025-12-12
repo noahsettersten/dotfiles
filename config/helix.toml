@@ -1,3 +1,4 @@
+# -- Config --
 theme = "catppuccin_macchiato" # Others: "kanagawa", "rose-pine", "rose-pine-moon"
 
 [editor]
@@ -8,6 +9,7 @@ rulers = [100]
 bufferline = "multiple"
 true-color = true
 end-of-line-diagnostics = "hint"
+default-yank-register = "+" # https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/#my-configuration
 
 [editor.cursor-shape]
 insert = "bar"
@@ -29,7 +31,7 @@ left = ["mode", "spinner", "version-control", "file-name"]
 
 # -- Mappings --
 [keys.normal]
-y = ["yank", "yank_to_clipboard"] # Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
+# y = ["yank", "yank_to_clipboard"] # Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 

@@ -4,10 +4,10 @@ My personal configuration files, built around Alacritty, Fish, Helix, and Tmux.
 
 ## Structure
 
-- `config/...`: Configuration files stored in various locations, including $HOME.
-- `scripts/...`: Useful scripts and tools used by zsh aliases and elsewhere.
-- `shell/...`: Fish configuration (+ abbreviations), Starship prompt, Tmuxline snapshot.
-- `wm/...`: Window management configuration and scripts for [Yabai](https://github.com/koekeishiya/yabai), [Skhd](https://github.com/koekeishiya/skhd), and [Jankyborders](https://github.com/FelixKratz/JankyBorders).
+- `compat/...`: Older Zsh configuration for places where fish isn't supported.
+- `config/...`: Configuration files stored in various locations, including $HOME. Also holds config for [Yabai](https://github.com/koekeishiya/yabai), [Skhd](https://github.com/koekeishiya/skhd), and [Jankyborders](https://github.com/FelixKratz/JankyBorders).
+- `scripts/...`: Useful scripts and tools.
+- `shell/...`: Fish configuration, abbreviations, Starship prompt.
 
 ## Key mappings
 
@@ -27,10 +27,6 @@ shift + alt + f/t: Float / BSP layouts
 
 https://w3m.sourceforge.net/MANUAL#Key:orig
 - U: open URL
-
-## Older tooling kept for compatibility
-
-- `compat/...`: Zsh and Neovim configuration.
 
 # Ideas
 - Consider kanata for key mapping instead of Karabiner Elements: https://github.com/jtroo/kanata/blob/main/cfg_samples/simple.kbd#L62

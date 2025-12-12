@@ -27,7 +27,7 @@ CLEAN_TRACK_NAMES=1
 CLEAN_ALBUM_NAMES=1
 
 # The length of a track/artist name after which to truncate.
-TRUNC_LEN=18
+TRUNC_LEN=32
 # String used when replacing truncated text.
 TRUNC_SUFFIX="..."
 # Comment out this line to disable cycling through track/artist

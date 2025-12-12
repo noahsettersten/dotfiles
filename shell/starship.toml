@@ -3,23 +3,15 @@
 palette = "catppuccin_macchiato"
 
 format = """
-$directory\
-$git_branch\
-$git_metrics\
-$git_status \
-$fill \
+$directory$git_branch$git_metrics$git_status$fill \
 $all\
-$cmd_duration\
-$character\
+$cmd_duration$character
 """
 right_format = """${custom.last_commit}"""
 
 nix_shell.disabled = true
 docker_context.disabled = true
 package.disabled = true
-
-# [fill]
-# symbol = ' '
 
 [git_status]
 stashed = '[$count\$](yellow)'

@@ -1,7 +1,6 @@
 typeset -F SECONDS
 
 export PATH="/opt/homebrew/bin:$PATH"
-# eval "$(devbox global shellenv --init-hook)"
 eval "$(starship init zsh)"
 
 # Terminal config
@@ -37,14 +36,14 @@ export DO_NOT_TRACK=1 # For Devbox
 export SAM_CLI_TELEMETRY=0
 
 # Additional tools
-source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
-source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
+# source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(direnv hook zsh)"
 
 # FZF
-export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
+# export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
 # [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # PCO tools

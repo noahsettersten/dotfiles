@@ -5,7 +5,7 @@ unsetopt correct_all
 # System Level
 # ------------
 alias ..='cd ..'
-alias hdu='du -d 1 -h | sort -h'
+# alias hdu='du -d 1 -h | sort -h'
 # alias web='w3m https://duckduckgo.com'
 
 # Directories
@@ -42,17 +42,17 @@ alias lg='lazygit'
 # Frameworks
 alias b='bundle exec $*'
 alias rc='bin/rails console'
-alias rdbc='bin/rails dbconsole'
-alias btest='PARALLEL_WORKERS=4 bundle exec rails test'
+# alias rdbc='bin/rails dbconsole'
+# alias btest='PARALLEL_WORKERS=4 bundle exec rails test'
 
 # PERSONAL TOOLS
-mansearch () {
-  man -k . | fzf --preview "echo {} | awk '{print $1}' | xargs -r man" | awk '{print $1}' | xargs -r man
-}
+# mansearch () {
+#   man -k . | fzf --preview "echo {} | awk '{print $1}' | xargs -r man" | awk '{print $1}' | xargs -r man
+# }
 
-brewdeps () {
-  brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
-}
+# brewdeps () {
+#   brew leaves | while read cask; do echo -n $fg[blue] $cask $fg[white]; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+# }
 
 # Edit/source this file
 # alias ea='hx ~/development/dotfiles/zsh/shortcuts.zsh'

@@ -23,7 +23,7 @@ echo "Set remaining macOS defaults"
   # defaults write com.apple.dock autohide -bool true
   defaults write com.apple.dock "show-recents" -bool false
 
-  defaults write com.apple.dock launchanim -bool false # Don't animate opening applications from the Dock
+  # defaults write com.apple.dock launchanim -bool false # Don't animate opening applications from the Dock
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true # Show all filename extensions in Finder
   defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true # Expand save panel by default
   defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true # Expand print panel by default
@@ -40,8 +40,6 @@ echo "Set remaining macOS defaults"
 
   defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false # Disable auto-correct
   defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false # Disable window animations
-
-  # shell 'defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true' # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 
   # Disable disk image verification
   # shell 'defaults write com.apple.frameworks.diskimages skip-verify -bool true'
@@ -67,11 +65,8 @@ echo "Set remaining macOS defaults"
   defaults write com.apple.terminal StringEncodings -array 4 # Only use UTF-8 in Terminal.app
   chflags nohidden ~/Library # Show the ~/Library folder
 
-  # defaults write com.apple.Safari ProxiesInBookmarksBar "()" # Remove useless icons from Safari's bookmarks bar
-  # shell 'defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false' # Disable Resume system-wide
-
   # shell 'for app in Finder Dock; do killall "$app"; done' # Kill affected applications (hopefully you don't have Mail or Safari Open when running this script)
 
-  echo "0x08000100:0" > ~/.CFUserTextEncoding # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
+  # echo "0x08000100:0" > ~/.CFUserTextEncoding # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
 
   defaults write -g NSToolbarTitleViewRolloverDelay -float 0 # Disable the hover delay for showing "proxy" icons for files in Big Sur.
