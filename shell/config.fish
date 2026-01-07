@@ -4,6 +4,7 @@ set -gx EDITOR hx
 set -gx NNN_OPENER $HOME/development/dotfiles/scripts/nnn_open.sh
 set -gx GIT_MERGE_AUTOEDIT no
 # set -gx BROWSER w3m
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # Disable telemetry/analytics
 set -gx HOMEBREW_NO_ANALYTICS 1
