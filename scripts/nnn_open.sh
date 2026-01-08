@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
+
+# See https://dev.to/rajasegar/helix-and-tmux-integration-3fd0
 if [ -n "$TMUX" ] ; then
     # tmux session running
 
