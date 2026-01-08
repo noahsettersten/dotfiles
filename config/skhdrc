@@ -6,6 +6,7 @@ alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 hyper - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 hyper - s: /Applications/Slack.app/Contents/MacOS/Slack
 hyper - f: open /Applications/LibreWolf.app
+hyper - m: open /Applications/Spotify.app
 # alt + shift - return : /Applications/qutebrowser.app/Contents/MacOS/qutebrowser
 
 # --- 2: Yabai Shortcuts ---

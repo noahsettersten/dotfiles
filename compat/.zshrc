@@ -1,15 +1,17 @@
 typeset -F SECONDS
 
-export PATH="/opt/homebrew/bin:$PATH"
-eval "$(starship init zsh)"
+export EDITOR=hx
+export NNN_OPENER=$HOME/development/dotfiles/scripts/nnn_open.sh
+export GIT_MERGE_AUTOEDIT=no
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Disable telemetry/analytics
+export HOMEBREW_NO_ANALYTICS=1
+export DO_NOT_TRACK=1 # For Devbox
+export SAM_CLI_TELEMETRY=0
 
 # Terminal config
 export DISABLE_AUTO_TITLE='true'    # Allows setTerminalText to work
-# export BROWSER=w3m
-
-export EDITOR=hx
-# export VISUAL=~/development/dotfiles/scripts/nnn_open.sh
-export GIT_MERGE_AUTOEDIT=no
 
 # Setup Android Studio
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
@@ -27,24 +29,17 @@ bindkey -M vicmd '^R' history-incremental-search-backward
 FPATH=/usr/local/share/zsh/site-functions:$FPATH
 autoload -Uz compinit && compinit
 
-# Aliases
+# Extend configuration
 source $HOME/development/dotfiles/compat/shortcuts.zsh
-
-# Disable telemetry/analytics
-export HOMEBREW_NO_ANALYTICS=1
-export DO_NOT_TRACK=1 # For Devbox
-export SAM_CLI_TELEMETRY=0
 
 # Additional tools
 # source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaaaaa"
 # source $HOME/.local/share/devbox/global/default/.devbox/nix/profile/default/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+export PATH="/opt/homebrew/bin:$PATH"
 eval "$(direnv hook zsh)"
-
-# FZF
-# export FZF_DEFAULT_COMMAND='find . -name .git -prune -o -name node_modules -prune -o -name deps -prune -o -name _build -prune -o -name .elixir_ls -prune -o -name coverage -prune -o -name tmp -prune -o -type f -print'
-# [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+eval "$(starship init zsh)"
 
 # PCO tools
 source $HOME/pco-box/env.sh

@@ -3,6 +3,8 @@ abbr -a .. cd ..
 abbr -a l lsd -lah --date relative
 abbr -a d cd $HOME/development/
 # abbr -a dd "cd $HOME/development/dotfiles"
+abbr -a hdu "du -d 1 -h | sort -h"
+abbr -a web w3m https://duckduckgo.com
 
 # -- Git (Brought over from oh-my-zsh's git aliases) --
 abbr -a ga git add
@@ -31,32 +33,25 @@ abbr -a tl tmux ls
 abbr -a ta tmux attach -t $argv
 abbr -a n "nnn -ce"
 abbr -a lg lazygit
-
-# -- Devbox --
-# abbr -a db devbox
 abbr -a outdated "brew outdated"
-
-# -- Other utilities --
-abbr -a hdu "du -d 1 -h | sort -h"
 abbr -a loc 'cloc --vcs git .'
-abbr -a web w3m https://duckduckgo.com
 
 # -- Ruby and Rails --
 abbr -a b bundle exec $argv
 abbr -a rc 'bin/rails console'
-abbr -a rdbc 'bin/rails dbconsole'
-# abbr -a localdb mysql -h 127.0.0.1 -u root
-abbr -a ldb mysql -h 127.0.0.1 -u root
+abbr -a ldb mycli -h 127.0.0.1 -u root
+abbr -a rt 'bin/rails test'
 
 # -- Personal --
-abbr -a bible $HOME/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h.rb
+# abbr -a bible $HOME/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h.rb
 # TODO: Retrieve Joshua Project's people group of the day (https://unreachedoftheday.org/)
-# history | LC_ALL=C sort | uniq -c | LC_ALL=C sort -nr | head -n 40 # TODO: Count commands in fish history to see how many times each abbreviation is used.
+# history | sort | uniq -c | sort -nr | head -n 40 # TODO: Count commands in fish history to see how many times each abbreviation is used.
 abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf
 
 # Temp
-abbr -a ts_count '~/development/dotfiles/scripts/ts_count.sh'
+# abbr -a ts_count '~/development/dotfiles/scripts/ts_count.sh'
 abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
 
 abbr -a tasks asana tasks list
-abbr -a projects asana projects list -l 25 --favorite
+# abbr -a projects asana projects list -l 25 --favorite
+abbr -a oc opencode

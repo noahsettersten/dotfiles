@@ -49,8 +49,9 @@ X = "select_line_above"
 
 
 # -- My custom tooling --
-[keys.normal.space]
-t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
+# Replace this with sending Helix to background?
+# [keys.normal.space]
+# t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 
 [keys.normal.t]
 ## - TODO: Run test under cursor / run entire current test file (mapping to a :sh command)
@@ -58,6 +59,6 @@ t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
 T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
 
 [keys.normal.space.z] # Holds personal mappings
-f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh", ":reload-all"]
+# f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh", ":reload-all"]
 i = ":toggle file-picker.git-ignore"
-r =  ":reload-all"
+# r =  ":reload-all"
