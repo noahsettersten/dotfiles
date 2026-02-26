@@ -55,3 +55,4 @@ abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
 abbr -a tasks asana tasks list
 # abbr -a projects asana projects list -l 25 --favorite
 abbr -a oc opencode
+abbr -a ly ~/development/dotfiles/scripts/libyear.sh
