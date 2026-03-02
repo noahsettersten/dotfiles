@@ -19,28 +19,28 @@
     ]
 
 - link:
-
-    ~/.newsboat/config: config/newsboat_config
+    # ~/.newsboat/cofig: config/newsboat_config
     ~/.config/starship.toml: shell/starship.toml
     ~/.config/fish/config.fish: shell/config.fish
-    ~/.config/nvim: compat/nvim
+    # ~/.config/nvim: compat/nvim
     ~/.zshrc: compat/.zshrc
     ~/.config/helix/config.toml: config/helix.toml
     ~/.config/helix/languages.toml: config/helix_languages.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
-    ~/.config/alacritty/catppuccin-macchiato.toml: config/alacritty-catppuccin-macchiato.toml
+    # ~/.config/alacritty/catppuccin-macchiato.toml: config/alacritty-catppuccin-macchiato.toml
     ~/.config/karabiner/karabiner.json:
       force: true
       path: config/karabiner.json
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
+    ~/.gitmessage: config/.gitmessage
     ~/.tmux.conf: shell/.tmux.conf
 
     ~/.config/yabai/yabairc: config/yabairc
     ~/.config/skhd/skhdrc: config/skhdrc
-    ~/.local/share/devbox/global/default/devbox.json: 
-      force: true
-      path: config/devbox.json
+    # ~/.local/share/devbox/global/default/devbox.json: 
+    #   force: true
+    #   path: config/devbox.json
 
 # - shell:
 #     - [
