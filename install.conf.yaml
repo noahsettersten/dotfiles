@@ -8,6 +8,7 @@
     - ~/.config
     # - ~/development
     - ~/.config/alacritty
+    - ~/.config/ghostty
     - ~/.config/helix
     - ~/.config/karabiner
     - ~/.config/yabai
@@ -28,6 +29,7 @@
     ~/.config/helix/languages.toml: config/helix_languages.toml
     ~/.config/alacritty/alacritty.toml: config/alacritty.toml
     # ~/.config/alacritty/catppuccin-macchiato.toml: config/alacritty-catppuccin-macchiato.toml
+    ~/.config/ghostty/config: config/ghostty.toml
     ~/.config/karabiner/karabiner.json:
       force: true
       path: config/karabiner.json

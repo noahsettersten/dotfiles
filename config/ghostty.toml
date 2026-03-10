@@ -1,0 +1,8 @@
+command = /opt/homebrew/bin/fish
+# font-family = Mononoki Nerd Font
+# font-size = 14.0
+
+# font-family = Iosevka Nerd Font Propo
+# font-size = 15
+theme = catppuccin-macchiato
+link-url

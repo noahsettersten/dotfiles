@@ -2,8 +2,10 @@
 # be found at https://github.com/koekeishiya/skhd/issues/1
 
 # --- 1: App Shortcuts ---
-alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
-hyper - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+# alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+# hyper - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+alt - return : /Applications/Ghostty.app/Contents/MacOS/ghostty
+hyper - return : /Applications/Ghostty.app/Contents/MacOS/ghostty
 hyper - s: /Applications/Slack.app/Contents/MacOS/Slack
 hyper - f: open /Applications/LibreWolf.app
 hyper - m: open /Applications/Spotify.app
