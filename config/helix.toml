@@ -1,6 +1,6 @@
-# -- Config --
-theme = "catppuccin_macchiato" # Others: "kanagawa", "rose-pine", "rose-pine-moon"
-
+# -- Helix configuration --
+theme = "catppuccin_macchiato" # Others: "kanagawa", "rose_pine", "rose_pine_moon", everforest_dark 
+  
 [editor]
 color-modes = true
 auto-format = true
@@ -31,12 +31,11 @@ left = ["mode", "spinner", "version-control", "file-name"]
 
 # -- Mappings --
 [keys.normal]
-# y = ["yank", "yank_to_clipboard"] # Copy to global clipboard by default: vim.cmd('set clipboard+=unnamedplus')
 Y = ["extend_to_line_end", "yank"]
 D = ["extend_to_line_end", "delete_selection"]
 
-## From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update
-C-g = [":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit", ":reload-all"]
+## From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update and https://github.com/helix-editor/helix/discussions/12045
+C-g = [":write-all", ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit", ":redraw", ":reload-all"]
 
 ## From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
 C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cut -d' ' -f1-4 | sed 's/$/)/g'}"
@@ -49,16 +48,10 @@ X = "select_line_above"
 
 
 # -- My custom tooling --
-# Replace this with sending Helix to background?
-# [keys.normal.space]
-# t = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%%"
-
-[keys.normal.t]
-## - TODO: Run test under cursor / run entire current test file (mapping to a :sh command)
+[keys.normal.t] # Testing
 ## Try https://github.com/helix-editor/helix/discussions/14227
-T = ":sh tmux send-keys -t{last} \"bin/rails test #{pane_current_path}\""
+T = ":sh tmux send-keys -t{last} \"bin/rails test %{buffer_name}\" Enter"
 
 [keys.normal.space.z] # Holds personal mappings
-# f = [":write", ":sh $HOME/development/dotfiles/scripts/rubotree_changed.sh", ":reload-all"]
 i = ":toggle file-picker.git-ignore"
 # r =  ":reload-all"
