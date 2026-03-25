@@ -6,6 +6,8 @@ set -gx GIT_MERGE_AUTOEDIT no
 # set -gx BROWSER w3m
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+set -gx CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS 1
+
 # Disable telemetry/analytics
 set -gx HOMEBREW_NO_ANALYTICS 1
 set -gx DO_NOT_TRACK 1 # For Devbox

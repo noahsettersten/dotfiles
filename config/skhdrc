@@ -4,8 +4,8 @@
 # --- 1: App Shortcuts ---
 # alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 # hyper - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
-alt - return : /Applications/Ghostty.app/Contents/MacOS/ghostty
-hyper - return : /Applications/Ghostty.app/Contents/MacOS/ghostty
+alt - return : open /Applications/Ghostty.app
+hyper - return : open /Applications/Ghostty.app
 hyper - s: /Applications/Slack.app/Contents/MacOS/Slack
 hyper - f: open /Applications/LibreWolf.app
 hyper - m: open /Applications/Spotify.app
