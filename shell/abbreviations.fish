@@ -36,6 +36,14 @@ abbr -a lg lazygit
 abbr -a outdated "brew outdated"
 abbr -a loc 'cloc --vcs git .'
 
+# --- Workflow
+abbr -a tasks asana tasks list
+abbr -a ghd gh dash
+
+# --- LLMs
+abbr -a oc opencode
+abbr -a rr roborev tui
+
 # -- Ruby and Rails --
 abbr -a b bundle exec $argv
 abbr -a rc 'bin/rails console'
@@ -46,13 +54,9 @@ abbr -a rt 'bin/rails test'
 # abbr -a bible $HOME/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h.rb
 # TODO: Retrieve Joshua Project's people group of the day (https://unreachedoftheday.org/)
 # history | sort | uniq -c | sort -nr | head -n 40 # TODO: Count commands in fish history to see how many times each abbreviation is used.
-abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf
 
-# Temp
+abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf
 # abbr -a ts_count '~/development/dotfiles/scripts/ts_count.sh'
 abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
-
-abbr -a tasks asana tasks list
-# abbr -a projects asana projects list -l 25 --favorite
-abbr -a oc opencode
 abbr -a ly ~/development/dotfiles/scripts/libyear.sh
+# xattr -dr com.apple.quarantine /Applications/LibreWolf.app 
