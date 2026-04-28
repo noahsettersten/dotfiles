@@ -19,6 +19,7 @@ source $HOME/development/dotfiles/shell/private_abbreviations.fish
 source $HOME/development/dotfiles/shell/pco.fish
 
 fish_add_path /opt/homebrew/bin
+fish_add_path ~/.local/bin
 direnv hook fish | source
 
 if status is-interactive
