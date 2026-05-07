@@ -53,3 +53,7 @@ name = "erb"
 language-servers = ["herb"]
 file-types = ["erb", "html.erb"]
 roots = ["Gemfile", "package.json"]
+
+[[language]]
+name = "bash"
+file-types = [{ glob = ".tmux.conf" }]
