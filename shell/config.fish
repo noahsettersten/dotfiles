@@ -26,3 +26,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     /opt/homebrew/bin/starship init fish | source
 end
+
+# sentry
+fish_add_path "/opt/homebrew/Cellar/sentry/0.31.0/bin"
