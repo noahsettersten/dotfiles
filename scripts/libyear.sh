@@ -28,7 +28,7 @@ echo ""
 echo "" | awk '{printf "| %-30s | %-12s |\n", "Dependency", "Years behind"}'
 echo "|--------------------------------|--------------|"
 
-LIBYEAR_NODE=$(bkt --ttl=1h --stale=5m -- npx depdebt@latest)
+LIBYEAR_NODE=$(bkt --ttl=1h --stale=5m -- npm exec depdebt@latest)
 echo $LIBYEAR_NODE |
   jq -r '.packages[].dependencies | to_entries[] | select(.value.libyears > 0) | "\(.key)\t\(.value.libyears)"' |
   awk -F '\t' '{printf "%-20s\t%.1f\n", $1, $NF}' |

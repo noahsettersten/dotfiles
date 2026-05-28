@@ -43,6 +43,20 @@ C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cu
 ## From https://tqwewe.com/blog/enhanced-helix-config/
 X = "select_line_above"
 
+## From https://github.com/helix-editor/helix/discussions/12775#discussioncomment-12061150
+"#" = "@miw/<C-r>.<ret>"
+"@" = "@miw<space>/<C-r>."
+
+## From https://github.com/helix-editor/helix/discussions/10361#discussioncomment-9089890
+# A-d = "delete_selection"
+# d = "delete_selection_noyank"
+# A-c = "change_selection"
+# c = "change_selection_noyank"
+
+[keys.normal.space]
+","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
+";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
+
 [keys.select]
 X = "select_line_above"
 
@@ -54,4 +68,6 @@ T = ":sh tmux send-keys -t{last} \"bin/rails test %{buffer_name}\" Enter"
 
 [keys.normal.space.z] # Holds personal mappings
 i = ":toggle file-picker.git-ignore"
-# r =  ":reload-all"
+g = ":sh gh browse %{buffer_name}:%{cursor_line}" # Open current file and line in GitHub's web UI.
+c = ":config-open"
+r = ":config-reload"

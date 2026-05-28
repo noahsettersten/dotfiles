@@ -1,4 +1,8 @@
+# Cmd+comma to open this config
+# Cmd+Shift+comma to reload config
+ 
 command = /opt/homebrew/bin/fish
+shell-integration = fish
 # font-family = Mononoki Nerd Font
 # font-size = 14.0
 
@@ -6,3 +10,6 @@ command = /opt/homebrew/bin/fish
 # font-size = 15
 theme = catppuccin-macchiato
 link-url
+
+keybind = global:super+grave_accent=toggle_quick_terminal
+# keybind = super+shift+p=toggle_command_palette

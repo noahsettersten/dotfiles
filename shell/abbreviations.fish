@@ -1,8 +1,7 @@
 # -- Core --
 abbr -a .. cd ..
 abbr -a l lsd -lah --date relative
-abbr -a d cd $HOME/development/
-# abbr -a dd "cd $HOME/development/dotfiles"
+abbr -a dd "cd $HOME/development/dotfiles"
 abbr -a hdu "du -d 1 -h | sort -h"
 abbr -a web w3m https://duckduckgo.com
 
@@ -48,7 +47,9 @@ abbr -a rr roborev tui
 abbr -a b bundle exec $argv
 abbr -a rc 'bin/rails console'
 abbr -a ldb mycli -h 127.0.0.1 -u root
-abbr -a rt 'bin/rails test'
+abbr -a rt 'PARALLEL=1 bin/rails test'
+
+abbr -a reset_android 'emulator -avd pco-mobile-emulator -wipe-data'
 
 # -- Personal --
 # abbr -a bible $HOME/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h.rb
@@ -57,6 +58,16 @@ abbr -a rt 'bin/rails test'
 
 abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf
 # abbr -a ts_count '~/development/dotfiles/scripts/ts_count.sh'
-abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
-abbr -a ly ~/development/dotfiles/scripts/libyear.sh
+# abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
+# abbr -a ly ~/development/dotfiles/scripts/libyear.sh
 # xattr -dr com.apple.quarantine /Applications/LibreWolf.app 
+
+# https://piechowski.io/post/git-commands-before-reading-code/
+abbr -a git_most_changed 'git log --format=format: --name-only --since="1 year ago" | sort | uniq -c | sort -nr | head -20'
+abbr -a git_top_contributors 'git shortlog -sn --no-merges'
+abbr -a git_most_bugs 'git log -i -E --grep="fix|bug|broken" --name-only --format=\'\' | sort | uniq -c | sort -nr | head -20'
+abbr -a git_velocity "git log --format='%ad' --date=format:'%Y-%m' | sort | uniq -c"
+abbr -a git_crises 'git log --oneline --since="1 year ago" | grep -iE \'revert|hotfix|emergency|rollback\''
+
+source "$HOME/development/dotfiles/scripts/print_git_branches.fish"
+abbr -a gab print_all_git_branches
