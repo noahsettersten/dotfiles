@@ -15,7 +15,7 @@ set -gx SAM_CLI_TELEMETRY 0 # For AWS CLI?
 
 # Extend configuration
 source $HOME/development/dotfiles/shell/abbreviations.fish
-source $HOME/development/dotfiles/shell/private_abbreviations.fish
+source $HOME/development/dotfiles/local/local_abbreviations.fish
 source $HOME/development/dotfiles/shell/pco.fish
 
 fish_add_path /opt/homebrew/bin
