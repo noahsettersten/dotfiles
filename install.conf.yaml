@@ -13,6 +13,7 @@
     - ~/.config/karabiner
     - ~/.config/yabai
     - ~/.config/skhd
+    - ~/.newsboat
 
 - shell:
   - [
@@ -20,7 +21,7 @@
     ]
 
 - link:
-    # ~/.newsboat/cofig: config/newsboat_config
+    ~/.newsboat/config: config/newsboat_config
     ~/.config/starship.toml: shell/starship.toml
     ~/.config/fish/config.fish: shell/config.fish
     # ~/.config/nvim: compat/nvim
