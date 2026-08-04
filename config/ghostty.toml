@@ -3,6 +3,7 @@
  
 command = /opt/homebrew/bin/fish
 shell-integration = fish
+font-family = JetBrains Mono
 # font-family = Mononoki Nerd Font
 # font-size = 14.0
 
