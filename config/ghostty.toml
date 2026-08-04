@@ -9,7 +9,15 @@ font-family = JetBrains Mono
 
 # font-family = Iosevka Nerd Font Propo
 # font-size = 15
-theme = catppuccin-macchiato
+
+theme = dark:catppuccin-macchiato,light:rose-pine-dawn 
+# theme = catppuccin-latte
+# theme = alabaster
+# theme = pencillight
+# theme = tokyonight-day
+# theme = tomorrow
+# theme = zenbones
+
 link-url
 
 keybind = global:super+grave_accent=toggle_quick_terminal

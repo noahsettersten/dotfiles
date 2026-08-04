@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "catppuccin_macchiato"
+# palette = "catppuccin_macchiato"
 
 format = """
 $directory$git_branch$git_metrics$git_status$fill \

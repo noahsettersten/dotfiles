@@ -1,5 +1,10 @@
 # -- Helix configuration --
-theme = "catppuccin_macchiato" # Others: "kanagawa", "rose_pine", "rose_pine_moon", everforest_dark 
+ 
+# Dark theme
+# theme = "catppuccin_macchiato" # Others: "kanagawa", "rose_pine", "rose_pine_moon", everforest_dark 
+ 
+# Light theme
+theme = "rose_pine_dawn" # Others: "catppuccin_latte"
   
 [editor]
 color-modes = true
