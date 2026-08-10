@@ -36,7 +36,7 @@
       path: config/karabiner.json
     ~/.git_template: config/git_template
     ~/.gitconfig: config/.gitconfig
-    ~/.gitmessage: config/.gitmessage
+    # ~/.gitmessage: config/.gitmessage
     ~/.tmux.conf: shell/.tmux.conf
 
     ~/.config/yabai/yabairc: config/yabairc
@@ -50,8 +50,8 @@
 #         curl "https://raw.githubusercontent.com/altercation/mutt-colors-solarized/master/mutt-colors-solarized-dark-256.muttrc" > $HOME/.mutt/solarized_dark_256.muttrc,
 #       ]
 
-- brewfile:
-    - config/Brewfile
+# - brewfile:
+#     - config/Brewfile
 
 # - shell:
   # - [curl -sS https://starship.rs/install.sh > install_starship.sh]
