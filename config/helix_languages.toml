@@ -10,25 +10,25 @@ auto-format = true
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
 auto-format = true
 
 # [language-server.typescript]
