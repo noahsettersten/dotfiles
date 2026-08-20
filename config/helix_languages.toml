@@ -56,4 +56,4 @@ roots = ["Gemfile", "package.json"]
 
 [[language]]
 name = "bash"
-file-types = [{ glob = ".tmux.conf" }]
+file-types = [{ glob = ".tmux.conf" }, {glob="yabairc"},{glob="skhdrc"}]

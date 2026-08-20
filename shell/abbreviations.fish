@@ -37,6 +37,9 @@ abbr -a loc 'cloc --vcs git .'
 
 # --- Workflow
 # abbr -a ghd gh dash
+abbr -a mine "bkt --ttl=10m --stale=5m -- linear issue list -s triage -s backlog -s unstarted -s started --team GRP"
+abbr -a available "bkt --ttl=10m --stale=5m -- linear issue query -s triage -s backlog -s unstarted -s started --team GRP -U"
+abbr -a lnote linear-cli notifications list -o json
 
 # --- LLMs
 abbr -a rr roborev tui
