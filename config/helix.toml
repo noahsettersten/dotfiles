@@ -52,12 +52,6 @@ X = "select_line_above"
 "#" = "@miw/<C-r>.<ret>"
 "@" = "@miw<space>/<C-r>."
 
-## From https://github.com/helix-editor/helix/discussions/10361#discussioncomment-9089890
-# A-d = "delete_selection"
-# d = "delete_selection_noyank"
-# A-c = "change_selection"
-# c = "change_selection_noyank"
-
 [keys.normal.space]
 ","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
 ";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]

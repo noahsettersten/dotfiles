@@ -1,7 +1,6 @@
 #  -- Foundation -- (Cmd+Shift+comma to reload config)
 command = /opt/homebrew/bin/fish
 shell-integration = fish
-link-url
 
 ## -- Theme -- (other light options: catppuccin-latte, alabaster, pencillight)
 theme = dark:catppuccin-macchiato,light:rose-pine-dawn 
@@ -14,3 +13,6 @@ font-family = Mononoki Nerd Font
 
 # font-family = Iosevka Nerd Font Propo
 # font-size = 15
+
+#  From Alacritty
+# family = "Monaco NERD Font" # Use with font size 12.0, offset.y 1

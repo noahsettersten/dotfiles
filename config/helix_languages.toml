@@ -1,38 +1,39 @@
 # https://helix-editor.vercel.app/reference/formatters#json
-# [language.config.completion.snippets.custom.abbrev]
-# note = "# NOTE: (%Y-%m-%d) Noah Settersten =>"
-
 [[language]]
 name = "json"
 formatter = { command = "jq", args = ["."] }
 auto-format = true
 
+# Discussion for new tsc LSP:
+# https://github.com/helix-editor/helix/pull/16026
+# https://github.com/helix-editor/helix/issues/15134#issuecomment-4937274016
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
+# formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript", "--stdin-filepath", "stdin.js"] }
+formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript", "--stdin-filepath", "stdin.js"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
+# formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript", "--stdin-filepath", "stdin.jsx"] }
+formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript", "--stdin-filepath", "stdin.jsx"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
+# formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript", "--stdin-filepath", "stdin.ts"] }
+formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript", "--stdin-filepath", "stdin.ts"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
-formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript"] }
+# formatter = { command = 'devbox', args = ["run", "yarn", "prettier", "--parser", "typescript", "--stdin-filepath", "stdin.tsx"] }
+formatter = { command = 'yarn', args = ["prettier", "--parser", "typescript", "--stdin-filepath", "stdin.tsx"] }
 auto-format = true
-
-# [language-server.typescript]
-# timeout = 5
 
 [language-server.rubocop]
 command = "bundle"
