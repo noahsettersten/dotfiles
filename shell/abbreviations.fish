@@ -34,14 +34,6 @@ abbr -a n "nnn -ce"
 abbr -a lg lazygit
 abbr -a outdated "brew outdated"
 abbr -a loc 'cloc --vcs git .'
-
-# --- Workflow
-# abbr -a ghd gh dash
-abbr -a mine "bkt --ttl=10m --stale=5m -- linear issue list -s triage -s backlog -s unstarted -s started --team GRP"
-abbr -a available "bkt --ttl=10m --stale=5m -- linear issue query -s triage -s backlog -s unstarted -s started --team GRP -U"
-abbr -a lnote linear-cli notifications list -o json
-
-# --- LLMs
 abbr -a rr roborev tui
 
 # -- Ruby and Rails --
@@ -52,11 +44,6 @@ abbr -a rt 'PARALLEL=1 bin/rails test'
 
 abbr -a reset_android 'emulator -avd pco-mobile-emulator -wipe-data'
 
-# -- Personal --
-# abbr -a bible $HOME/development/dotfiles/scripts/swiftbar_plugins/bible_in_a_year.1h.rb
-# TODO: Retrieve Joshua Project's people group of the day (https://unreachedoftheday.org/)
 # history | sort | uniq -c | sort -nr | head -n 40 # TODO: Count commands in fish history to see how many times each abbreviation is used.
-
-# abbr -a compress_pdf gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/printer -sOutputFile=compressed.pdf
 # abbr -a test_changes "~/development/dotfiles/scripts/test_ruby_changes.rb"
 # abbr -a ly ~/development/dotfiles/scripts/libyear.sh
