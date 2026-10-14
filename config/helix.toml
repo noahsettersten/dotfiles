@@ -7,14 +7,14 @@
 theme = "rose_pine_dawn" # Others: "catppuccin_latte"
   
 [editor]
-color-modes = true
-auto-format = true
-cursorline = true
-rulers = [100]
-bufferline = "multiple"
-true-color = true
-end-of-line-diagnostics = "hint"
+# auto-format = true
+bufferline = "multiple" # Show bufferline when more than one open
+color-modes = true # Color the mode indicator
+cursorline = true # Highlight line with cursor
 default-yank-register = "+" # https://jvns.ca/blog/2025/10/10/notes-on-switching-to-helix-from-vim/#my-configuration
+end-of-line-diagnostics = "hint"
+rulers = [100] # Line numbers for vertical rulers
+true-color = true # Override auto-detection
 
 [editor.cursor-shape]
 insert = "bar"
@@ -31,13 +31,13 @@ render = true
 cursor-line = "warning"
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
+left = ["mode", "spinner", "version-control", "file-name", "file-modification-indicator"]
 
 
 # -- Mappings --
 [keys.normal]
-Y = ["extend_to_line_end", "yank"]
-D = ["extend_to_line_end", "delete_selection"]
+# Y = ["extend_to_line_end", "yank"]
+# D = ["extend_to_line_end", "delete_selection"]
 
 ## From https://dev.to/rajasegar/helix-tmux-and-lazygit-7nj#update and https://github.com/helix-editor/helix/discussions/12045
 C-g = [":write-all", ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% -h80%% -E lazygit", ":redraw", ":reload-all"]
@@ -45,16 +45,16 @@ C-g = [":write-all", ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80%% 
 ## From https://github.com/helix-editor/helix/issues/3035#issuecomment-2715731119
 C-b = ":echo %sh{git blame --date=short -L %{cursor_line},+1 %{buffer_name} | cut -d' ' -f1-4 | sed 's/$/)/g'}"
 
+## From https://github.com/helix-editor/helix/discussions/12775#discussioncomment-12061150
+# "#" = "@miw/<C-r>.<ret>"
+# "@" = "@miw<space>/<C-r>."
+
+# [keys.normal.space]
+# ","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
+# ";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
+
 ## From https://tqwewe.com/blog/enhanced-helix-config/
 X = "select_line_above"
-
-## From https://github.com/helix-editor/helix/discussions/12775#discussioncomment-12061150
-"#" = "@miw/<C-r>.<ret>"
-"@" = "@miw<space>/<C-r>."
-
-[keys.normal.space]
-","      = ["save_selection", "goto_line_end", ":append-output echo ','", "collapse_selection", "delete_selection", "jump_backward"]
-";"      = ["save_selection", "goto_line_end", ":append-output echo ';'", "collapse_selection", "delete_selection", "jump_backward"]
 
 [keys.select]
 X = "select_line_above"
@@ -68,5 +68,5 @@ T = ":sh tmux send-keys -t{last} \"bin/rails test %{buffer_name}\" Enter"
 [keys.normal.space.z] # Holds personal mappings
 i = ":toggle file-picker.git-ignore"
 g = ":sh gh browse %{buffer_name}:%{cursor_line}" # Open current file and line in GitHub's web UI.
-c = ":config-open"
-r = ":config-reload"
+# c = ":config-open"
+# r = ":config-reload"

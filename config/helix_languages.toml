@@ -1,12 +1,15 @@
 # https://helix-editor.vercel.app/reference/formatters#json
-[[language]]
-name = "json"
-formatter = { command = "jq", args = ["."] }
-auto-format = true
+# [[language]]
+# name = "json"
+# formatter = { command = "jq", args = ["."] }
+# formatter = { command = "yarn", args = ["prettier", "--parser", "json", "--stdin-filepath", "stdin.json"] }
+# auto-format = true
 
 # Discussion for new tsc LSP:
 # https://github.com/helix-editor/helix/pull/16026
 # https://github.com/helix-editor/helix/issues/15134#issuecomment-4937274016
+
+# --Add ESLint and Prettier formatting for JS/JSX/TS/TSX--
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server", "vscode-eslint-language-server"]
@@ -39,12 +42,14 @@ auto-format = true
 command = "bundle"
 args = ["exec", "rubocop", "--lsp"]
 
+# --Add RuboCop for Ruby--
 [[language]]
 name = "ruby"
 language-servers = [ { name = "ruby-lsp", except-features=["diagnostics"] }, { name = "rubocop", only-features=["diagnostics"] } ]
 formatter = { command = "bundle", args = ["exec", "stree", "format", "--print-width=100", "--plugins=plugin/trailing_comma"] }
 auto-format = true
 
+# --Add Herb for ERB--
 [language-server.herb]
 command = "yarn"
 args = ["exec", "herb-language-server", "--", "--stdio"]
@@ -55,6 +60,7 @@ language-servers = ["herb"]
 file-types = ["erb", "html.erb"]
 roots = ["Gemfile", "package.json"]
 
+# --Add other configs to Bash filetype--
 [[language]]
 name = "bash"
 file-types = [{ glob = ".tmux.conf" }, {glob="yabairc"},{glob="skhdrc"}]
