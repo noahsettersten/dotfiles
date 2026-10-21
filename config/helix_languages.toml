@@ -53,6 +53,7 @@ auto-format = true
 [language-server.herb]
 command = "yarn"
 args = ["exec", "herb-language-server", "--", "--stdio"]
+formatter = { command = "yarn", args = ["dlx", "@herb-tools/formatter", "--force"] }
 
 [[language]]
 name = "erb"
