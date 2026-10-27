@@ -3,7 +3,7 @@ command = /opt/homebrew/bin/fish
 # shell-integration = fish
 
 ## -- Theme -- (other light options: catppuccin-latte, alabaster, pencillight)
-theme = dark:catppuccin-macchiato,light:rose-pine-dawn 
+theme = dark:catppuccin-macchiato,light:"Rose Pine Dawn"
 
 ## -- Font -- (Fallback needed starting 8/26/2026 for Ghostty)
 # font-family = JetBrains Mono
@@ -17,3 +17,6 @@ font-family = JetBrains Mono Nerd Font
 
 # font-family = "Monaco NERD Font"
 # font-size = 13
+
+keybind = global:cmd+backquote=toggle_quick_terminal
+quick-terminal-size = 40%,60%
