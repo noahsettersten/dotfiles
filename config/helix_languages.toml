@@ -64,4 +64,4 @@ roots = ["Gemfile", "package.json"]
 # --Add other configs to Bash filetype--
 [[language]]
 name = "bash"
-file-types = [{ glob = ".tmux.conf" }, {glob="yabairc"},{glob="skhdrc"}]
+file-types = [{ glob = ".tmux.conf" }, { glob = ".zshrc" }, {glob="yabairc"},{glob="skhdrc"}]
